@@ -94,7 +94,26 @@ function escapeHtml(s) {
 }
 
 // ---------- step 1 : routine + file --------------------------------
+// Says, under the "Enter the card" button, what is still missing.
+let routinesLoaded = false;
+function updateStartHint() {
+  const hint = $("#start-hint");
+  if (!hint) return;
+  const sel = $("#routine-select");
+  const missing = routinesLoaded && !sel.value;
+  sel.closest(".field").classList.toggle("needs-value", missing);
+  if (!routinesLoaded) {
+    hint.textContent = "Loading the routines… (the first visit can take up to 30 seconds)";
+  } else if (missing) {
+    hint.textContent = "To continue, choose the Routine type above. The coach card file is optional — without one you type the elements in yourself.";
+  } else {
+    hint.textContent = "";
+  }
+  hint.classList.toggle("hidden", !hint.textContent);
+}
+
 async function loadRoutines() {
+  updateStartHint();
   const res = await fetch("/api/routines");
   const data = await res.json();
   if (!data.ok) {
@@ -123,6 +142,8 @@ async function loadRoutines() {
     });
     sel.appendChild(og);
   });
+  routinesLoaded = true;
+  updateStartHint();
 }
 
 function renderRoutineInfo(name) {
@@ -808,8 +829,19 @@ async function runCheck() {
 // ---------- step 3 : report --------------------------------------
 let lastReportText = "";
 
+// Name of the coach card the report is about (file name), shown on the report.
+function reportCardName() {
+  const b = state.batch;
+  if (b && b.current != null) {
+    const it = batchItem(b.current);
+    if (it && it.file) return it.file.name;
+  }
+  return state.file ? state.file.name : "";
+}
+
 function renderReport(data) {
-  lastReportText = data.text || "";
+  const cardName = reportCardName();
+  lastReportText = (cardName ? "Coach card: " + cardName + "\n" : "") + (data.text || "");
   const s = (data.summary || "").toLowerCase();
   const sum = $("#report-summary");
   sum.className = "s-" + s;
@@ -820,6 +852,7 @@ function renderReport(data) {
       ? ` <span class="careful">— ${counts.info} point${counts.info > 1 ? "s" : ""} to double-check</span>`
       : "";
   sum.innerHTML = `
+    ${cardName ? `<span class="card-name">${escapeHtml(cardName)}</span>` : ""}
     ${data.summary}${careful}
     <span class="meta">${data.routine} · ${data.age_group} —
       ${counts.fail} FAIL · ${counts.warn} WARN · ${counts.info} CHECK · ${counts.pass} OK</span>
@@ -877,6 +910,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = e.target.value;
     renderRoutineInfo(name);
     $("#btn-start").disabled = !name;
+    updateStartHint();
   });
 
   $("#btn-start").addEventListener("click", startEntry);

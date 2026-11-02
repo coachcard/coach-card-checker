@@ -693,3 +693,11 @@ button.ghost:hover { background: var(--brand-ghost); border-color: var(--brand);
 .batch-nav b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 50vw; }
 .batch-nav button { padding: 4px 10px; font-size: 13px; }
 .hidden { display: none !important; }
+
+/* coach card file name at the top of the report */
+#report-summary .card-name { display:block; font-size:15px; font-weight:600; letter-spacing:0;
+  opacity:.85; margin-bottom:4px; overflow-wrap:anywhere; }
+
+/* what is missing before "Enter the card" */
+.start-hint { margin:10px 0 0; text-align:right; font-size:14px; color:var(--muted, #5b6475); }
+.field.needs-value select { outline:2px solid var(--warn-ink, #b45309); outline-offset:1px; }
