@@ -16,8 +16,8 @@
   const ORT_VER = "1.19.2";
   const ORT_URL = `https://cdn.jsdelivr.net/npm/onnxruntime-web@${ORT_VER}/dist/ort.min.js`;
   const CV_URLS = [
-    "https://docs.opencv.org/4.10.0/opencv.js",
     "https://cdn.jsdelivr.net/npm/@techstark/opencv-js@4.10.0-release.1/dist/opencv.js",
+    "https://docs.opencv.org/4.10.0/opencv.js",
   ];
 
   let ready = null;
@@ -40,12 +40,23 @@
       try {
         await loadScript(u);
         let c = window.cv;
-        if (c && typeof c.then === "function") c = await c;          // promise-style builds
+        // Real Promise builds can be awaited. The classic Emscripten build is a
+        // "thenable" Module whose then() resolves with itself: awaiting it loops
+        // forever and freezes the page, so never await it — wait for cv.Mat instead.
+        if (c instanceof Promise) c = await c;
         if (c && !c.Mat) {
-          await new Promise((r) => {
-            c.onRuntimeInitialized = r;
-            setTimeout(() => c.Mat && r(), 50);
+          await new Promise((r, rej) => {
+            const t0 = Date.now();
+            const prev = c.onRuntimeInitialized;
+            c.onRuntimeInitialized = () => { if (prev) try { prev(); } catch (e) { /* ignore */ } r(); };
+            const iv = setInterval(() => {
+              if (c.Mat) { clearInterval(iv); r(); }
+              else if (Date.now() - t0 > 60000) { clearInterval(iv); rej(new Error("opencv.js did not start")); }
+            }, 100);
           });
+        }
+        if (c && typeof c.then === "function" && !(c instanceof Promise)) {
+          try { delete c.then; } catch (e) { /* ignore */ }         // so nobody awaits it later
         }
         window.cv = c;
         if (c && c.Mat) return;
