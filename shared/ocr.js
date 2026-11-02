@@ -11,7 +11,9 @@
 (function () {
   "use strict";
 
-  const WORKER_URL = new URL("ocr-worker.js", document.currentScript ? document.currentScript.src : location.href).href;
+  const ME = document.currentScript ? document.currentScript.src : location.href;
+  const VER = new URL(ME).searchParams.get("v");           // cache-busting stamp from index.html
+  const WORKER_URL = new URL("ocr-worker.js", ME).href + "?" + (VER ? "v=" + VER + "&" : "");
   const ORT_FALLBACK = "1.17.3";       // for phones/browsers where 1.19 has no usable backend
   // iPhone / iPad Safari: onnxruntime 1.19 reports "no available backend"; 1.17 works.
   const IOS = /iP(hone|ad|od)/.test(navigator.userAgent) ||
@@ -22,7 +24,7 @@
 
   function getWorker() {
     if (worker) return worker;
-    worker = new Worker(WORKER_URL + (ortVer ? "?ort=" + ortVer : ""));
+    worker = new Worker(WORKER_URL + (ortVer ? "ort=" + ortVer : ""));
     worker.onmessage = (ev) => {
       const m = ev.data || {};
       const p = pending.get(m.id);

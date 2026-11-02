@@ -259,9 +259,11 @@ def _detect_routine(text: str):
 
 
 _THEME_LABEL_RE = re.compile(r"\bTH[EÈÉ]M[EÉ]\b\s*[:.\-]?\s*", re.I)
+# OCR of a photo often clips the left edge of the label column: "HEME", "EME".
+_THEME_LABEL_CLIPPED_RE = re.compile(r"^(?:T?H?[EÈÉ]M[EÉ]|THEM)(?:\s{2,}|\s*[:.]\s*|$)", re.I)
 # Lines that mark the END of the header block / are never a theme.
 _THEME_STOP_RE = re.compile(
-    r"COMPETITOR|MONITOR|\bITOR\(|ADJUDICAT|COACH|ELEMENT[S]?\s*IN\s*ORDER"
+    r"COMPETITOR|MONITOR|\bITOR\(|PETITOR|ADJUDICAT|COACH|ELEMENT[S]?\s*IN\s*ORDER"
     r"|REFEREE|JUDGE", re.I)
 # Phase / category tokens that sit right before the theme and must be dropped.
 _THEME_JUNK_RE = re.compile(
@@ -272,16 +274,29 @@ _THEME_JUNK_RE = re.compile(
 def _looks_like_names(s: str) -> bool:
     """Reserve/competitor lists OCR as a long run of Name+SURNAME with many
     case flips; a theme has at most a couple."""
-    if "(R)" in s or "(S)" in s:
+    if re.search(r"[(（]\s*[RS]\s*[)）]|[a-z]R\)", s):
         return True
     flips = len(re.findall(r"[a-z][A-Z]", s))
     return len(s) > 42 and flips >= 4
 
 
+def _theme_ok(v: str) -> bool:
+    """A plausible theme: some letters, not a name list. All-caps is fine when
+    short (ACDC, CANCAN, GHOST); long all-caps runs are surnames."""
+    if not v or len(v) < 2 or len(v) > 60 or not re.search(r"[A-Za-z]", v):
+        return False
+    if _looks_like_names(v):
+        return False
+    if not re.search(r"[a-z]", v) and len(v) > 25:
+        return False
+    return True
+
+
 def _detect_theme(text: str):
     """Acrobatic / Free Combination cards show the routine theme in the header,
-    sometimes after a 'THEME' label, sometimes as a bare line between the phase
-    row and the competitor/monitor row. Best-effort — the coach can fix it."""
+    sometimes after a 'THEME' label (photos may clip it to 'HEME' / 'EME'),
+    sometimes as a bare line between the phase row and the competitor row.
+    Best-effort — the coach can fix it."""
     lines = [ln.strip() for ln in (text or "").splitlines()]
 
     _phase_only = re.compile(
@@ -290,42 +305,45 @@ def _detect_theme(text: str):
 
     def _clean(v):
         v = _THEME_LABEL_RE.sub("", v).strip(" :.-\t|")
+        v = _THEME_LABEL_CLIPPED_RE.sub("", v).strip(" :.-\t|")
+        v = re.sub(r"^[A-Z]{1,4}\s{2,}", "", v)              # clipped label left of the value ("TE  CrazyCats")
         v = re.split(r"\s{2,}|\t", v)[0].strip()           # drop glued next column
         v = re.sub(r"^(?:QUAL|FNL|PRE|SF|RR)-\S*", "", v).strip(" -:|")
         v = _THEME_JUNK_RE.sub("", v).strip(" -:|")
         if _phase_only.match(v):
             return ""
-        return v
+        return v.rstrip(".")
+
+    def _is_label(ln):
+        return bool(_THEME_LABEL_RE.search(ln) or _THEME_LABEL_CLIPPED_RE.match(ln))
 
     for i, ln in enumerate(lines):
-        if not _THEME_LABEL_RE.search(ln):
+        if not _is_label(ln):
             continue
-        # value on the label line?
-        v = _clean(ln)
-        if v and len(v) > 1 and not _looks_like_names(v) and re.search(r"[a-z]", v):
+        v = _clean(ln)                                     # value on the label line?
+        if _theme_ok(v):
             return v[:80]
-        # else the value is the next usable line
-        for nxt in lines[i + 1 : i + 3]:
-            if not nxt or _THEME_STOP_RE.search(nxt) or _THEME_JUNK_RE.match(nxt):
+        for nxt in lines[i + 1 : i + 3]:                   # else the next usable line
+            if not nxt or _THEME_JUNK_RE.match(nxt):
                 continue
-            if _looks_like_names(nxt):
-                break
+            if _THEME_STOP_RE.search(nxt) or _looks_like_names(nxt):
+                break                                      # reached the competitors: no theme
             v = _clean(nxt)
-            if v and len(v) > 1 and re.search(r"[a-z]", v):
+            if _theme_ok(v):
                 return v[:80]
         return None  # label found but no value -> genuinely themeless
 
     # No THEME label: take the line between the phase row and the competitor row.
     phase = next((i for i, ln in enumerate(lines)
-                  if re.match(r"^(QUAL|FNL|PRE|SF)\b|-(Finals|Preliminaries)\b", ln, re.I)), None)
+                  if re.search(r"^(QUAL|FNL|PRE|SF)\b|\b(QUAL|FNL|PRE|SF)\s*-|-\s*(Finals|Preliminaries)\b", ln, re.I)), None)
     if phase is not None:
         for nxt in lines[phase + 1 : phase + 4]:
-            if not nxt or _THEME_STOP_RE.search(nxt) or _THEME_JUNK_RE.match(nxt):
+            if not nxt or _THEME_JUNK_RE.match(nxt):
                 continue
-            if _looks_like_names(nxt):
+            if _THEME_STOP_RE.search(nxt) or _looks_like_names(nxt):
                 break
             v = _clean(nxt)
-            if v and len(v) > 1 and re.search(r"[a-z]", v) and len(v) <= 60:
+            if _theme_ok(v):
                 return v[:80]
     return None
 
@@ -981,6 +999,7 @@ def _from_pdf(path, routine):
         "detected_federation": _detect_federation(text),
         "detected_theme": _detect_theme(text),
         "notes": notes + ["PDF table parsing is approximate — check every line."],
+        "_raw_text": text,
     }
 
 
@@ -1044,7 +1063,67 @@ def _snap_elements(elements):
     return fixes, cases
 
 
-def _post_process(result):
+_EVENTS = None
+
+
+def _routine_total(routine):
+    """Number of declared elements the routine allows (Appendix 3), or None."""
+    global _EVENTS
+    if not routine:
+        return None
+    if _EVENTS is None:
+        try:
+            import json as _json
+            p = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                              "..", "skill", "appendix3_requirements.json"))
+            with open(p, "r", encoding="utf-8") as f:
+                _EVENTS = _json.load(f).get("events", {})
+        except Exception:
+            _EVENTS = {}
+    ev = _EVENTS.get(routine) or {}
+    return ev.get("total_required_elements")
+
+
+_TYPE_WORD_RE = re.compile(r"HYBRID|ACRO|TRE\b|TECH|PAIR|SuCon|CONNECTION", re.I)
+
+
+def _multi_card_signs(result, routine):
+    """Hints that a photo / PDF shows more than one coach card (or pieces of
+    other cards): headers seen twice, element numbers starting again at 1,
+    more elements than the routine allows."""
+    text = result.get("ocr_text") or result.get("_raw_text") or ""
+    signs = []
+    if len(re.findall(r"COACH\s*CARD", text, re.I)) >= 2:
+        signs.append("the “COACH CARD” title appears twice")
+    elif len(re.findall(r"ELEMENTS?\s*IN\s*ORDER", text, re.I)) >= 2:
+        signs.append("the “Elements in order of performance” header appears twice")
+    elif len(re.findall(r"DD\s*TOT", text, re.I)) >= 2:
+        signs.append("two “DD TOT.” lines were found")
+    elif len(re.findall(r"EDERATION\s*/\s*CLUB", text, re.I)) >= 2:
+        signs.append("the “Federation / Club” line appears twice")
+
+    # Element numbers (EL column) starting again at 1 after 3 or more elements.
+    nums = []
+    for ln in text.splitlines():
+        if not _TYPE_WORD_RE.search(ln):
+            continue
+        cells = [c.strip() for c in re.split(r"\s{2,}|\t", ln) if c.strip()]
+        n = next((int(c) for c in cells if re.fullmatch(r"\d{1,2}", c)), None)
+        if n is not None and 1 <= n <= 20:
+            nums.append(n)
+    restart = any(n == 1 and max(nums[:i] or [0]) >= 3 for i, n in enumerate(nums))
+    if restart:
+        signs.append("the element numbers start again at 1")
+
+    total = _routine_total(routine)
+    els = [e for e in (result.get("elements") or [])
+           if "surface connection" not in (e.get("type") or "").lower()]
+    if total and len(els) > total:
+        signs.append(f"{len(els)} elements were read but this routine has {total}")
+    return signs
+
+
+def _post_process(result, routine=None):
     """Catalogue snapping + the notes that explain it, on every source."""
     try:
         els = result.get("elements") or []
@@ -1066,6 +1145,19 @@ def _post_process(result):
             )
     except Exception:
         pass
+    try:
+        if result.get("source") in ("image", "pdf"):
+            signs = _multi_card_signs(result, routine)
+            if signs:
+                result["multi_card"] = True
+                result.setdefault("notes", []).insert(0,
+                    "WARNING — this photo may show more than one coach card ("
+                    + "; ".join(signs) + "). Lines from another card may have been "
+                    "added: compare every row with the card on the left and delete "
+                    "the extra ones — or retake the photo with only this card in the frame.")
+    except Exception:
+        pass
+    result.pop("_raw_text", None)
     return result
 
 
@@ -1082,15 +1174,15 @@ def extract_coach_card(path, filename, routine=None, progress=None):
         prog(30, "Reading spreadsheet")
         r = _from_xlsx(path, routine)
         prog(96, "Matching elements")
-        return _post_process(r)
+        return _post_process(r, routine)
     if ext == ".pdf":
         prog(30, "Reading PDF")
         r = _from_pdf(path, routine)
         prog(96, "Matching elements")
-        return _post_process(r)
+        return _post_process(r, routine)
     if ext in (".png", ".jpg", ".jpeg", ".jfif", ".webp", ".gif", ".bmp"):
         try:
-            return _post_process(_from_image(path, routine, progress=progress))
+            return _post_process(_from_image(path, routine, progress=progress), routine)
         except Exception as exc:  # never let OCR crash the request
             return {
                 "ok": True, "source": "image", "extracted": False, "elements": [],

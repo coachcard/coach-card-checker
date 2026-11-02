@@ -105,7 +105,7 @@ def from_ocr(raw_json, angle, routine, alt_json=None, alt_angle=None, filename="
             "detected_theme": ex._detect_theme(ocr_text),
             "ocr_text": ocr_text, "notes": base_notes + notes,
         }
-        result = ex._post_process(result)
+        result = ex._post_process(result, routine)
     except Exception as exc:  # never let OCR crash the page
         result = {"ok": True, "source": "image", "extracted": False, "elements": [],
                   "time_seconds": None, "detected_routine": None,

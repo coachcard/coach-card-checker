@@ -743,7 +743,7 @@ function loadEntry(result, file, spec, name) {
           : "") +
         `Highlighted rows came from the file — check every one against the card.` +
         (notes ? `<ul>${notes}</ul>` : ""),
-      partial ? "warn" : "ok"
+      partial || result.multi_card ? "warn" : "ok"
     );
   } else {
     fillRows(templateRows(spec));
@@ -1030,7 +1030,10 @@ function statusCell(it) {
   const n = ((it.result && it.result.elements) || []).length;
   const need = state.batch.spec.total_required_elements || 0;
   if (it.status === "error") return `<span class="bstat err">not read — fill in by hand</span>`;
-  return `<span class="bstat read">${n}${need ? "/" + need : ""} elements</span>`;
+  const multi = it.result && it.result.multi_card
+    ? ` <span class="bstat err" title="This photo may show more than one coach card — check the rows when you review it">more than one card?</span>`
+    : "";
+  return `<span class="bstat read">${n}${need ? "/" + need : ""} elements</span>${multi}`;
 }
 
 function resultCell(it) {

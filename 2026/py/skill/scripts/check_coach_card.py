@@ -288,40 +288,8 @@ def check(
                     detail=f"declared {cnt}",
                 ))
 
-        # ---- 5. No-repeat acrobatic warning (visual flag) -------------------
-        codes_by_group: dict[str, list[str]] = {}
-        for el in declared_elements:
-            canonical = normalise_type(el.get("type", ""), aliases)
-            if canonical == "Acrobatic":
-                grp = (el.get("group") or "").upper().strip()
-                code = (el.get("code") or "").strip()
-                codes_by_group.setdefault(grp, []).append(code)
-        flagged = []
-        for grp, codes in codes_by_group.items():
-            seen: dict[str, int] = {}
-            for c in codes:
-                if not c:
-                    continue
-                seen[c] = seen.get(c, 0) + 1
-            for c, n in seen.items():
-                if n > 1:
-                    flagged.append(f"{grp}: '{c}' appears {n}x")
-        if flagged:
-            report.add(CheckResult(
-                label="Acrobatic codes appear unique (basic check)",
-                status="warn",
-                detail="; ".join(flagged) + " — verify against catalogue rules (construction/grip/positions)",
-            ))
-            report.recommendations.append(
-                "Compare flagged acrobatics against the no-repeat definitions for their group "
-                "(see appendix3_requirements.json -> no_repeat_acrobatic_definition)."
-            )
-        else:
-            report.add(CheckResult(
-                label="Acrobatic codes appear unique (basic check)",
-                status="pass",
-                detail="No identical acrobatic codes detected within the same group",
-            ))
+        # (5. Identical-code check removed: the per-group no-repeat rules of
+        #  Appendix 7 — check_acro_no_repeat below — already cover it.)
 
     # ---- 6. Family coverage (Free routines, Appendix 6 §29.6.1.8.b) --------
     fc_rule = reqs.get("family_coverage_rule")
@@ -965,15 +933,15 @@ def check_acro_no_repeat(routine: str, declared) -> list[CheckResult]:
         if viols:
             for v in viols:
                 results.append(CheckResult(
-                    label=f"Pair Acro no-repeat: {v.code_a}",
+                    label=f"Pair acrobatics: same code repeated — {v.code_a}",
                     status="fail",
                     detail=v.detail,
                 ))
         else:
             results.append(CheckResult(
-                label="Pair Acro no-repeat",
+                label="Pair acrobatics: no code repeated",
                 status="pass",
-                detail=f"{len(pair_codes)} code(s), all distinct",
+                detail=f"{len(pair_codes)} pair acrobatic(s), all different codes",
             ))
 
     # Team Acros (and Open Acrobatic) — both follow the per-group rules
@@ -983,13 +951,13 @@ def check_acro_no_repeat(routine: str, declared) -> list[CheckResult]:
         if viols:
             for v in viols:
                 results.append(CheckResult(
-                    label=f"Acro no-repeat (Group {v.group})",
+                    label=f"Team acrobatics: repetition in group {v.group}",
                     status="fail",
                     detail=f"{v.code_a}  vs  {v.code_b}  ({v.detail})",
                 ))
         else:
             results.append(CheckResult(
-                label="Team/Open Acro no-repeat (per-group rules)",
+                label="Team acrobatics: no-repeat rules of each group (A, B, C, P)",
                 status="pass",
                 detail=f"{len(all_team_like)} acro(s), no per-group repetition detected",
             ))
@@ -1131,10 +1099,13 @@ def check_code_existence(routine: str, declared) -> list[CheckResult]:
 
     if casing_notes:
         results.append(CheckResult(
-            label="Case / 0-O differences vs catalogue",
+            label="Upper/lower case or 0/O differences vs catalogue",
             status="info",
             detail="; ".join(casing_notes)
-                   + "  - accepted as matches; fix on the card to match the "
-                     "catalogue spelling exactly.",
+                   + "  — accepted as matches. This is often the app misreading the card "
+                     "(photo or scan), not an error on the card: compare with the card. If the "
+                     "card is right, go back (\u2190 Edit elements), correct the code by hand and run "
+                     "the analysis again. If the card itself is written that way, it should match "
+                     "the catalogue spelling exactly.",
         ))
     return results
