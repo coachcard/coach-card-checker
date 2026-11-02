@@ -1,0 +1,3425 @@
+{
+  "_source": "Excel list of team acro codes.xlsx",
+  "_count": 550,
+  "components_by_group": {
+    "A": {
+      "Construction": [
+        {
+          "code": "Thr",
+          "description": "Simple throw/jump",
+          "DD": 0.6
+        },
+        {
+          "code": "Shou",
+          "description": "Shoulders or arms or combination",
+          "DD": 0.9
+        },
+        {
+          "code": "Feet",
+          "description": "Feet",
+          "DD": 1
+        },
+        {
+          "code": "Sq",
+          "description": "Square",
+          "DD": 1.2
+        },
+        {
+          "code": "2Sup",
+          "description": "2 Sup. head-up",
+          "DD": 1
+        },
+        {
+          "code": "2SupH",
+          "description": "2 Sup. (at least 1 head down)",
+          "DD": 1.1
+        }
+      ],
+      "Direction": [
+        {
+          "code": "Up",
+          "description": "Upwards",
+          "DD": 0.05
+        },
+        {
+          "code": "Forw",
+          "description": "Forwards",
+          "DD": 0.05
+        },
+        {
+          "code": "Back",
+          "description": "Backwards",
+          "DD": 0.1
+        },
+        {
+          "code": "Side",
+          "description": "Sideways",
+          "DD": 0.2
+        },
+        {
+          "code": "Rev",
+          "description": "Reverse",
+          "DD": 0.4
+        }
+      ],
+      "Position1": [
+        {
+          "code": "tk",
+          "description": "Tuck",
+          "DD": 0.125
+        },
+        {
+          "code": "pk",
+          "description": "Pike",
+          "DD": 0.2
+        },
+        {
+          "code": "kt",
+          "description": "Kite",
+          "DD": 0.05
+        },
+        {
+          "code": "ln",
+          "description": "Line / Arch",
+          "DD": 0.1
+        },
+        {
+          "code": "sp",
+          "description": "Split",
+          "DD": 0.25
+        },
+        {
+          "code": "ja",
+          "description": "Jay",
+          "DD": 0.175
+        },
+        {
+          "code": "rg",
+          "description": "Ring",
+          "DD": 0.3
+        }
+      ],
+      "Position2": [
+        {
+          "code": "2tk",
+          "description": "Tuck",
+          "DD": 0.0625
+        },
+        {
+          "code": "2pk",
+          "description": "Pike",
+          "DD": 0.1
+        },
+        {
+          "code": "2kt",
+          "description": "Kite",
+          "DD": 0.025
+        },
+        {
+          "code": "2ln",
+          "description": "Line / Arch",
+          "DD": 0.05
+        },
+        {
+          "code": "2sp",
+          "description": "Split",
+          "DD": 0.125
+        },
+        {
+          "code": "2ja",
+          "description": "Jay",
+          "DD": 0.087
+        },
+        {
+          "code": "2rg",
+          "description": "Ring",
+          "DD": 0.15
+        }
+      ],
+      "Rotation Plane": [
+        {
+          "code": "t0.5",
+          "description": "1/2 twist",
+          "DD": 0.025
+        },
+        {
+          "code": "t1",
+          "description": "1 twist",
+          "DD": 0.05
+        },
+        {
+          "code": "t1.5",
+          "description": "1.5 twist",
+          "DD": 0.1
+        },
+        {
+          "code": "t2",
+          "description": "2 twists",
+          "DD": 0.2
+        },
+        {
+          "code": "t2.5",
+          "description": "2.5 twists",
+          "DD": 0.25
+        },
+        {
+          "code": "t3",
+          "description": "3 twists",
+          "DD": 0.35
+        },
+        {
+          "code": "f1",
+          "description": "1 side som.",
+          "DD": 0.4
+        },
+        {
+          "code": "f1.5",
+          "description": "1.5 side som.",
+          "DD": 0.7
+        },
+        {
+          "code": "f2",
+          "description": "2 side som.",
+          "DD": 1.1
+        },
+        {
+          "code": "D",
+          "description": "1/2 som.",
+          "DD": 0.075
+        },
+        {
+          "code": "dt0.5",
+          "description": "dive + 1/2 twist",
+          "DD": 0.1
+        },
+        {
+          "code": "dt1",
+          "description": "dive + 1 twist",
+          "DD": 0.15
+        },
+        {
+          "code": "dt1.5",
+          "description": "dive + 1.5 twist",
+          "DD": 0.25
+        },
+        {
+          "code": "dt2",
+          "description": "dive + 2 twists",
+          "DD": 0.3
+        },
+        {
+          "code": "s1",
+          "description": "1 som.",
+          "DD": 0.3
+        },
+        {
+          "code": "s1f",
+          "description": "1 som. + forw.",
+          "DD": 0.4
+        },
+        {
+          "code": "ss1",
+          "description": "straight 1 som.",
+          "DD": 0.5
+        },
+        {
+          "code": "ss1f",
+          "description": "straight 1 som. + forw.",
+          "DD": 0.6
+        },
+        {
+          "code": "s1t0.5",
+          "description": "1 som. + 1/2 twist",
+          "DD": 0.45
+        },
+        {
+          "code": "s1t0.5f",
+          "description": "1 som. + 1/2 twist + forw.",
+          "DD": 0.55
+        },
+        {
+          "code": "s1t1",
+          "description": "1 som. + 1 twist",
+          "DD": 0.5
+        },
+        {
+          "code": "s1t1f",
+          "description": "1 som. + 1 twist + forw.",
+          "DD": 0.6
+        },
+        {
+          "code": "s1t1.5",
+          "description": "1 som. + 1.5 twist",
+          "DD": 0.55
+        },
+        {
+          "code": "s1t2",
+          "description": "1 som. + 2 twists",
+          "DD": 0.7
+        },
+        {
+          "code": "ss1t0.5",
+          "description": "1 straight som. + 1/2 twist",
+          "DD": 0.6
+        },
+        {
+          "code": "ss1t0.5f",
+          "description": "1 straight som. +0.5 twist + forw.",
+          "DD": 0.7
+        },
+        {
+          "code": "ss1t1",
+          "description": "1 straight som. + 1 twist",
+          "DD": 0.625
+        },
+        {
+          "code": "ss1t1f",
+          "description": "1 straight som. +1 twist + forw.",
+          "DD": 0.75
+        },
+        {
+          "code": "ss1t1.5",
+          "description": "1 straight som. + 1.5 twist",
+          "DD": 0.9
+        },
+        {
+          "code": "ss1t2",
+          "description": "1 straight som. + 2 twists",
+          "DD": 1.1
+        },
+        {
+          "code": "ss1t2.5",
+          "description": "1 straight som. + 2.5 twists",
+          "DD": 1.25
+        },
+        {
+          "code": "ss1t3",
+          "description": "1 straight som. + 3 twists",
+          "DD": 1.5
+        },
+        {
+          "code": "s1.5",
+          "description": "1.5 som.",
+          "DD": 0.65
+        },
+        {
+          "code": "s1.5f",
+          "description": "1.5 som. forw.",
+          "DD": 0.75
+        },
+        {
+          "code": "s1.5o",
+          "description": "1.5 som. + open",
+          "DD": 1
+        },
+        {
+          "code": "s1.5fo",
+          "description": "1.5 som. + forw.+ open",
+          "DD": 1.1
+        },
+        {
+          "code": "s1.5t0.5",
+          "description": "1.5 som. + 1/2 twist",
+          "DD": 0.675
+        },
+        {
+          "code": "s1.5t0.5f",
+          "description": "1.5 som. + 1/2 twist + forw.",
+          "DD": 0.775
+        },
+        {
+          "code": "s1.5t0.5o",
+          "description": "1.5 som. + 1/2 twist + open",
+          "DD": 1.2
+        },
+        {
+          "code": "s1.5t0.5fo",
+          "description": "1.5 som. + 1/2 twist + open+ forw.",
+          "DD": 1.3
+        },
+        {
+          "code": "s1.5t1fo",
+          "description": "1.5 som. + 1 twist + open+forw.",
+          "DD": 1.4
+        },
+        {
+          "code": "s1.5t1",
+          "description": "1.5 som. + 1 twist",
+          "DD": 0.8
+        },
+        {
+          "code": "s1.5t1.5",
+          "description": "1.5 som. + 1.5 twist",
+          "DD": 0.975
+        },
+        {
+          "code": "s2",
+          "description": "2 som.",
+          "DD": 0.9
+        },
+        {
+          "code": "s2o",
+          "description": "2 som. + open",
+          "DD": 1.7
+        },
+        {
+          "code": "s2f",
+          "description": "2 som. + forw.",
+          "DD": 1.1
+        },
+        {
+          "code": "s2fo",
+          "description": "2 som. + forw. + open",
+          "DD": 1.8
+        },
+        {
+          "code": "s2t0.5",
+          "description": "2 som. + 1/2 twist",
+          "DD": 1.2
+        },
+        {
+          "code": "s2t0.5f",
+          "description": "2 som. +1/2 twist + forw.",
+          "DD": 1.3
+        },
+        {
+          "code": "s2t0.5o",
+          "description": "2 som. + 1/2 twist + open",
+          "DD": 1.75
+        },
+        {
+          "code": "s2t0.5fo",
+          "description": "2 som. +1/2 twist+ open+ forw.",
+          "DD": 1.85
+        },
+        {
+          "code": "s2t1",
+          "description": "2 som. + 1 twist",
+          "DD": 1.6
+        },
+        {
+          "code": "s2t1o",
+          "description": "2 som. + 1 twist + open",
+          "DD": 2.1
+        },
+        {
+          "code": "s2t1fo",
+          "description": "2 som. + 1 twist + open + forw.",
+          "DD": 2.2
+        },
+        {
+          "code": "s2.5",
+          "description": "2.5 som.",
+          "DD": 1.2
+        },
+        {
+          "code": "s2.5f",
+          "description": "2.5 som. + forw.",
+          "DD": 1.3
+        },
+        {
+          "code": "s3",
+          "description": "3 som.",
+          "DD": 2
+        },
+        {
+          "code": "ss1.5",
+          "description": "1.5 straight som.",
+          "DD": 1.2
+        },
+        {
+          "code": "C",
+          "description": "cartwheel",
+          "DD": 0.1
+        },
+        {
+          "code": "ct0.5",
+          "description": "cartwheel + 1/2 twist",
+          "DD": 0.15
+        },
+        {
+          "code": "ct1",
+          "description": "cartwheel + 1 twist",
+          "DD": 0.175
+        },
+        {
+          "code": "H",
+          "description": "handspring",
+          "DD": 0.1
+        },
+        {
+          "code": "ht0.5",
+          "description": "handspring + 1/2 twist",
+          "DD": 0.15
+        },
+        {
+          "code": "ht1",
+          "description": "handspring + 1 twist",
+          "DD": 0.175
+        },
+        {
+          "code": "hd",
+          "description": "handspring + 1/2 som.",
+          "DD": 0.125
+        },
+        {
+          "code": "hs1",
+          "description": "handspring + 1 som.",
+          "DD": 0.4
+        }
+      ],
+      "Bonus": [
+        {
+          "code": "Dbl",
+          "description": "Double",
+          "DD": 0.2
+        },
+        {
+          "code": "Pos3",
+          "description": "3rd position",
+          "DD": 0.05
+        },
+        {
+          "code": "Grip",
+          "description": "Arm conn. with 2 (F) (begin -> end)",
+          "DD": 0.1
+        },
+        {
+          "code": "Conn",
+          "description": "Conn. of (F) and (S) (can disc.)",
+          "DD": 0.1
+        },
+        {
+          "code": "Catch",
+          "description": "Conn. with 2 (F) in airborne -> end",
+          "DD": 0.15
+        },
+        {
+          "code": "Split",
+          "description": "Jump/throw from split",
+          "DD": 0.2
+        },
+        {
+          "code": "Hula",
+          "description": "Ring/Jay around (S)",
+          "DD": 0.35
+        },
+        {
+          "code": "RetSq",
+          "description": "Return on square construction",
+          "DD": 0.8
+        },
+        {
+          "code": "RetPa",
+          "description": "Return on palms of (S)",
+          "DD": 0.6
+        },
+        {
+          "code": "Feet",
+          "description": "Jump from feet to feet connection",
+          "DD": 0.075
+        },
+        {
+          "code": "ESP-Ret1Pa",
+          "description": "Reserved (P2)",
+          "DD": 1.1
+        },
+        {
+          "code": "USA-RetF",
+          "description": "Reserved (P2)",
+          "DD": 1.0
+        }
+      ]
+    },
+    "B": {
+      "Construction": [
+        {
+          "code": "St",
+          "description": "Stack head up",
+          "DD": 1
+        },
+        {
+          "code": "StH",
+          "description": "Stack head down",
+          "DD": 1.1
+        },
+        {
+          "code": "2SupU",
+          "description": "2 stacks head up",
+          "DD": 1.15
+        },
+        {
+          "code": "2SupD",
+          "description": "2 stacks head down",
+          "DD": 1.4
+        },
+        {
+          "code": "2SupM",
+          "description": "2 stacks (with 1 head down)",
+          "DD": 1.25
+        },
+        {
+          "code": "2SupD2F",
+          "description": "2 stacks head down + 2 (F)",
+          "DD": 1.55
+        },
+        {
+          "code": "L",
+          "description": "Simple lift",
+          "DD": 0.7
+        },
+        {
+          "code": "L2F+",
+          "description": "Lift with 2 (F) connected or more",
+          "DD": 0.8
+        },
+        {
+          "code": "St>",
+          "description": "Transitional stack (with disc. with one (S))",
+          "DD": 1.025
+        },
+        {
+          "code": "LH",
+          "description": "Lift on heads (only heads)",
+          "DD": 1.1
+        },
+        {
+          "code": "Lh2F",
+          "description": "Lift on heads with 2 (F) (only heads)",
+          "DD": 1.2
+        }
+      ],
+      "Connection": [
+        {
+          "code": "1P1P",
+          "description": "1 palm on 1 palm",
+          "DD": 1.3
+        },
+        {
+          "code": "1P1F",
+          "description": "1 palm on 1 foot",
+          "DD": 1.05
+        },
+        {
+          "code": "1PPx",
+          "description": "1 palm on xsmall grip of support",
+          "DD": 1
+        },
+        {
+          "code": "PP",
+          "description": "Palms on Palms",
+          "DD": 0.8
+        },
+        {
+          "code": "FP",
+          "description": "1 foot / 2 feet on palms ((S) can have an xsmall grip or apart)",
+          "DD": 0.7
+        },
+        {
+          "code": "FF",
+          "description": "Feet on feet",
+          "DD": 0.6
+        },
+        {
+          "code": "FF/",
+          "description": "Feet on feet with spotter's/base's help",
+          "DD": 0.275
+        },
+        {
+          "code": "PF",
+          "description": "Palms on feet",
+          "DD": 0.45
+        },
+        {
+          "code": "SiSb",
+          "description": "Lowerback sits on shoulderblades (blind)",
+          "DD": 0.5
+        },
+        {
+          "code": "Bp",
+          "description": "Backpack: Back to back blind connection",
+          "DD": 0.15
+        },
+        {
+          "code": "ShF",
+          "description": "Shoulders on feet",
+          "DD": 0.4
+        },
+        {
+          "code": "E",
+          "description": "Eiffel: Shoulders (F) on palms (S) + palms (S) on shoulders (F)",
+          "DD": 0.375
+        },
+        {
+          "code": "PH/",
+          "description": "1 palm on head + 1 palm on 1 palm",
+          "DD": 0.85
+        },
+        {
+          "code": "LiH",
+          "description": "Lift on heads (only heads)",
+          "DD": 0.45
+        },
+        {
+          "code": "AP",
+          "description": "All body sits/lays on palms",
+          "DD": 0.35
+        },
+        {
+          "code": "SiS",
+          "description": "Sit / lay /hang on shoulders",
+          "DD": 0.1
+        },
+        {
+          "code": "FS",
+          "description": "Feet on shoulders",
+          "DD": 0.025
+        },
+        {
+          "code": "F1S",
+          "description": "1 foot on 1 shoulder",
+          "DD": 0.125
+        },
+        {
+          "code": "Le",
+          "description": "Lemur: (F) lays/sits/hangs/stands or is in a head-down on 2 (S) with at least 1 head up",
+          "DD": 0.15
+        },
+        {
+          "code": "Tow",
+          "description": "Tower: (F) sits/lays/stands or hangs on 2 supports head down",
+          "DD": 0.25
+        },
+        {
+          "code": "Li",
+          "description": "Simple lift: base swimmers hold (F)",
+          "DD": 0.075
+        },
+        {
+          "code": "Ch",
+          "description": "Chameleon: 2 (S) with 1 head down. (F) connects with 1(S) by stomach and connects with 2nd (S) with arms, legs/feet",
+          "DD": 0.3
+        },
+        {
+          "code": "Tw",
+          "description": "Twins: (F) holds stomach (S) + (S) holds pelvis (F) OR another variant",
+          "DD": 0.1
+        },
+        {
+          "code": "LayF",
+          "description": "Lay/hang on feet",
+          "DD": 0.175
+        },
+        {
+          "code": "SiF",
+          "description": "Sit on feet or 1 foot",
+          "DD": 0.2
+        },
+        {
+          "code": "1FH+1FP",
+          "description": "2 (S) head-up (1 foot on head of 1 (S) + 1 foot on palms of 2nd (S))",
+          "DD": 0.55
+        },
+        {
+          "code": "S+",
+          "description": "Sit/lay/hang on St or StH with spotter/s",
+          "DD": 0.05
+        },
+        {
+          "code": "1F1P",
+          "description": "1 foot on 1 palm",
+          "DD": 1.25
+        },
+        {
+          "code": "1F1F",
+          "description": "1 foot on 1 foot",
+          "DD": 1.1
+        },
+        {
+          "code": "1PH",
+          "description": "1 palm on head",
+          "DD": 1.4
+        },
+        {
+          "code": "PP2",
+          "description": "Palms to palms on 2SupU",
+          "DD": 0.65
+        },
+        {
+          "code": "2pH",
+          "description": "Palm(s) on head (transitionnal stack only)",
+          "DD": 0.775
+        },
+        {
+          "code": "H1F/",
+          "description": "Head on 1 foot + hands connected to legs",
+          "DD": 0.95
+        },
+        {
+          "code": "HT+",
+          "description": "Head on 2 feet + holding legs",
+          "DD": 0.75
+        },
+        {
+          "code": "FRA+ESP-1FH/",
+          "description": "1 foot (F) on head (S); hand(s) (S) may connect to leg (F). Not for 12U/Youth (else BM).",
+          "DD": 0.75
+        },
+        {
+          "code": "ESP-1PH/ + H1P/",
+          "description": "1 palm (F) on head (S) + head (F) on 1 palm (S) + extra connection with other hands.",
+          "DD": 0.725
+        },
+        {
+          "code": "ESP-1FH/+ S1P/",
+          "description": "1 foot (F) on head (S) + shoulder (F) on 1 palm (S) + extra connection; may have spotter(s).",
+          "DD": 0.6
+        }
+      ],
+      "Position1": [
+        {
+          "code": "he",
+          "description": "Heron",
+          "DD": 0.125
+        },
+        {
+          "code": "vs",
+          "description": "Vertical split (both legs straight)",
+          "DD": 0.3
+        },
+        {
+          "code": "gl",
+          "description": "Glass (opposite or both arms capt.)",
+          "DD": 0.4
+        },
+        {
+          "code": "ba",
+          "description": "Ballerina",
+          "DD": 0.15
+        },
+        {
+          "code": "sa",
+          "description": "Sail (must have hand capt.)",
+          "DD": 0.325
+        },
+        {
+          "code": "ne",
+          "description": "Needle (both legs straight)",
+          "DD": 0.425
+        },
+        {
+          "code": "ey",
+          "description": "Eye (blind capt. both hands or opposite arm)",
+          "DD": 0.5
+        },
+        {
+          "code": "sd",
+          "description": "Stand",
+          "DD": 0.05
+        },
+        {
+          "code": "mo",
+          "description": "Monkey",
+          "DD": 0.075
+        },
+        {
+          "code": "pp",
+          "description": "Porcupine",
+          "DD": 0.1
+        },
+        {
+          "code": "ct",
+          "description": "Cat",
+          "DD": 0.025
+        },
+        {
+          "code": "sh",
+          "description": "Shrimp (legs straight)",
+          "DD": 0.175
+        },
+        {
+          "code": "hp",
+          "description": "Harp (blind capt. both arms or opposite)",
+          "DD": 0.45
+        },
+        {
+          "code": "fl",
+          "description": "Flamingo",
+          "DD": 0.225
+        },
+        {
+          "code": "tu",
+          "description": "Turtle (blind capt. 2 hands + 2 legs)",
+          "DD": 0.375
+        },
+        {
+          "code": "co",
+          "description": "Cobra",
+          "DD": 0.15
+        },
+        {
+          "code": "spl",
+          "description": "Split",
+          "DD": 0.28
+        },
+        {
+          "code": "so",
+          "description": "Scorpio",
+          "DD": 0.275
+        },
+        {
+          "code": "pi",
+          "description": "Pin (blind opposite or both arms capt.)",
+          "DD": 0.6
+        },
+        {
+          "code": "bb",
+          "description": "Bamboo",
+          "DD": 0.15
+        },
+        {
+          "code": "bo",
+          "description": "Box",
+          "DD": 0.2
+        },
+        {
+          "code": "ff",
+          "description": "Firefly",
+          "DD": 0.275
+        },
+        {
+          "code": "wi",
+          "description": "Willow",
+          "DD": 0.25
+        },
+        {
+          "code": "br",
+          "description": "Bridge",
+          "DD": 0.325
+        },
+        {
+          "code": "ow",
+          "description": "Owl",
+          "DD": 0.3
+        },
+        {
+          "code": "ma",
+          "description": "Marlin",
+          "DD": 0.35
+        },
+        {
+          "code": "dr",
+          "description": "Drop (blind capt. with 2 arms)",
+          "DD": 0.8
+        },
+        {
+          "code": "qu",
+          "description": "Queen (blind capt. with opposite or both arms)",
+          "DD": 0.7
+        },
+        {
+          "code": "sn",
+          "description": "Snail",
+          "DD": 0.475
+        }
+      ],
+      "Position2": [
+        {
+          "code": "2he",
+          "description": "Heron",
+          "DD": 0.062
+        },
+        {
+          "code": "2vs",
+          "description": "Vertical split (both legs straight)",
+          "DD": 0.1
+        },
+        {
+          "code": "2gl",
+          "description": "Glass (opposite or both arms capt.)",
+          "DD": 0.2
+        },
+        {
+          "code": "2ba",
+          "description": "Ballerina",
+          "DD": 0.075
+        },
+        {
+          "code": "2sa",
+          "description": "Sail (must have hand capt.)",
+          "DD": 0.162
+        },
+        {
+          "code": "2ne",
+          "description": "Needle (both legs straight)",
+          "DD": 0.212
+        },
+        {
+          "code": "2ey",
+          "description": "Eye (blind capt. both hands or opposite arm)",
+          "DD": 0.25
+        },
+        {
+          "code": "2sd",
+          "description": "Stand",
+          "DD": 0.025
+        },
+        {
+          "code": "2mo",
+          "description": "Monkey",
+          "DD": 0.037
+        },
+        {
+          "code": "2pp",
+          "description": "Porcupine",
+          "DD": 0.05
+        },
+        {
+          "code": "2ct",
+          "description": "Cat",
+          "DD": 0.012
+        },
+        {
+          "code": "2sh",
+          "description": "Shrimp (legs straight)",
+          "DD": 0.087
+        },
+        {
+          "code": "2hp",
+          "description": "Harp (blind capt. both arms or opposite)",
+          "DD": 0.225
+        },
+        {
+          "code": "2fl",
+          "description": "Flamingo",
+          "DD": 0.112
+        },
+        {
+          "code": "2tu",
+          "description": "Turtle (blind capt. 2 hands + 2 legs)",
+          "DD": 0.187
+        },
+        {
+          "code": "2co",
+          "description": "Cobra",
+          "DD": 0.075
+        },
+        {
+          "code": "2spl",
+          "description": "Split",
+          "DD": 0.14
+        },
+        {
+          "code": "2so",
+          "description": "Scorpio",
+          "DD": 0.137
+        },
+        {
+          "code": "2pi",
+          "description": "Pin (blind opposite or both arms capt.)",
+          "DD": 0.3
+        },
+        {
+          "code": "2bb",
+          "description": "Bamboo",
+          "DD": 0.075
+        },
+        {
+          "code": "2bo",
+          "description": "Box",
+          "DD": 0.1
+        },
+        {
+          "code": "2ff",
+          "description": "Firefly",
+          "DD": 0.137
+        },
+        {
+          "code": "2wi",
+          "description": "Willow",
+          "DD": 0.125
+        },
+        {
+          "code": "2br",
+          "description": "Bridge",
+          "DD": 0.162
+        },
+        {
+          "code": "2ow",
+          "description": "Owl",
+          "DD": 0.175
+        },
+        {
+          "code": "2ma",
+          "description": "Marlin",
+          "DD": 0.175
+        },
+        {
+          "code": "2dr",
+          "description": "Drop (blind capt. with 2 arms)",
+          "DD": 0.4
+        },
+        {
+          "code": "2qu",
+          "description": "Queen (blind capt. with opposite or both arms)",
+          "DD": 0.35
+        },
+        {
+          "code": "2sn",
+          "description": "Snail",
+          "DD": 0.238
+        }
+      ],
+      "Rotation Base": [
+        {
+          "code": "r0.5/",
+          "description": "Standing on 2 feet on shoulders of a stack 1/2 rotation",
+          "DD": 0.05
+        },
+        {
+          "code": "r1/",
+          "description": "Standing on 2 feet on shoulders of a stack 1 rotation",
+          "DD": 0.1
+        },
+        {
+          "code": "r1.5/",
+          "description": "Standing on 2 feet on shoulders of a stack 1.5 rotation",
+          "DD": 0.15
+        },
+        {
+          "code": "r0.5",
+          "description": "(S) Head-up, (F) Head-up or Head down + 0.5 rotation",
+          "DD": 0.1
+        },
+        {
+          "code": "r1",
+          "description": "(S) Head-up, (F) Head-up or Head down + 1 rotation",
+          "DD": 0.2
+        },
+        {
+          "code": "r1.5",
+          "description": "(S) Head-up, (F) Head-up or Head down + 1.5 rotation",
+          "DD": 0.3
+        },
+        {
+          "code": "r0.5+",
+          "description": "Standing on 1 foot of a stack +leg at 135 or more throughout the entire 1/2 rotation",
+          "DD": 0.125
+        },
+        {
+          "code": "r1+",
+          "description": "Standing on 1 foot of a stack +leg at 135 or more throughout the entire 1 rotation",
+          "DD": 0.225
+        },
+        {
+          "code": "r1.5+",
+          "description": "Standing on 1 foot of a stack +leg at 135 or more throughout the entire 1.5 rotation",
+          "DD": 0.325
+        },
+        {
+          "code": "r2+",
+          "description": "Standing on 1 foot of a stack +leg at 135 or more throughout the entire 2 rotations",
+          "DD": 0.425
+        },
+        {
+          "code": "r0.5!",
+          "description": "1/2 stack rotation with (S) head down OR (F) in handstand",
+          "DD": 0.15
+        },
+        {
+          "code": "r1!",
+          "description": "1 stack rotation with (S) head down OR (F) in handstand",
+          "DD": 0.25
+        },
+        {
+          "code": "r1.5!",
+          "description": "1.5 stack rotation with (S) head down OR (F) in handstand",
+          "DD": 0.35
+        },
+        {
+          "code": "r2!",
+          "description": "2 stack rotation with (S) head down OR (F) in handstand",
+          "DD": 0.45
+        },
+        {
+          "code": "r/L",
+          "description": "1/4 rotation for lift",
+          "DD": 0.4
+        },
+        {
+          "code": "r0.5L",
+          "description": "1/2 rotation for lift",
+          "DD": 0.5
+        },
+        {
+          "code": "r1L",
+          "description": "1 rotation for lift",
+          "DD": 0.8
+        },
+        {
+          "code": "USA-r1.5L+",
+          "description": "Reserved (P2)",
+          "DD": 1.0
+        }
+      ],
+      "Bonus": [
+        {
+          "code": "Dbl",
+          "description": "Double",
+          "DD": 0.2
+        },
+        {
+          "code": "Pos3",
+          "description": "3rd position",
+          "DD": 0.05
+        },
+        {
+          "code": "Twirl",
+          "description": "180+ twirl of (F) on static Support",
+          "DD": 0.1
+        },
+        {
+          "code": "RotF",
+          "description": "(F) rotation on feet of (S) in horizontal plane (180 +)",
+          "DD": 0.2
+        },
+        {
+          "code": "SdUp",
+          "description": "Lifting torso from head down pos.",
+          "DD": 0.1
+        },
+        {
+          "code": "Wave",
+          "description": "Wave movements",
+          "DD": 0.1
+        },
+        {
+          "code": "Moon",
+          "description": "Lifting up from split and change legs to split",
+          "DD": 0.275
+        },
+        {
+          "code": "Mov",
+          "description": "Moving base lift",
+          "DD": 0.7
+        },
+        {
+          "code": "Hold",
+          "description": "Long holding lift (3s +)",
+          "DD": 0.5
+        },
+        {
+          "code": "NAB-ChangeL",
+          "description": "Lifts only: change Lift construction (L, LH, Lh2F, L2F+) without submerging. Not with Moon/Mov/Hold.",
+          "DD": 0.35
+        },
+        {
+          "code": "ESP-Spiral",
+          "description": "Ending action: LH → handstand on 2 palms/heads; base+F turn ≥180° while submerging before F's waist.",
+          "DD": 0.3
+        },
+        {
+          "code": "CHN-Switch",
+          "description": "Reserved (P2)",
+          "DD": 0.3
+        },
+        {
+          "code": "CHN-Bloom",
+          "description": "Reserved (P2)",
+          "DD": 0.9
+        },
+        {
+          "code": "JPN-ESP-USA-Mov!",
+          "description": "Reserved (P2)",
+          "DD": 0.2
+        }
+      ]
+    },
+    "C": {
+      "Construction": [
+        {
+          "code": "Thr>St",
+          "description": "Transit/jump onto/through stack",
+          "DD": 1.125
+        },
+        {
+          "code": "Thr>StH",
+          "description": "Transit/jump onto/through stack head down",
+          "DD": 1.2
+        },
+        {
+          "code": "Thr>Pair>",
+          "description": "Transit/jump through 2 pair + (F)",
+          "DD": 0.675
+        },
+        {
+          "code": "Thr>FF",
+          "description": "Transit/jump onto/through 2+ floats",
+          "DD": 1
+        },
+        {
+          "code": "Thr>F",
+          "description": "Transit/jump onto/through one float",
+          "DD": 0.875
+        },
+        {
+          "code": "Thr^Lh",
+          "description": "Fly above lift on heads (heads only)",
+          "DD": 1.575
+        },
+        {
+          "code": "Thr^2F",
+          "description": "Fly above 2nd formation",
+          "DD": 1.225
+        },
+        {
+          "code": "L+spot",
+          "description": "Lift with spotter/s",
+          "DD": 0.775
+        },
+        {
+          "code": "Thr>hand",
+          "description": "Transit/jump onto/through formation made of hands/arms",
+          "DD": 0.8
+        },
+        {
+          "code": "Thr+Thr",
+          "description": "2 jumps from 2 throws (2 (F) connected)",
+          "DD": 1.25
+        },
+        {
+          "code": "Sn",
+          "description": "Snake ((S) and (S) connected + dive)",
+          "DD": 1.175
+        },
+        {
+          "code": "Thr>head>",
+          "description": "Transit through 1,2 or 3 heads",
+          "DD": 1.075
+        },
+        {
+          "code": "2Sup+",
+          "description": "2 mini Sup. stacks head up (with disconnect of (F) with 1 (S))",
+          "DD": 1.05
+        },
+        {
+          "code": "Thr>Sq",
+          "description": "Transit/jump onto/through small square",
+          "DD": 1.15
+        },
+        {
+          "code": "Thr>St2",
+          "description": "Transit/jump onto/through 2 stacks",
+          "DD": 1.2
+        },
+        {
+          "code": "Thr>StH>1F",
+          "description": "Jump/step 1 foot/1 foot + step on 1 foot/1 foot (3rd formation)",
+          "DD": 1.3
+        }
+      ],
+      "Direction": [
+        {
+          "code": "Up",
+          "description": "Upwards",
+          "DD": 0.05
+        },
+        {
+          "code": "Forw",
+          "description": "Forwards",
+          "DD": 0.05
+        },
+        {
+          "code": "Back",
+          "description": "Backwards",
+          "DD": 0.1
+        },
+        {
+          "code": "Side",
+          "description": "Sideways",
+          "DD": 0.2
+        },
+        {
+          "code": "Rev",
+          "description": "Reverse",
+          "DD": 0.4
+        },
+        {
+          "code": "Bln",
+          "description": "Blind back jump",
+          "DD": 0.2
+        }
+      ],
+      "Position1": [
+        {
+          "code": "tk",
+          "description": "Tuck",
+          "DD": 0.125
+        },
+        {
+          "code": "pk",
+          "description": "Pike",
+          "DD": 0.2
+        },
+        {
+          "code": "kt",
+          "description": "Kite",
+          "DD": 0.05
+        },
+        {
+          "code": "ln",
+          "description": "Line / Arch",
+          "DD": 0.1
+        },
+        {
+          "code": "sp",
+          "description": "Split",
+          "DD": 0.25
+        },
+        {
+          "code": "ja",
+          "description": "Jay",
+          "DD": 0.175
+        },
+        {
+          "code": "rg",
+          "description": "Ring",
+          "DD": 0.3
+        },
+        {
+          "code": "he",
+          "description": "Heron",
+          "DD": 0.125
+        },
+        {
+          "code": "vs",
+          "description": "Vertical split (both legs straight)",
+          "DD": 0.3
+        },
+        {
+          "code": "gl",
+          "description": "Glass (opposite or both arms capt.)",
+          "DD": 0.4
+        },
+        {
+          "code": "ba",
+          "description": "Ballerina",
+          "DD": 0.15
+        },
+        {
+          "code": "sa",
+          "description": "Sail (must have hand capt.)",
+          "DD": 0.325
+        },
+        {
+          "code": "ne",
+          "description": "Needle (both legs straight)",
+          "DD": 0.425
+        },
+        {
+          "code": "ey",
+          "description": "Eye (blind capt. both hands or opposite arm)",
+          "DD": 0.5
+        },
+        {
+          "code": "sd",
+          "description": "Stand",
+          "DD": 0.05
+        },
+        {
+          "code": "mo",
+          "description": "Monkey",
+          "DD": 0.075
+        },
+        {
+          "code": "pp",
+          "description": "Porcupine",
+          "DD": 0.1
+        },
+        {
+          "code": "ct",
+          "description": "Cat",
+          "DD": 0.025
+        },
+        {
+          "code": "sh",
+          "description": "Shrimp (legs straight)",
+          "DD": 0.175
+        },
+        {
+          "code": "hp",
+          "description": "Harp (blind capt. both arms or opposite)",
+          "DD": 0.45
+        },
+        {
+          "code": "fl",
+          "description": "Flamingo",
+          "DD": 0.225
+        },
+        {
+          "code": "tu",
+          "description": "Turtle (blind capt. 2 hands + 2 legs)",
+          "DD": 0.375
+        },
+        {
+          "code": "co",
+          "description": "Cobra",
+          "DD": 0.15
+        },
+        {
+          "code": "spl",
+          "description": "Split",
+          "DD": 0.28
+        },
+        {
+          "code": "so",
+          "description": "Scorpio",
+          "DD": 0.275
+        },
+        {
+          "code": "pi",
+          "description": "Pin (blind opposite or both arms capt.)",
+          "DD": 0.6
+        },
+        {
+          "code": "bb",
+          "description": "Bamboo",
+          "DD": 0.15
+        },
+        {
+          "code": "bo",
+          "description": "Box",
+          "DD": 0.2
+        },
+        {
+          "code": "ff",
+          "description": "Firefly",
+          "DD": 0.275
+        },
+        {
+          "code": "wi",
+          "description": "Willow",
+          "DD": 0.25
+        },
+        {
+          "code": "br",
+          "description": "Bridge",
+          "DD": 0.325
+        },
+        {
+          "code": "ow",
+          "description": "Owl",
+          "DD": 0.3
+        },
+        {
+          "code": "ma",
+          "description": "Marlin",
+          "DD": 0.35
+        },
+        {
+          "code": "dr",
+          "description": "Drop (blind capt. with 2 arms)",
+          "DD": 0.8
+        },
+        {
+          "code": "qu",
+          "description": "Queen (blind capt. with opposite or both arms)",
+          "DD": 0.7
+        },
+        {
+          "code": "sn",
+          "description": "Snail",
+          "DD": 0.475
+        }
+      ],
+      "Position2": [
+        {
+          "code": "2tk",
+          "description": "Tuck",
+          "DD": 0.0625
+        },
+        {
+          "code": "2pk",
+          "description": "Pike",
+          "DD": 0.1
+        },
+        {
+          "code": "2kt",
+          "description": "Kite",
+          "DD": 0.025
+        },
+        {
+          "code": "2ln",
+          "description": "Line / Arch",
+          "DD": 0.05
+        },
+        {
+          "code": "2sp",
+          "description": "Split",
+          "DD": 0.125
+        },
+        {
+          "code": "2ja",
+          "description": "Jay",
+          "DD": 0.087
+        },
+        {
+          "code": "2rg",
+          "description": "Ring",
+          "DD": 0.15
+        },
+        {
+          "code": "2he",
+          "description": "Heron",
+          "DD": 0.062
+        },
+        {
+          "code": "2vs",
+          "description": "Vertical split (both legs straight)",
+          "DD": 0.1
+        },
+        {
+          "code": "2gl",
+          "description": "Glass (opposite or both arms capt.)",
+          "DD": 0.2
+        },
+        {
+          "code": "2ba",
+          "description": "Ballerina",
+          "DD": 0.075
+        },
+        {
+          "code": "2sa",
+          "description": "Sail (must have hand capt.)",
+          "DD": 0.162
+        },
+        {
+          "code": "2ne",
+          "description": "Needle (both legs straight)",
+          "DD": 0.212
+        },
+        {
+          "code": "2ey",
+          "description": "Eye (blind capt. both hands or opposite arm)",
+          "DD": 0.25
+        },
+        {
+          "code": "2sd",
+          "description": "Stand",
+          "DD": 0.025
+        },
+        {
+          "code": "2mo",
+          "description": "Monkey",
+          "DD": 0.037
+        },
+        {
+          "code": "2pp",
+          "description": "Porcupine",
+          "DD": 0.05
+        },
+        {
+          "code": "2ct",
+          "description": "Cat",
+          "DD": 0.012
+        },
+        {
+          "code": "2sh",
+          "description": "Shrimp (legs straight)",
+          "DD": 0.087
+        },
+        {
+          "code": "2hp",
+          "description": "Harp (blind capt. both arms or opposite)",
+          "DD": 0.225
+        },
+        {
+          "code": "2fl",
+          "description": "Flamingo",
+          "DD": 0.112
+        },
+        {
+          "code": "2tu",
+          "description": "Turtle (blind capt. 2 hands + 2 legs)",
+          "DD": 0.187
+        },
+        {
+          "code": "2co",
+          "description": "Cobra",
+          "DD": 0.075
+        },
+        {
+          "code": "2spl",
+          "description": "Split",
+          "DD": 0.14
+        },
+        {
+          "code": "2so",
+          "description": "Scorpio",
+          "DD": 0.137
+        },
+        {
+          "code": "2pi",
+          "description": "Pin (blind opposite or both arms capt.)",
+          "DD": 0.3
+        },
+        {
+          "code": "2bb",
+          "description": "Bamboo",
+          "DD": 0.075
+        },
+        {
+          "code": "2bo",
+          "description": "Box",
+          "DD": 0.1
+        },
+        {
+          "code": "2ff",
+          "description": "Firefly",
+          "DD": 0.137
+        },
+        {
+          "code": "2wi",
+          "description": "Willow",
+          "DD": 0.125
+        },
+        {
+          "code": "2br",
+          "description": "Bridge",
+          "DD": 0.162
+        },
+        {
+          "code": "2ow",
+          "description": "Owl",
+          "DD": 0.175
+        },
+        {
+          "code": "2ma",
+          "description": "Marlin",
+          "DD": 0.175
+        },
+        {
+          "code": "2dr",
+          "description": "Drop (blind capt. with 2 arms)",
+          "DD": 0.4
+        },
+        {
+          "code": "2qu",
+          "description": "Queen (blind capt. with opposite or both arms)",
+          "DD": 0.35
+        },
+        {
+          "code": "2sn",
+          "description": "Snail",
+          "DD": 0.238
+        }
+      ],
+      "Rotation Base": [
+        {
+          "code": "Cr0.5",
+          "description": "1/2 stack rotation where (S) and (F) not in head down",
+          "DD": 0.2
+        },
+        {
+          "code": "Cr1",
+          "description": "1 stack rotation where (S) and (F) not in head down",
+          "DD": 0.3
+        },
+        {
+          "code": "Cr1.5",
+          "description": "1.5 stack rotation where (S) and (F) not in head down",
+          "DD": 0.4
+        },
+        {
+          "code": "Cr0.5!",
+          "description": "1/2 stack rotation where (S) OR (F) is head down",
+          "DD": 0.3
+        },
+        {
+          "code": "Cr1!",
+          "description": "1 stack rotation where (S) OR (F) is head down",
+          "DD": 0.4
+        },
+        {
+          "code": "Cr1.5!",
+          "description": "1.5 stack rotation where (S) OR (F) is head down",
+          "DD": 0.5
+        },
+        {
+          "code": "Cr0.5L",
+          "description": "1/2 rotation for lift on heads",
+          "DD": 0.4
+        },
+        {
+          "code": "CP0.5",
+          "description": "1/2 platform rotation after (F) landing on platform/float",
+          "DD": 0.4
+        },
+        {
+          "code": "2F0.5",
+          "description": "1/2 rotation of the formation being flied over for Thr^2F construction",
+          "DD": 0.25
+        },
+        {
+          "code": "2F1",
+          "description": "1 rotation of the formation being flied over for Thr^2F construction",
+          "DD": 0.35
+        },
+        {
+          "code": "CHN-2F1.5",
+          "description": "Reserved (P2)",
+          "DD": 0.45
+        }
+      ],
+      "Rotation Plane": [
+        {
+          "code": "Ct0.5",
+          "description": "1/2 twist (group C)",
+          "DD": 0.05
+        },
+        {
+          "code": "Ct1",
+          "description": "1 twist (group C)",
+          "DD": 0.1
+        },
+        {
+          "code": "Ct1.5",
+          "description": "1.5 twist (group C)",
+          "DD": 0.2
+        },
+        {
+          "code": "Ct2",
+          "description": "2 twists (group C)",
+          "DD": 0.3
+        },
+        {
+          "code": "Ct2.5",
+          "description": "2.5 twist (group C)",
+          "DD": 0.4
+        },
+        {
+          "code": "Ct3",
+          "description": "3 twists (group C)",
+          "DD": 0.5
+        },
+        {
+          "code": "Cd",
+          "description": "Dive (group C)",
+          "DD": 0.1
+        },
+        {
+          "code": "Cdt0.5",
+          "description": "1/2 twist + dive (group C)",
+          "DD": 0.15
+        },
+        {
+          "code": "Cdt1",
+          "description": "1 twist + dive (group C)",
+          "DD": 0.2
+        },
+        {
+          "code": "Cdt1.5",
+          "description": "1.5 twist + dive (group C)",
+          "DD": 0.3
+        },
+        {
+          "code": "Cs1",
+          "description": "1 som. (group C)",
+          "DD": 0.25
+        },
+        {
+          "code": "Css1",
+          "description": "1 straight som. (group C)",
+          "DD": 0.35
+        },
+        {
+          "code": "Cs1.5",
+          "description": "1.5 som. (group C)",
+          "DD": 0.45
+        },
+        {
+          "code": "Cs1.5o",
+          "description": "1.5 som. + open (group C)",
+          "DD": 0.55
+        },
+        {
+          "code": "Cf1",
+          "description": "1 frontal som. (group C)",
+          "DD": 0.35
+        },
+        {
+          "code": "Cf1.5",
+          "description": "1.5 frontal som. (group C)",
+          "DD": 0.55
+        },
+        {
+          "code": "Cc",
+          "description": "Cartwheel (group C)",
+          "DD": 0.1
+        },
+        {
+          "code": "Cct0.5",
+          "description": "Cartwheel + 1/2 twist (group C)",
+          "DD": 0.15
+        },
+        {
+          "code": "Cct1",
+          "description": "Cartwheel + 1 twist (group C)",
+          "DD": 0.2
+        },
+        {
+          "code": "Ch",
+          "description": "Handspring (group C)",
+          "DD": 0.1
+        },
+        {
+          "code": "Cht0.5",
+          "description": "Handspring + 1/2 twist (group C)",
+          "DD": 0.15
+        },
+        {
+          "code": "Cht1",
+          "description": "Handspring + 1 twist (group C)",
+          "DD": 0.2
+        },
+        {
+          "code": "Cs1t0.5",
+          "description": "1 som. + 1/2 twist (group C)",
+          "DD": 0.3
+        },
+        {
+          "code": "Cs1t1",
+          "description": "1 som. + 1 twist (group C)",
+          "DD": 0.4
+        },
+        {
+          "code": "Cs1t1.5",
+          "description": "1 som. + 1.5 twist (group C)",
+          "DD": 0.5
+        },
+        {
+          "code": "Cs1t2",
+          "description": "1 som. + 2 twists (group C)",
+          "DD": 0.6
+        },
+        {
+          "code": "Css1t0.5",
+          "description": "1 straight som. + 1/2 twist (group C)",
+          "DD": 0.4
+        },
+        {
+          "code": "Css1t1",
+          "description": "1 straight som. + 1 twist (group C)",
+          "DD": 0.5
+        },
+        {
+          "code": "Css1t1.5",
+          "description": "1 straight som. + 1.5 twist (group C)",
+          "DD": 0.6
+        },
+        {
+          "code": "Css1t2",
+          "description": "1 straight som. + 2 twists (group C)",
+          "DD": 0.7
+        },
+        {
+          "code": "Cs1t1o",
+          "description": "1 som.+1 twist+open (group C)",
+          "DD": 0.75
+        },
+        {
+          "code": "Cs1t1.5o",
+          "description": "1 som.+1.5 twist+open (group C)",
+          "DD": 0.9
+        },
+        {
+          "code": "Cs1t2o",
+          "description": "1 som.+2 twist+open (group C)",
+          "DD": 1.05
+        },
+        {
+          "code": "Chs0.5",
+          "description": "Handspring + 0.5 somersault (group C)",
+          "DD": 0.2
+        },
+        {
+          "code": "MEX-Cs2",
+          "description": "2 somersaults in the air (Group C team acrobatic).",
+          "DD": 0.55
+        },
+        {
+          "code": "FRA-Cs1.5t0.5o",
+          "description": "Reserved (P2)",
+          "DD": 0.95
+        },
+        {
+          "code": "JPN-Cs2t0.5",
+          "description": "Reserved (P2)",
+          "DD": 0.8
+        }
+      ],
+      "Bonus": [
+        {
+          "code": "Pos3",
+          "description": "3rd position",
+          "DD": 0.05
+        },
+        {
+          "code": "Dbl",
+          "description": "Double",
+          "DD": 0.3
+        },
+        {
+          "code": "Slip",
+          "description": "(F) slips between Support's. Legs or arms",
+          "DD": 0.175
+        },
+        {
+          "code": "Star",
+          "description": "Blind fall backwards on hand's formation",
+          "DD": 0.1
+        },
+        {
+          "code": "Cx",
+          "description": "Connect 2 (F)",
+          "DD": 0.125
+        },
+        {
+          "code": "Twirl",
+          "description": "Twirl of (F)",
+          "DD": 0.075
+        },
+        {
+          "code": "C-Roll",
+          "description": "Rolling on top of const.",
+          "DD": 0.15
+        },
+        {
+          "code": "Turn",
+          "description": "Push up from split + (F) disconnect from 1 (S) + 1/2 rotation",
+          "DD": 0.25
+        },
+        {
+          "code": "Run",
+          "description": "Running on the back(s)",
+          "DD": 0.2
+        },
+        {
+          "code": "Ju",
+          "description": "Jump onto non-stack",
+          "DD": 0.15
+        },
+        {
+          "code": "1P>H",
+          "description": "Jump 1 hand onto head",
+          "DD": 1.1
+        },
+        {
+          "code": "H>1P",
+          "description": "Jump head onto 1 palm",
+          "DD": 0.9
+        },
+        {
+          "code": "Jump",
+          "description": "Jump onto stack",
+          "DD": 0.275
+        },
+        {
+          "code": "Jump>",
+          "description": "Jump on stack + continue",
+          "DD": 0.225
+        },
+        {
+          "code": "On1Foot",
+          "description": "Jump onto 1 foot with 1 palm",
+          "DD": 0.4
+        },
+        {
+          "code": "1F>1F",
+          "description": "Jump onto 1 foot with 1 foot",
+          "DD": 0.7
+        },
+        {
+          "code": "1F>1F+",
+          "description": "Jump onto 1 foot with 1 foot + step 1 foot 1 foot on 3rd form.",
+          "DD": 1
+        },
+        {
+          "code": "2F>2F",
+          "description": "Jump 2 feet onto 2 feet",
+          "DD": 0.5
+        },
+        {
+          "code": "NAB-1F>1P",
+          "description": "JUMP (F) lands 1 foot on 1 palm (S) in St head-up; balance until (S) submerges. Arm (S) straight.",
+          "DD": 0.6
+        },
+        {
+          "code": "USA-1P>1P",
+          "description": "JUMP from any throw lands 1 palm on 1 palm (S) in St head-up; balance until (S) submerges. Arm in ≤45° cone.",
+          "DD": 0.375
+        }
+      ]
+    },
+    "P": {
+      "Construction": [
+        {
+          "code": "P",
+          "description": "Standard platform with (S) horizontal and straight",
+          "DD": 1
+        },
+        {
+          "code": "Box",
+          "description": "Platform with (S) head-up with torso bent at 90 degrees",
+          "DD": 1.1
+        },
+        {
+          "code": "Knees",
+          "description": "Straight body with bent knees",
+          "DD": 1.05
+        },
+        {
+          "code": "B",
+          "description": "Ballet leg platform",
+          "DD": 1.2
+        },
+        {
+          "code": "DB",
+          "description": "Double ballet leg platform",
+          "DD": 1.3
+        },
+        {
+          "code": "Chariot",
+          "description": "Chariot: (S) on stomach with bent knees or arched",
+          "DD": 1.15
+        },
+        {
+          "code": "2S",
+          "description": "Platform with 2 (S)",
+          "DD": 1.25
+        },
+        {
+          "code": "Flower",
+          "description": "Platform made with formation made with legs with 3 to 8 (S)",
+          "DD": 1
+        },
+        {
+          "code": "Hand",
+          "description": "Platform made with hands/arms",
+          "DD": 0.8
+        },
+        {
+          "code": "FRA-Split",
+          "description": "Reserved (P2)",
+          "DD": 1.25
+        },
+        {
+          "code": "USA-Weasel",
+          "description": "Reserved (P2)",
+          "DD": 1.5
+        },
+        {
+          "code": "USA-4L",
+          "description": "Reserved (P2)",
+          "DD": 1.45
+        }
+      ],
+      "Connection": [
+        {
+          "code": "SiA",
+          "description": "Sits / lays on big area of support",
+          "DD": 0.1
+        },
+        {
+          "code": "F2A",
+          "description": "Stand on big area of support (2 legs)",
+          "DD": 0.2
+        },
+        {
+          "code": "FAb",
+          "description": "Stand on big area of support (2 legs/1 leg) + (F) blind connects with (S).",
+          "DD": 0.2
+        },
+        {
+          "code": "3pA",
+          "description": "3 points of conn. on big area of support (with at least 1 leg)",
+          "DD": 0.15
+        },
+        {
+          "code": "1FA",
+          "description": "Stand on 1 foot on big area of support",
+          "DD": 0.4
+        },
+        {
+          "code": "HA",
+          "description": "Headstand OR head between legs / arms on big area of support",
+          "DD": 0.1
+        },
+        {
+          "code": "SP+K",
+          "description": "Shoulders on palms + knees capt.",
+          "DD": 0.25
+        },
+        {
+          "code": "3pK",
+          "description": "3 points of conn. for bent knees platform",
+          "DD": 0.3
+        },
+        {
+          "code": "3pS",
+          "description": "3 points of conn. on small area",
+          "DD": 0.4
+        },
+        {
+          "code": "3pbA",
+          "description": "3 points of conn. (blind conn.) on big area of support",
+          "DD": 0.45
+        },
+        {
+          "code": "FA+PF",
+          "description": "1 foot on ballet leg body + palm on foot",
+          "DD": 0.25
+        },
+        {
+          "code": "SP+L",
+          "description": "Shoulders on palms + leg/s capture",
+          "DD": 0.375
+        },
+        {
+          "code": "SiF+Pb",
+          "description": "Sit on feet or 1 foot+ blind palms/palms",
+          "DD": 0.35
+        },
+        {
+          "code": "ShF+P",
+          "description": "Shoulders on feet+ connect to palms/palms",
+          "DD": 0.4
+        },
+        {
+          "code": "L/SiF+P",
+          "description": "(F) sits or lays on feet (or foot) + other connection with palms of (S)",
+          "DD": 0.3
+        },
+        {
+          "code": "4p",
+          "description": "4 points of conn.: palms to ankles, ankles to palms",
+          "DD": 0.1
+        },
+        {
+          "code": "2pA/",
+          "description": "Handstand on big area of support + help",
+          "DD": 0.275
+        },
+        {
+          "code": "BA",
+          "description": "Bridge position on big area of support",
+          "DD": 0.3
+        },
+        {
+          "code": "DBB",
+          "description": "Bridge position on DB platform (conn. with palms and feet only)",
+          "DD": 0.5
+        },
+        {
+          "code": "2pK",
+          "description": "2 points of conn. on Knees const.",
+          "DD": 0.2
+        },
+        {
+          "code": ">F1P",
+          "description": "Transit onto 1 foot on 1 or 2 palm(s)",
+          "DD": 0.4
+        },
+        {
+          "code": "2pBb",
+          "description": "2 blind point conn. on 2S construction. Can have extra point of conn. For Queen pos. only",
+          "DD": 0.55
+        },
+        {
+          "code": ">2P2P",
+          "description": "Transit to 2 arm handstand on both palms",
+          "DD": 0.6
+        },
+        {
+          "code": "2b/",
+          "description": "Hanging on 1 or 2 ballet leg of one or 2 (S) + help",
+          "DD": 0.45
+        },
+        {
+          "code": "SF+TP",
+          "description": "Chest on feet +Hips on palms",
+          "DD": 0.25
+        },
+        {
+          "code": "ShiShi+",
+          "description": "Shin to Shin + help",
+          "DD": 0.7
+        },
+        {
+          "code": "HP+L",
+          "description": "Head on palms + extra connect with 1 or 2 leg(s)",
+          "DD": 0.425
+        },
+        {
+          "code": "USA-3pS+",
+          "description": "2S only! Both (S) in Ballet Leg; 3 pts connection (small area): palm(s)-foot + foot-foot.",
+          "DD": 0.4
+        }
+      ],
+      "Position1": [
+        {
+          "code": "he",
+          "description": "Heron",
+          "DD": 0.125
+        },
+        {
+          "code": "vs",
+          "description": "Vertical split (both legs straight)",
+          "DD": 0.3
+        },
+        {
+          "code": "gl",
+          "description": "Glass (opposite or both arms capt.)",
+          "DD": 0.4
+        },
+        {
+          "code": "ba",
+          "description": "Ballerina",
+          "DD": 0.15
+        },
+        {
+          "code": "sa",
+          "description": "Sail (must have hand capt.)",
+          "DD": 0.325
+        },
+        {
+          "code": "ne",
+          "description": "Needle (both legs straight)",
+          "DD": 0.425
+        },
+        {
+          "code": "ey",
+          "description": "Eye (blind capt. both hands or opposite arm)",
+          "DD": 0.5
+        },
+        {
+          "code": "sd",
+          "description": "Stand",
+          "DD": 0.05
+        },
+        {
+          "code": "mo",
+          "description": "Monkey",
+          "DD": 0.075
+        },
+        {
+          "code": "pp",
+          "description": "Porcupine",
+          "DD": 0.1
+        },
+        {
+          "code": "ct",
+          "description": "Cat",
+          "DD": 0.025
+        },
+        {
+          "code": "sh",
+          "description": "Shrimp (legs straight)",
+          "DD": 0.175
+        },
+        {
+          "code": "hp",
+          "description": "Harp (blind capt. both arms or opposite)",
+          "DD": 0.45
+        },
+        {
+          "code": "fl",
+          "description": "Flamingo",
+          "DD": 0.225
+        },
+        {
+          "code": "tu",
+          "description": "Turtle (blind capt. 2 hands + 2 legs)",
+          "DD": 0.375
+        },
+        {
+          "code": "co",
+          "description": "Cobra",
+          "DD": 0.15
+        },
+        {
+          "code": "spl",
+          "description": "Split",
+          "DD": 0.28
+        },
+        {
+          "code": "so",
+          "description": "Scorpio",
+          "DD": 0.275
+        },
+        {
+          "code": "pi",
+          "description": "Pin (blind opposite or both arms capt.)",
+          "DD": 0.6
+        },
+        {
+          "code": "bb",
+          "description": "Bamboo",
+          "DD": 0.15
+        },
+        {
+          "code": "bo",
+          "description": "Box",
+          "DD": 0.2
+        },
+        {
+          "code": "ff",
+          "description": "Firefly",
+          "DD": 0.275
+        },
+        {
+          "code": "wi",
+          "description": "Willow",
+          "DD": 0.25
+        },
+        {
+          "code": "br",
+          "description": "Bridge",
+          "DD": 0.325
+        },
+        {
+          "code": "ow",
+          "description": "Owl",
+          "DD": 0.3
+        },
+        {
+          "code": "ma",
+          "description": "Marlin",
+          "DD": 0.35
+        },
+        {
+          "code": "dr",
+          "description": "Drop (blind capt. with 2 arms)",
+          "DD": 0.8
+        },
+        {
+          "code": "qu",
+          "description": "Queen (blind capt. with opposite or both arms)",
+          "DD": 0.7
+        },
+        {
+          "code": "sn",
+          "description": "Snail",
+          "DD": 0.475
+        }
+      ],
+      "Position2": [
+        {
+          "code": "2he",
+          "description": "Heron",
+          "DD": 0.062
+        },
+        {
+          "code": "2vs",
+          "description": "Vertical split (both legs straight)",
+          "DD": 0.1
+        },
+        {
+          "code": "2gl",
+          "description": "Glass (opposite or both arms capt.)",
+          "DD": 0.2
+        },
+        {
+          "code": "2ba",
+          "description": "Ballerina",
+          "DD": 0.075
+        },
+        {
+          "code": "2sa",
+          "description": "Sail (must have hand capt.)",
+          "DD": 0.162
+        },
+        {
+          "code": "2ne",
+          "description": "Needle (both legs straight)",
+          "DD": 0.212
+        },
+        {
+          "code": "2ey",
+          "description": "Eye (blind capt. both hands or opposite arm)",
+          "DD": 0.25
+        },
+        {
+          "code": "2sd",
+          "description": "Stand",
+          "DD": 0.025
+        },
+        {
+          "code": "2mo",
+          "description": "Monkey",
+          "DD": 0.037
+        },
+        {
+          "code": "2pp",
+          "description": "Porcupine",
+          "DD": 0.05
+        },
+        {
+          "code": "2ct",
+          "description": "Cat",
+          "DD": 0.012
+        },
+        {
+          "code": "2sh",
+          "description": "Shrimp (legs straight)",
+          "DD": 0.087
+        },
+        {
+          "code": "2hp",
+          "description": "Harp (blind capt. both arms or opposite)",
+          "DD": 0.225
+        },
+        {
+          "code": "2fl",
+          "description": "Flamingo",
+          "DD": 0.112
+        },
+        {
+          "code": "2tu",
+          "description": "Turtle (blind capt. 2 hands + 2 legs)",
+          "DD": 0.187
+        },
+        {
+          "code": "2co",
+          "description": "Cobra",
+          "DD": 0.075
+        },
+        {
+          "code": "2spl",
+          "description": "Split",
+          "DD": 0.14
+        },
+        {
+          "code": "2so",
+          "description": "Scorpio",
+          "DD": 0.137
+        },
+        {
+          "code": "2pi",
+          "description": "Pin (blind opposite or both arms capt.)",
+          "DD": 0.3
+        },
+        {
+          "code": "2bb",
+          "description": "Bamboo",
+          "DD": 0.075
+        },
+        {
+          "code": "2bo",
+          "description": "Box",
+          "DD": 0.1
+        },
+        {
+          "code": "2ff",
+          "description": "Firefly",
+          "DD": 0.137
+        },
+        {
+          "code": "2wi",
+          "description": "Willow",
+          "DD": 0.125
+        },
+        {
+          "code": "2br",
+          "description": "Bridge",
+          "DD": 0.162
+        },
+        {
+          "code": "2ow",
+          "description": "Owl",
+          "DD": 0.175
+        },
+        {
+          "code": "2ma",
+          "description": "Marlin",
+          "DD": 0.175
+        },
+        {
+          "code": "2dr",
+          "description": "Drop (blind capt. with 2 arms)",
+          "DD": 0.4
+        },
+        {
+          "code": "2qu",
+          "description": "Queen (blind capt. with opposite or both arms)",
+          "DD": 0.35
+        },
+        {
+          "code": "2sn",
+          "description": "Snail",
+          "DD": 0.238
+        }
+      ],
+      "Rotation Base": [
+        {
+          "code": "Pr",
+          "description": "1/4 rotation on platform (horizontal)",
+          "DD": 0.2
+        },
+        {
+          "code": "Pr0.5",
+          "description": "1/2 rotation on platform (horizontal)",
+          "DD": 0.3
+        },
+        {
+          "code": "Pr1",
+          "description": "1 rotation on platform (horizontal)",
+          "DD": 0.5
+        },
+        {
+          "code": "Pr1.5",
+          "description": "1.5 rotation on platform (horizontal)",
+          "DD": 0.7
+        },
+        {
+          "code": "Ph",
+          "description": "1/4 rotation on hands formation",
+          "DD": 0.1
+        },
+        {
+          "code": "P0.5h",
+          "description": "1/2 rotation on hands formation",
+          "DD": 0.2
+        },
+        {
+          "code": "P1h",
+          "description": "1 rotation on hands formation",
+          "DD": 0.3
+        },
+        {
+          "code": "P1.5h",
+          "description": "1.5 rotation on hands formation",
+          "DD": 0.5
+        },
+        {
+          "code": "P2h",
+          "description": "2 rotation + on hands formation",
+          "DD": 0.7
+        },
+        {
+          "code": "P2S",
+          "description": "1/4 rotation with 2 (S) platform",
+          "DD": 0.3
+        },
+        {
+          "code": "P2Sr0.5",
+          "description": "1/2 rotation with 2 (S) platform",
+          "DD": 0.4
+        },
+        {
+          "code": "P2Sr1",
+          "description": "1 rotation with 2(S) platform",
+          "DD": 0.6
+        },
+        {
+          "code": "PDB",
+          "description": "1/4 rotation with DB const.",
+          "DD": 0.35
+        },
+        {
+          "code": "PDB0.5",
+          "description": "1/2 rotation with DB const.",
+          "DD": 0.45
+        },
+        {
+          "code": "PDB1",
+          "description": "1 rotation with DB const.",
+          "DD": 0.7
+        }
+      ],
+      "Bonus": [
+        {
+          "code": "Dbl",
+          "description": "Double",
+          "DD": 0.3
+        },
+        {
+          "code": "Pos3",
+          "description": "3rd position",
+          "DD": 0.05
+        },
+        {
+          "code": "UP",
+          "description": "Platform lifted up (3+sec)",
+          "DD": 1
+        },
+        {
+          "code": "Porp",
+          "description": "Porpoise action at the beginning",
+          "DD": 0.15
+        },
+        {
+          "code": "Spich",
+          "description": "Spichag action (up and down -> must come back to original position)",
+          "DD": 0.5
+        },
+        {
+          "code": "Trav",
+          "description": "Travelling construction",
+          "DD": 0.2
+        },
+        {
+          "code": "Stand",
+          "description": "(F) moves from head down to head up standing",
+          "DD": 0.1
+        },
+        {
+          "code": "Diva",
+          "description": "Starts in 3pS ->foot to foot of 2 (S)",
+          "DD": 0.3
+        },
+        {
+          "code": "PRoll",
+          "description": "Rolling action",
+          "DD": 0.125
+        },
+        {
+          "code": "Box",
+          "description": "Lifting in a \"Box\" and/or lowering back",
+          "DD": 0.175
+        },
+        {
+          "code": "Spider",
+          "description": "Spider action",
+          "DD": 0.225
+        },
+        {
+          "code": "Climb",
+          "description": "Climb onto from underwater (inside const.)",
+          "DD": 0.1
+        },
+        {
+          "code": "Arch",
+          "description": "Transition to head-up position to Queen or Drop",
+          "DD": 0.4
+        },
+        {
+          "code": "Kozak",
+          "description": "Kozak power press sequence",
+          "DD": 0.6
+        },
+        {
+          "code": "Dive",
+          "description": "Dive or half som.",
+          "DD": 0.05
+        },
+        {
+          "code": "CH",
+          "description": "Cartwheel/Handspring",
+          "DD": 0.1
+        },
+        {
+          "code": "Ps1",
+          "description": "1 som.",
+          "DD": 0.1
+        },
+        {
+          "code": "Ps1t0.5",
+          "description": "1 som.+ 1/2 tw",
+          "DD": 0.15
+        },
+        {
+          "code": "Ps1o",
+          "description": "1 som.+ open",
+          "DD": 0.3
+        },
+        {
+          "code": "Ps1t0.5o",
+          "description": "1 som+1/2 tw+open",
+          "DD": 0.4
+        },
+        {
+          "code": "Ps1t1",
+          "description": "1 som.+ 1 tw",
+          "DD": 0.35
+        },
+        {
+          "code": "Pf1",
+          "description": "1 side som.",
+          "DD": 0.15
+        },
+        {
+          "code": "Pf1o",
+          "description": "1 side som. +open",
+          "DD": 0.325
+        },
+        {
+          "code": "Mov",
+          "description": "Moves to stand on 1 or 2 spotter/base's head(s)",
+          "DD": 0.25
+        },
+        {
+          "code": "Mov1",
+          "description": "Moves to stand on 1 leg on shoulder of spotter/base",
+          "DD": 0.15
+        },
+        {
+          "code": "Mov1+t",
+          "description": "Moves to stand on 1 leg on shoulder of spotter/base + 180 rot.",
+          "DD": 0.275
+        },
+        {
+          "code": "Fall",
+          "description": "Fast fall down inside",
+          "DD": 0.05
+        },
+        {
+          "code": "FTurn",
+          "description": "Fast fall down inside + 360 twist",
+          "DD": 0.15
+        },
+        {
+          "code": "NAB-Ps1!",
+          "description": "Ending action: 360° somersault from head-down, enters water head-down. Max 1 ending bonus/acro.",
+          "DD": 0.15
+        },
+        {
+          "code": "NAB-Ps1t1o",
+          "description": "Ending action: 360° somersault + 1 twist, open to straight body at entry. Max 1 ending bonus/acro.",
+          "DD": 0.45
+        },
+        {
+          "code": "CHN-Lotus",
+          "description": "Reserved (P2)",
+          "DD": 0.3
+        },
+        {
+          "code": "ESP-Mov1+t1",
+          "description": "Reserved (P2)",
+          "DD": 0.325
+        },
+        {
+          "code": "JPN-Ps1!o",
+          "description": "Reserved (P2)",
+          "DD": 0.35
+        },
+        {
+          "code": "JPN-Ps1.5!",
+          "description": "Reserved (P2)",
+          "DD": 0.3
+        }
+      ]
+    }
+  },
+  "valid_codes": {
+    "A": {
+      "Construction": [
+        "2Sup",
+        "2SupH",
+        "Feet",
+        "Shou",
+        "Sq",
+        "Thr"
+      ],
+      "Direction": [
+        "Back",
+        "Forw",
+        "Rev",
+        "Side",
+        "Up"
+      ],
+      "Position1": [
+        "ja",
+        "kt",
+        "ln",
+        "pk",
+        "rg",
+        "sp",
+        "tk"
+      ],
+      "Position2": [
+        "2ja",
+        "2kt",
+        "2ln",
+        "2pk",
+        "2rg",
+        "2sp",
+        "2tk"
+      ],
+      "Rotation Plane": [
+        "C",
+        "D",
+        "H",
+        "ct0.5",
+        "ct1",
+        "dt0.5",
+        "dt1",
+        "dt1.5",
+        "dt2",
+        "f1",
+        "f1.5",
+        "f2",
+        "hd",
+        "hs1",
+        "ht0.5",
+        "ht1",
+        "s1",
+        "s1.5",
+        "s1.5f",
+        "s1.5fo",
+        "s1.5o",
+        "s1.5t0.5",
+        "s1.5t0.5f",
+        "s1.5t0.5fo",
+        "s1.5t0.5o",
+        "s1.5t1",
+        "s1.5t1.5",
+        "s1.5t1fo",
+        "s1f",
+        "s1t0.5",
+        "s1t0.5f",
+        "s1t1",
+        "s1t1.5",
+        "s1t1f",
+        "s1t2",
+        "s2",
+        "s2.5",
+        "s2.5f",
+        "s2f",
+        "s2fo",
+        "s2o",
+        "s2t0.5",
+        "s2t0.5f",
+        "s2t0.5fo",
+        "s2t0.5o",
+        "s2t1",
+        "s2t1fo",
+        "s2t1o",
+        "s3",
+        "ss1",
+        "ss1.5",
+        "ss1f",
+        "ss1t0.5",
+        "ss1t0.5f",
+        "ss1t1",
+        "ss1t1.5",
+        "ss1t1f",
+        "ss1t2",
+        "ss1t2.5",
+        "ss1t3",
+        "t0.5",
+        "t1",
+        "t1.5",
+        "t2",
+        "t2.5",
+        "t3"
+      ],
+      "Bonus": [
+        "Catch",
+        "Conn",
+        "Dbl",
+        "ESP-Ret1Pa",
+        "Feet",
+        "Grip",
+        "Hula",
+        "Pos3",
+        "RetPa",
+        "RetSq",
+        "Split",
+        "USA-RetF"
+      ]
+    },
+    "B": {
+      "Construction": [
+        "2SupD",
+        "2SupD2F",
+        "2SupM",
+        "2SupU",
+        "L",
+        "L2F+",
+        "LH",
+        "Lh2F",
+        "St",
+        "St>",
+        "StH"
+      ],
+      "Connection": [
+        "1F1F",
+        "1F1P",
+        "1FH+1FP",
+        "1P1F",
+        "1P1P",
+        "1PH",
+        "1PPx",
+        "2pH",
+        "AP",
+        "Bp",
+        "Ch",
+        "E",
+        "ESP-1FH/+ S1P/",
+        "ESP-1PH/ + H1P/",
+        "F1S",
+        "FF",
+        "FF/",
+        "FP",
+        "FRA+ESP-1FH/",
+        "FS",
+        "H1F/",
+        "HT+",
+        "LayF",
+        "Le",
+        "Li",
+        "LiH",
+        "PF",
+        "PH/",
+        "PP",
+        "PP2",
+        "S+",
+        "ShF",
+        "SiF",
+        "SiS",
+        "SiSb",
+        "Tow",
+        "Tw"
+      ],
+      "Position1": [
+        "ba",
+        "bb",
+        "bo",
+        "br",
+        "co",
+        "ct",
+        "dr",
+        "ey",
+        "ff",
+        "fl",
+        "gl",
+        "he",
+        "hp",
+        "ma",
+        "mo",
+        "ne",
+        "ow",
+        "pi",
+        "pp",
+        "qu",
+        "sa",
+        "sd",
+        "sh",
+        "sn",
+        "so",
+        "spl",
+        "tu",
+        "vs",
+        "wi"
+      ],
+      "Position2": [
+        "2ba",
+        "2bb",
+        "2bo",
+        "2br",
+        "2co",
+        "2ct",
+        "2dr",
+        "2ey",
+        "2ff",
+        "2fl",
+        "2gl",
+        "2he",
+        "2hp",
+        "2ma",
+        "2mo",
+        "2ne",
+        "2ow",
+        "2pi",
+        "2pp",
+        "2qu",
+        "2sa",
+        "2sd",
+        "2sh",
+        "2sn",
+        "2so",
+        "2spl",
+        "2tu",
+        "2vs",
+        "2wi"
+      ],
+      "Rotation Base": [
+        "USA-r1.5L+",
+        "r/L",
+        "r0.5",
+        "r0.5!",
+        "r0.5+",
+        "r0.5/",
+        "r0.5L",
+        "r1",
+        "r1!",
+        "r1+",
+        "r1.5",
+        "r1.5!",
+        "r1.5+",
+        "r1.5/",
+        "r1/",
+        "r1L",
+        "r2!",
+        "r2+"
+      ],
+      "Bonus": [
+        "CHN-Bloom",
+        "CHN-Switch",
+        "Dbl",
+        "ESP-Spiral",
+        "Hold",
+        "JPN-ESP-USA-Mov!",
+        "Moon",
+        "Mov",
+        "NAB-ChangeL",
+        "Pos3",
+        "RotF",
+        "SdUp",
+        "Twirl",
+        "Wave"
+      ]
+    },
+    "C": {
+      "Construction": [
+        "2Sup+",
+        "L+spot",
+        "Sn",
+        "Thr+Thr",
+        "Thr>F",
+        "Thr>FF",
+        "Thr>Pair>",
+        "Thr>Sq",
+        "Thr>St",
+        "Thr>St2",
+        "Thr>StH",
+        "Thr>StH>1F",
+        "Thr>hand",
+        "Thr>head>",
+        "Thr^2F",
+        "Thr^Lh"
+      ],
+      "Direction": [
+        "Back",
+        "Bln",
+        "Forw",
+        "Rev",
+        "Side",
+        "Up"
+      ],
+      "Position1": [
+        "ba",
+        "bb",
+        "bo",
+        "br",
+        "co",
+        "ct",
+        "dr",
+        "ey",
+        "ff",
+        "fl",
+        "gl",
+        "he",
+        "hp",
+        "ja",
+        "kt",
+        "ln",
+        "ma",
+        "mo",
+        "ne",
+        "ow",
+        "pi",
+        "pk",
+        "pp",
+        "qu",
+        "rg",
+        "sa",
+        "sd",
+        "sh",
+        "sn",
+        "so",
+        "sp",
+        "spl",
+        "tk",
+        "tu",
+        "vs",
+        "wi"
+      ],
+      "Position2": [
+        "2ba",
+        "2bb",
+        "2bo",
+        "2br",
+        "2co",
+        "2ct",
+        "2dr",
+        "2ey",
+        "2ff",
+        "2fl",
+        "2gl",
+        "2he",
+        "2hp",
+        "2ja",
+        "2kt",
+        "2ln",
+        "2ma",
+        "2mo",
+        "2ne",
+        "2ow",
+        "2pi",
+        "2pk",
+        "2pp",
+        "2qu",
+        "2rg",
+        "2sa",
+        "2sd",
+        "2sh",
+        "2sn",
+        "2so",
+        "2sp",
+        "2spl",
+        "2tk",
+        "2tu",
+        "2vs",
+        "2wi"
+      ],
+      "Rotation Base": [
+        "2F0.5",
+        "2F1",
+        "CHN-2F1.5",
+        "CP0.5",
+        "Cr0.5",
+        "Cr0.5!",
+        "Cr0.5L",
+        "Cr1",
+        "Cr1!",
+        "Cr1.5",
+        "Cr1.5!"
+      ],
+      "Rotation Plane": [
+        "Cc",
+        "Cct0.5",
+        "Cct1",
+        "Cd",
+        "Cdt0.5",
+        "Cdt1",
+        "Cdt1.5",
+        "Cf1",
+        "Cf1.5",
+        "Ch",
+        "Chs0.5",
+        "Cht0.5",
+        "Cht1",
+        "Cs1",
+        "Cs1.5",
+        "Cs1.5o",
+        "Cs1t0.5",
+        "Cs1t1",
+        "Cs1t1.5",
+        "Cs1t1.5o",
+        "Cs1t1o",
+        "Cs1t2",
+        "Cs1t2o",
+        "Css1",
+        "Css1t0.5",
+        "Css1t1",
+        "Css1t1.5",
+        "Css1t2",
+        "Ct0.5",
+        "Ct1",
+        "Ct1.5",
+        "Ct2",
+        "Ct2.5",
+        "Ct3",
+        "FRA-Cs1.5t0.5o",
+        "JPN-Cs2t0.5",
+        "MEX-Cs2"
+      ],
+      "Bonus": [
+        "1F>1F",
+        "1F>1F+",
+        "1P>H",
+        "2F>2F",
+        "C-Roll",
+        "Cx",
+        "Dbl",
+        "H>1P",
+        "Ju",
+        "Jump",
+        "Jump>",
+        "NAB-1F>1P",
+        "On1Foot",
+        "Pos3",
+        "Run",
+        "Slip",
+        "Star",
+        "Turn",
+        "Twirl",
+        "USA-1P>1P"
+      ]
+    },
+    "P": {
+      "Construction": [
+        "2S",
+        "B",
+        "Box",
+        "Chariot",
+        "DB",
+        "FRA-Split",
+        "Flower",
+        "Hand",
+        "Knees",
+        "P",
+        "USA-4L",
+        "USA-Weasel"
+      ],
+      "Connection": [
+        "1FA",
+        "2b/",
+        "2pA/",
+        "2pBb",
+        "2pK",
+        "3pA",
+        "3pK",
+        "3pS",
+        "3pbA",
+        "4p",
+        ">2P2P",
+        ">F1P",
+        "BA",
+        "DBB",
+        "F2A",
+        "FA+PF",
+        "FAb",
+        "HA",
+        "HP+L",
+        "L/SiF+P",
+        "SF+TP",
+        "SP+K",
+        "SP+L",
+        "ShF+P",
+        "ShiShi+",
+        "SiA",
+        "SiF+Pb",
+        "USA-3pS+"
+      ],
+      "Position1": [
+        "ba",
+        "bb",
+        "bo",
+        "br",
+        "co",
+        "ct",
+        "dr",
+        "ey",
+        "ff",
+        "fl",
+        "gl",
+        "he",
+        "hp",
+        "ma",
+        "mo",
+        "ne",
+        "ow",
+        "pi",
+        "pp",
+        "qu",
+        "sa",
+        "sd",
+        "sh",
+        "sn",
+        "so",
+        "spl",
+        "tu",
+        "vs",
+        "wi"
+      ],
+      "Position2": [
+        "2ba",
+        "2bb",
+        "2bo",
+        "2br",
+        "2co",
+        "2ct",
+        "2dr",
+        "2ey",
+        "2ff",
+        "2fl",
+        "2gl",
+        "2he",
+        "2hp",
+        "2ma",
+        "2mo",
+        "2ne",
+        "2ow",
+        "2pi",
+        "2pp",
+        "2qu",
+        "2sa",
+        "2sd",
+        "2sh",
+        "2sn",
+        "2so",
+        "2spl",
+        "2tu",
+        "2vs",
+        "2wi"
+      ],
+      "Rotation Base": [
+        "P0.5h",
+        "P1.5h",
+        "P1h",
+        "P2S",
+        "P2Sr0.5",
+        "P2Sr1",
+        "P2h",
+        "PDB",
+        "PDB0.5",
+        "PDB1",
+        "Ph",
+        "Pr",
+        "Pr0.5",
+        "Pr1",
+        "Pr1.5"
+      ],
+      "Bonus": [
+        "Arch",
+        "Box",
+        "CH",
+        "CHN-Lotus",
+        "Climb",
+        "Dbl",
+        "Diva",
+        "Dive",
+        "ESP-Mov1+t1",
+        "FTurn",
+        "Fall",
+        "JPN-Ps1!o",
+        "JPN-Ps1.5!",
+        "Kozak",
+        "Mov",
+        "Mov1",
+        "Mov1+t",
+        "NAB-Ps1!",
+        "NAB-Ps1t1o",
+        "PRoll",
+        "Pf1",
+        "Pf1o",
+        "Porp",
+        "Pos3",
+        "Ps1",
+        "Ps1o",
+        "Ps1t0.5",
+        "Ps1t0.5o",
+        "Ps1t1",
+        "Spich",
+        "Spider",
+        "Stand",
+        "Trav",
+        "UP"
+      ]
+    }
+  },
+  "_reserved_codes_merged": "Phase 1 + Phase 2 (see reserved_codes.json)"
+}

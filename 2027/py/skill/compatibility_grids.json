@@ -1,0 +1,897 @@
+{
+  "_source": "Appendix 7 - Team Acrobatics Catalogue (full bonus review)",
+  "Group A": {
+    "all_directions": [
+      "Up",
+      "Forw",
+      "Back",
+      "Side",
+      "Rev"
+    ],
+    "plane_t_direction_constraint": {
+      "cartwheel_codes": [
+        "C",
+        "ct0.5",
+        "ct1"
+      ],
+      "cartwheel_required_direction": [
+        "Side"
+      ],
+      "handspring_codes": [
+        "H",
+        "ht0.5",
+        "ht1",
+        "hd",
+        "hs1"
+      ],
+      "handspring_required_direction": [
+        "Forw",
+        "Back"
+      ]
+    },
+    "bonus_constraints": {
+      "_mutual_exclusive_groups": [
+        {
+          "name": "GripConnCatch",
+          "bonuses": [
+            "Grip",
+            "Conn",
+            "Catch"
+          ]
+        },
+        {
+          "name": "ReturnBonuses",
+          "bonuses": [
+            "RetSq",
+            "RetPa",
+            "Ret1Pa",
+            "RetF"
+          ]
+        }
+      ],
+      "Catch": {
+        "requires_bonus": "Dbl"
+      },
+      "RetSq": {
+        "construction_must_be_in": [
+          "Sq"
+        ]
+      },
+      "Hula": {
+        "p1_must_be_in": [
+          "rg",
+          "ja"
+        ]
+      },
+      "Ret1Pa": {
+        "incompatible_with_bonuses": [
+          "Hula",
+          "D",
+          "dt0.5",
+          "dt1",
+          "dt1.5",
+          "dt2"
+        ]
+      },
+      "RetF": {
+        "incompatible_with_bonuses": [
+          "Feet",
+          "Hula",
+          "D",
+          "dt0.5",
+          "dt1",
+          "dt1.5",
+          "dt2"
+        ]
+      }
+    }
+  },
+  "Group B": {
+    "construction_to_connections": {
+      "St": [
+        "1P1P",
+        "1PPx",
+        "PP",
+        "FP",
+        "SiSb",
+        "Bp",
+        "E",
+        "PH/",
+        "AP",
+        "SiS",
+        "FS",
+        "F1S",
+        "Tw",
+        "S+",
+        "1PH",
+        "1F1P",
+        "1F1F"
+      ],
+      "StH": [
+        "1P1F",
+        "FF",
+        "FF/",
+        "PF",
+        "ShF",
+        "LayF",
+        "SiF",
+        "S+",
+        "1F1F",
+        "H1F/",
+        "HT+"
+      ],
+      "2SupU": [
+        "Le",
+        "1FH+1FP",
+        "PP2"
+      ],
+      "2SupD": [
+        "Tow"
+      ],
+      "2SupM": [
+        "Le",
+        "Ch"
+      ],
+      "2SupD2F": [
+        "Tow"
+      ],
+      "L": [
+        "Li"
+      ],
+      "L2F+": [
+        "Li"
+      ],
+      "St>": [
+        "PP",
+        "PF",
+        "Bp",
+        "ShF",
+        "E",
+        "F1S",
+        "LayF",
+        "1P1F",
+        "2pH",
+        "PH/"
+      ],
+      "LH": [
+        "LiH"
+      ],
+      "Lh2F": [
+        "LiH"
+      ]
+    },
+    "rotation_constraints": {
+      "connections_no_rotation": [
+        "Le",
+        "Tow",
+        "Ch"
+      ]
+    },
+    "bonus_constraints": {
+      "_mutual_exclusive_groups": [
+        {
+          "name": "TwirlRotF",
+          "bonuses": [
+            "Twirl",
+            "RotF"
+          ]
+        },
+        {
+          "name": "MoonMovHold",
+          "bonuses": [
+            "Moon",
+            "Mov",
+            "Hold"
+          ]
+        }
+      ],
+      "Hold": {
+        "cannot_with_rotation": true
+      },
+      "ChangeL": {
+        "construction_must_be_in": [
+          "L",
+          "LH",
+          "Lh2F",
+          "L2F+"
+        ],
+        "incompatible_with_bonuses": [
+          "Moon",
+          "Mov",
+          "Hold"
+        ]
+      },
+      "Spiral": {
+        "construction_must_be_in": [
+          "LH"
+        ]
+      },
+      "Mov!": {
+        "incompatible_with_bonuses": [
+          "Spiral",
+          "Twirl",
+          "RotF"
+        ]
+      }
+    },
+    "rotation_codes_detailed": {
+      "r0.5/": {
+        "connections": [
+          "FS"
+        ]
+      },
+      "r1/": {
+        "connections": [
+          "FS"
+        ]
+      },
+      "r1.5/": {
+        "connections": [
+          "FS"
+        ]
+      },
+      "r0.5": {
+        "connections": [
+          "FP",
+          "SiSb",
+          "Bp",
+          "E",
+          "AP",
+          "SiS",
+          "F1S",
+          "Tw",
+          "1F1P",
+          "S+",
+          "PP",
+          "1F1F"
+        ]
+      },
+      "r1": {
+        "connections": [
+          "FP",
+          "SiSb",
+          "Bp",
+          "E",
+          "AP",
+          "SiS",
+          "F1S",
+          "Tw",
+          "1F1P",
+          "S+",
+          "PP",
+          "1F1F"
+        ]
+      },
+      "r1.5": {
+        "connections": [
+          "FP",
+          "SiSb",
+          "Bp",
+          "E",
+          "AP",
+          "SiS",
+          "F1S",
+          "Tw",
+          "1F1P",
+          "S+",
+          "PP",
+          "1F1F"
+        ]
+      },
+      "r0.5+": {
+        "connections": [
+          "F1S",
+          "1F1P",
+          "1F1F",
+          "FP"
+        ],
+        "position_constraint": "1 leg at 135-180"
+      },
+      "r1+": {
+        "connections": [
+          "F1S",
+          "1F1P",
+          "1F1F",
+          "FP"
+        ],
+        "position_constraint": "1 leg at 135-180"
+      },
+      "r1.5+": {
+        "connections": [
+          "F1S",
+          "1F1P",
+          "1F1F",
+          "FP"
+        ],
+        "position_constraint": "1 leg at 135-180"
+      },
+      "r2+": {
+        "connections": [
+          "F1S",
+          "1F1P",
+          "1F1F",
+          "FP"
+        ],
+        "position_constraint": "1 leg at 135-180"
+      },
+      "r0.5!": {
+        "connections_handstand": [
+          "1P1P",
+          "1P1F",
+          "1PPx",
+          "PF",
+          "PH/",
+          "PP2",
+          "2PH",
+          "1PH",
+          "PP"
+        ],
+        "connections_head_down": [
+          "FF",
+          "FF/",
+          "ShF",
+          "LayF",
+          "SiF",
+          "1F1F",
+          "H1F/",
+          "HT+",
+          "1P1F",
+          "PF",
+          "S+"
+        ]
+      },
+      "r1!": {
+        "connections_handstand": [
+          "1P1P",
+          "1P1F",
+          "1PPx",
+          "PF",
+          "PH/",
+          "PP2",
+          "2PH",
+          "1PH",
+          "PP"
+        ],
+        "connections_head_down": [
+          "FF",
+          "FF/",
+          "ShF",
+          "LayF",
+          "SiF",
+          "1F1F",
+          "H1F/",
+          "HT+",
+          "1P1F",
+          "PF",
+          "S+"
+        ]
+      },
+      "r1.5!": {
+        "connections_handstand": [
+          "1P1P",
+          "1P1F",
+          "1PPx",
+          "PF",
+          "PH/",
+          "PP2",
+          "2PH",
+          "1PH",
+          "PP"
+        ],
+        "connections_head_down": [
+          "FF",
+          "FF/",
+          "ShF",
+          "LayF",
+          "SiF",
+          "1F1F",
+          "H1F/",
+          "HT+",
+          "1P1F",
+          "PF",
+          "S+"
+        ]
+      },
+      "r2!": {
+        "connections_handstand": [
+          "1P1P",
+          "1P1F",
+          "1PPx",
+          "PF",
+          "PH/",
+          "PP2",
+          "2PH",
+          "1PH",
+          "PP"
+        ],
+        "connections_head_down": [
+          "FF",
+          "FF/",
+          "ShF",
+          "LayF",
+          "SiF",
+          "1F1F",
+          "H1F/",
+          "HT+",
+          "1P1F",
+          "PF",
+          "S+"
+        ]
+      },
+      "r/L": {
+        "connections": [
+          "LiH",
+          "Li"
+        ]
+      },
+      "r0.5L": {
+        "connections": [
+          "LiH",
+          "Li"
+        ]
+      },
+      "r1L": {
+        "connections": [
+          "LiH",
+          "Li"
+        ]
+      }
+    },
+    "positions_135_180": [
+      "ey",
+      "ne",
+      "sa",
+      "vs",
+      "gl"
+    ]
+  },
+  "Group P": {
+    "construction_to_connections": {
+      "P": [
+        "F2A",
+        "SiA",
+        "1FA",
+        "3pA",
+        "HA",
+        ">F1P",
+        "2pA/",
+        "4p",
+        "3pbA",
+        "BA",
+        ">2P2P"
+      ],
+      "Box": [
+        "4p",
+        "3pA",
+        "SiA",
+        "F2A",
+        "HA"
+      ],
+      "Knees": [
+        "2pK",
+        "3pbA",
+        "3pK",
+        "SP+K",
+        "F2A",
+        "SiA",
+        "3pA",
+        ">F1P",
+        ">2P2P",
+        "BA",
+        "1FA"
+      ],
+      "B": [
+        "2pBb",
+        ">F1P",
+        "L/SiF+P",
+        "SiF+Pb",
+        "SP+L",
+        "FA+PF",
+        "F2A",
+        "SiA",
+        "HP+L",
+        "FAb",
+        "3pA",
+        "1FA",
+        "HA",
+        "3pS",
+        "3pbA"
+      ],
+      "DB": [
+        "L/SiF+P",
+        "ShF+P",
+        "SiF+Pb",
+        "SP+L",
+        "FA+PF",
+        "3pK",
+        "F2A",
+        "SiA",
+        ">F1P",
+        "ShiShi+",
+        "SF+TP",
+        "HP+L",
+        "3pA",
+        "1FA",
+        "4p",
+        "DBB",
+        "3pbA"
+      ],
+      "Chariot": [
+        "2pA/",
+        "4p",
+        "3pbA",
+        "3pA",
+        "FAb",
+        "F2A",
+        "SiA",
+        "1FA",
+        "BA"
+      ],
+      "2S": [
+        "2b/",
+        "2pBb",
+        "FA+PF",
+        "3pbA",
+        "HA",
+        "3pA",
+        "F2A",
+        "SiA",
+        "1FA",
+        "SP+K",
+        "3pS",
+        "ShF+P",
+        "L/SiF+P",
+        "2pA/",
+        "BA",
+        "3pS+"
+      ],
+      "Flower": [
+        "2pA/",
+        "3pbA",
+        "HA",
+        "3pA",
+        "F2A",
+        "SiA",
+        "1FA",
+        "BA"
+      ],
+      "Hand": [
+        "2pA/",
+        "3pbA",
+        "HA",
+        "1FA",
+        "3pA",
+        "F2A",
+        "SiA",
+        "3pbA",
+        "BA"
+      ]
+    },
+    "rotation_to_constructions": {
+      "Pr": [
+        "P",
+        "Box",
+        "Knees",
+        "B",
+        "Chariot",
+        "Split"
+      ],
+      "Pr0.5": [
+        "P",
+        "Box",
+        "Knees",
+        "B",
+        "Chariot",
+        "Split"
+      ],
+      "Pr1": [
+        "P",
+        "Box",
+        "Knees",
+        "B",
+        "Chariot",
+        "Split"
+      ],
+      "Pr1.5": [
+        "P",
+        "Box",
+        "Knees",
+        "B",
+        "Chariot",
+        "Split"
+      ],
+      "Ph": [
+        "Hand"
+      ],
+      "P0.5h": [
+        "Hand"
+      ],
+      "P1h": [
+        "Hand"
+      ],
+      "P1.5h": [
+        "Hand"
+      ],
+      "P2h": [
+        "Hand"
+      ],
+      "P2S": [
+        "2S",
+        "Flower"
+      ],
+      "P2Sr0.5": [
+        "2S",
+        "Flower"
+      ],
+      "P2Sr1": [
+        "2S",
+        "Flower"
+      ],
+      "PDB": [
+        "DB"
+      ],
+      "PDB0.5": [
+        "DB"
+      ],
+      "PDB1": [
+        "DB"
+      ]
+    },
+    "bonus_constraints": {
+      "_mutual_exclusive_groups": [
+        {
+          "name": "PorpSpich",
+          "bonuses": [
+            "Porp",
+            "Spich"
+          ]
+        },
+        {
+          "name": "StandDiva",
+          "bonuses": [
+            "Stand",
+            "Diva"
+          ]
+        },
+        {
+          "name": "EndingActions",
+          "bonuses": [
+            "Dive",
+            "CH",
+            "Ps1",
+            "Ps1t0.5",
+            "Ps1o",
+            "Ps1t0.5o",
+            "Ps1t1",
+            "Pf1",
+            "Pf1o",
+            "Mov",
+            "Mov1",
+            "Mov1+t",
+            "Ps1!",
+            "Ps1t1o",
+            "Ps1!o",
+            "Ps1.5!",
+            "Mov1+t1",
+            "Lotus"
+          ]
+        }
+      ],
+      "Porp": {
+        "p1_must_be": "bb",
+        "p1_must_be_label": "Bamboo"
+      },
+      "Spider": {
+        "construction_must_be_in": [
+          "2S",
+          "Flower",
+          "Hand"
+        ]
+      },
+      "Climb": {
+        "construction_must_be_in": [
+          "2S",
+          "Flower",
+          "Hand"
+        ]
+      },
+      "Fall": {
+        "construction_must_be_in": [
+          "2S",
+          "Flower",
+          "Hand"
+        ]
+      },
+      "FTurn": {
+        "construction_must_be_in": [
+          "2S",
+          "Flower",
+          "Hand"
+        ]
+      }
+    }
+  },
+  "Group C": {
+    "all_directions": [
+      "Up",
+      "Forw",
+      "Back",
+      "Side",
+      "Rev",
+      "Bln"
+    ],
+    "rotation_constraints": {
+      "constructions_no_rotation": [
+        "Thr>Pair>",
+        "Thr+Thr",
+        "Sn",
+        "2Sup+",
+        "Thr>head>"
+      ],
+      "constructions_twirl_only": [
+        "L+spot",
+        "Thr>Sq"
+      ]
+    },
+    "rotation_to_constructions": {
+      "Cr0.5": [
+        "Thr>St",
+        "Thr>St2"
+      ],
+      "Cr1": [
+        "Thr>St",
+        "Thr>St2"
+      ],
+      "Cr1.5": [
+        "Thr>St",
+        "Thr>St2"
+      ],
+      "Cr0.5!": [
+        "Thr>StH",
+        "Thr>StH>1F",
+        "Thr>St",
+        "Thr>St2"
+      ],
+      "Cr1!": [
+        "Thr>StH",
+        "Thr>StH>1F",
+        "Thr>St",
+        "Thr>St2"
+      ],
+      "Cr1.5!": [
+        "Thr>StH",
+        "Thr>StH>1F",
+        "Thr>St",
+        "Thr>St2"
+      ],
+      "Cr0.5L": [
+        "Thr^Lh"
+      ],
+      "CP0.5": [
+        "Thr>F",
+        "Thr>FF",
+        "Thr>hand"
+      ],
+      "2F0.5": [
+        "Thr^2F"
+      ],
+      "2F1": [
+        "Thr^2F"
+      ],
+      "2F1.5": [
+        "Thr^2F"
+      ]
+    },
+    "position_source_by_construction": {
+      "Thr>FF": {
+        "p1": "B",
+        "p2": "B"
+      },
+      "Thr>F": {
+        "p1": "B",
+        "p2": "B"
+      },
+      "Thr^2F": {
+        "p1": "B",
+        "p2": "A"
+      },
+      "Thr^Lh": {
+        "p1": "B",
+        "p2": "A"
+      },
+      "Thr>St": {
+        "p1": "B_or_A",
+        "p2": "B_or_A"
+      },
+      "Thr>StH": {
+        "p1": "B",
+        "p2": "B"
+      },
+      "Thr>St2": {
+        "p1": "B_or_A",
+        "p2": "B_or_A"
+      },
+      "Thr>StH>1F": {
+        "p1": "B",
+        "p2": "B"
+      },
+      "Thr>hand": {
+        "p1": "B",
+        "p2": "B"
+      }
+    },
+    "plane_t_direction_constraint": {
+      "cartwheel_codes": [
+        "Cc",
+        "Cct0.5",
+        "Cct1"
+      ],
+      "cartwheel_required_direction": [
+        "Side"
+      ],
+      "handspring_codes": [
+        "Ch",
+        "Cht0.5",
+        "Cht1",
+        "Chs0.5"
+      ],
+      "handspring_required_direction": [
+        "Forw",
+        "Back"
+      ]
+    },
+    "bonus_constraints": {
+      "_mutual_exclusive_groups": [
+        {
+          "name": "JumpBonuses",
+          "bonuses": [
+            "Ju",
+            "1P>H",
+            "H>1P",
+            "Jump",
+            "Jump>",
+            "On1Foot",
+            "1F>1F",
+            "1F>1F+",
+            "2F>2F",
+            "1F>1P",
+            "1P>1P"
+          ]
+        }
+      ],
+      "Run": {
+        "construction_must_be_in": [
+          "Thr>FF",
+          "Thr>F"
+        ]
+      },
+      "Ju": {
+        "construction_must_be_in": [
+          "Thr>FF",
+          "Thr>F",
+          "Thr>hand",
+          "Thr>Sq"
+        ]
+      },
+      "Jump": {
+        "construction_must_be_in": [
+          "Thr>St",
+          "Thr>StH",
+          "Thr>St2"
+        ]
+      },
+      "Jump>": {
+        "construction_must_be_in": [
+          "Thr>St",
+          "Thr>StH",
+          "Thr>FF",
+          "Thr>F",
+          "Thr>hand",
+          "Thr>Sq",
+          "Thr>St2"
+        ]
+      }
+    }
+  },
+  "_meta_2027": "Updated for 2027: 2026 federation-reserved bonuses renamed to their unprefixed codes (open to all from 01/01/2027) and Appendix 7 Addendum / 2027 clarification constraints added."
+}

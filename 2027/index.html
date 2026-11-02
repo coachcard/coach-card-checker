@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coach Card Checker — Rules 2027</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%230a5cb8' d='M16 3S5 15 5 21a11 11 0 0 0 22 0C27 15 16 3 16 3z'/%3E%3Cpath fill='%2338bdf8' d='M16 9s-6 7-6 11a6 6 0 0 0 6 6z'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <svg class="logo" viewBox="0 0 32 32" aria-hidden="true">
+          <path d="M16 3S5 15 5 21a11 11 0 0 0 22 0C27 15 16 3 16 3z" fill="rgba(255,255,255,.25)"/>
+          <path d="M16 9s-6 7-6 11a6 6 0 0 0 6 6z" fill="rgba(255,255,255,.9)"/>
+        </svg>
+        <div>
+          <h1>Coach Card Checker <span class="rules-badge" title="This app applies the 2027 rules">RULES 2027</span></h1>
+          <p class="sub">Technical control — World Aquatics rules in force January 1, 2027 (Appendix 3 draft &amp; Appendix 6 v. Sept 27 2026, Appendix 7 + 2027 addendum)</p>
+        </div>
+      </div>
+    </div>
+    <svg class="wave" viewBox="0 0 1440 48" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 24C240 48 480 48 720 24S1200 0 1440 24V48H0Z" fill="var(--bg)"/>
+    </svg>
+  </header>
+
+  <nav class="stepper" aria-label="Progress">
+    <ol>
+      <li data-step="1"><span class="dot">1</span><span class="lbl">Routine &amp; file</span></li>
+      <li data-step="2"><span class="dot">2</span><span class="lbl">Review</span></li>
+      <li data-step="3"><span class="dot">3</span><span class="lbl">Report</span></li>
+    </ol>
+  </nav>
+
+  <main>
+    <!-- ============ STEP 1 : ROUTINE + FILE ============ -->
+    <section id="view-setup" class="view card">
+      <h2>Routine &amp; file</h2>
+      <p class="muted lead">Pick the routine type, then drop the coach card (optional — you can also type it in by hand).</p>
+
+      <label class="field">
+        <span>Routine type</span>
+        <div class="select-wrap">
+          <select id="routine-select"><option value="">— select —</option></select>
+        </div>
+      </label>
+
+      <div id="routine-info" class="info hidden"></div>
+
+      <div class="field">
+        <span>Coach card file <small class="muted">— Excel, PDF or photo, optional</small></span>
+        <div id="dropzone" class="dnd" tabindex="0" role="button" aria-label="Add a coach card file">
+          <input type="file" id="file-input" hidden multiple
+                 accept=".xlsx,.xlsm,.pdf,.png,.jpg,.jpeg,.jfif,.webp" />
+          <input type="file" id="camera-input" hidden accept="image/*" capture="environment" />
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V4m0 0 4 4m-4-4-4 4M4 16v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <p class="dnd-text"><strong>Drop one or more coach cards here</strong> or click to browse<br><small class="muted">several cards = same event, checked one after the other</small></p>
+          <p class="dnd-file hidden"><span id="dnd-name"></span>
+            <button type="button" id="dnd-clear" class="link">remove</button></p>
+        </div>
+        <ul id="file-list" class="file-list hidden"></ul>
+        <button type="button" id="btn-camera" class="ghost camera-btn">
+          <svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18"><path d="M4 8a2 2 0 0 1 2-2h1.5l1-1.5h7l1 1.5H20a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="12.5" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+          Take a photo
+        </button>
+      </div>
+
+      <div class="actions">
+        <button id="btn-start" class="primary" disabled>Enter the card →</button>
+      </div>
+    </section>
+
+    <!-- ============ BATCH : SEVERAL CARDS OF ONE EVENT ============ -->
+    <section id="view-batch" class="view card hidden">
+      <div class="view-head">
+        <h2>Coach cards</h2>
+        <span id="batch-routine" class="pill"></span>
+      </div>
+      <p class="muted lead">
+        The cards are read one after the other in the background. As soon as a card is
+        <b>ready</b>, open it to check what was read and run its analysis — the other cards
+        keep reading meanwhile.
+      </p>
+      <div id="batch-progress" class="batch-progress"></div>
+      <div class="batch-table-wrap">
+        <table class="batch-table">
+          <thead><tr><th>#</th><th>Card</th><th>Federation</th><th>Read</th><th>Result</th><th></th></tr></thead>
+          <tbody id="batch-rows"></tbody>
+        </table>
+      </div>
+      <input type="file" id="batch-add-input" hidden multiple accept=".xlsx,.xlsm,.pdf,.png,.jpg,.jpeg,.jfif,.webp" />
+      <div class="actions">
+        <button id="btn-batch-add" class="ghost">+ Add cards</button>
+        <button id="btn-batch-auto" class="ghost" title="Run the analysis on every card that is read but not reviewed yet, exactly as read (OCR errors included)">Check the others as read</button>
+        <button id="btn-batch-copy" class="ghost">Copy summary</button>
+        <button id="btn-batch-copy-all" class="ghost">Copy all reports</button>
+        <button id="btn-batch-new" class="primary">New check</button>
+      </div>
+    </section>
+
+    <!-- ============ STEP 2 : REVIEW & EDIT ============ -->
+    <section id="view-entry" class="view card hidden">
+      <div class="batch-nav hidden"></div>
+      <div class="view-head">
+        <h2>Review the coach card</h2>
+        <span id="entry-routine" class="pill"></span>
+      </div>
+      <p class="muted lead">
+        Every element and code, in order of performance.
+        <strong>Check each line against the card and fix anything that was misread</strong>,
+        then run the analysis.
+      </p>
+
+      <div id="extract-banner" class="banner hidden"></div>
+
+      <div class="entry-grid" id="entry-grid">
+        <aside id="preview-pane" class="preview-pane hidden"></aside>
+
+        <div class="entry-form">
+          <div class="fed-row">
+            <label for="federation">Federation</label>
+            <input id="federation" type="text" maxlength="4" size="4"
+                   placeholder="CZE" autocomplete="off" />
+            <span class="muted">
+              3-letter code from the card (for the report only). In 2027 the
+              former reserved codes are open to all — written without prefix.
+            </span>
+          </div>
+
+          <div class="fed-row" id="theme-row" hidden>
+            <label for="theme">Theme</label>
+            <input id="theme" type="text" maxlength="80"
+                   placeholder="routine theme / title" autocomplete="off" />
+            <span class="muted">
+              Required on the card for Acrobatic Routine and Free Combination —
+              a missing theme is a FAIL.
+            </span>
+          </div>
+
+          <div class="rows-wrap">
+            <div class="rows-head">
+              <span>#</span><span>Type</span><span>Group</span><span>Code(s)</span><span>DD</span><span></span>
+            </div>
+            <div id="rows"></div>
+          </div>
+
+          <div class="actions">
+            <button id="btn-add-row" class="ghost">+ Add an element</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions sticky">
+        <button id="btn-back" class="ghost">← Routine</button>
+        <button id="btn-check" class="primary">Run analysis</button>
+      </div>
+    </section>
+
+    <!-- ============ STEP 3 : REPORT ============ -->
+    <section id="view-report" class="view hidden">
+      <div class="batch-nav hidden"></div>
+      <div class="rules-strip">Report produced with the <b>2027 rules</b> (in force January 1, 2027). For 2026 competitions use the 2026 app.</div>
+      <div id="report-summary"></div>
+
+      <div class="card report-body">
+        <div class="report-filters" role="group" aria-label="Filter checks">
+          <label class="chip"><input type="checkbox" class="f-status" value="fail" checked /> <span>FAIL</span></label>
+          <label class="chip"><input type="checkbox" class="f-status" value="warn" checked /> <span>WARN</span></label>
+          <label class="chip"><input type="checkbox" class="f-status" value="info" checked /> <span>CHECK</span></label>
+          <label class="chip"><input type="checkbox" class="f-status" value="pass" checked /> <span>OK</span></label>
+        </div>
+
+        <div id="report-checks"></div>
+        <div id="report-reco"></div>
+      </div>
+
+      <div class="actions sticky">
+        <button id="btn-edit" class="ghost">← Edit elements</button>
+        <button id="btn-copy" class="ghost">Copy report</button>
+        <button id="btn-next-card" class="primary hidden">Next card →</button>
+        <button id="btn-restart" class="primary">New check</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>Runs in your browser · your coach cards never leave this device</span> · <a href="../">Change rules year</a>
+  </footer>
+
+  <div id="card-zoom" class="hidden" aria-label="Zoom coach card">
+    <div class="card-zoom-tools">
+      <button type="button" id="card-zoom-rotl" aria-label="Rotate left" title="Rotate left">↺</button>
+      <button type="button" id="card-zoom-rotr" aria-label="Rotate right" title="Rotate right">↻</button>
+      <button type="button" id="card-zoom-close" aria-label="Close" title="Close">×</button>
+    </div>
+    <img alt="coach card (zoomable)" draggable="false" />
+    <p class="zoom-hint">scroll or pinch to zoom · drag to pan · ↺ ↻ rotate · double-tap to reset · Esc to close</p>
+  </div>
+
+  <div id="extract-progress" class="progress-overlay hidden" role="status" aria-live="polite">
+    <div class="progress-box">
+      <span class="spinner" aria-hidden="true"></span>
+      <div class="progress-main">
+        <div class="progress-label">Reading the card…</div>
+        <div class="progress-track"><div class="progress-fill"></div></div>
+        <div class="progress-sub"><span class="progress-time">0:00</span> · a photo can take a minute or two</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../shared/ocr.js"></script>
+  <script src="../shared/runtime.js" data-year="2027"></script>
+  <script src="app.js"></script>
+</body>
+</html>

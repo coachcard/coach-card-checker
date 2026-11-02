@@ -1,0 +1,601 @@
+{
+  "_source": [
+    "New Acro Codes Phase 1 (2026 World Cups) v2.docx",
+    "New Acro Codes Phase 2 - 2026.pdf"
+  ],
+  "_note": "NF-prefixed codes are reserved to the listed federations. The same element without the prefix (see 'base') opens to every federation on the date below, per the Appendix 7 Addendum.",
+  "open_to_all_from": "2027-01-01",
+  "federation_aliases": {
+    "NAB": [
+      "NAB",
+      "RUS"
+    ],
+    "RUS": [
+      "RUS",
+      "NAB"
+    ],
+    "NAA": [
+      "NAA",
+      "BLR"
+    ],
+    "BLR": [
+      "BLR",
+      "NAA"
+    ]
+  },
+  "_count": 43,
+  "codes": {
+    "AUT-SL!f2r0.5+r1>": {
+      "federations": [
+        "AUT"
+      ],
+      "allowed": [
+        "AUT"
+      ],
+      "base": "SL!f2r0.5+r1>",
+      "kind": "PAIR",
+      "phase": "P1"
+    },
+    "NAA-W!s0.5p": {
+      "federations": [
+        "NAA"
+      ],
+      "allowed": [
+        "NAA",
+        "BLR"
+      ],
+      "base": "W!s0.5p",
+      "kind": "PAIR",
+      "phase": "P1"
+    },
+    "KAZ-JBs1t1": {
+      "federations": [
+        "KAZ"
+      ],
+      "allowed": [
+        "KAZ"
+      ],
+      "base": "JBs1t1",
+      "kind": "PAIR",
+      "phase": "P1"
+    },
+    "KAZ-JBss1t1": {
+      "federations": [
+        "KAZ"
+      ],
+      "allowed": [
+        "KAZ"
+      ],
+      "base": "JBss1t1",
+      "kind": "PAIR",
+      "phase": "P1"
+    },
+    "NAB-SL!f2r1+r1": {
+      "federations": [
+        "NAB"
+      ],
+      "allowed": [
+        "NAB",
+        "RUS"
+      ],
+      "base": "SL!f2r1+r1",
+      "kind": "PAIR",
+      "phase": "P1"
+    },
+    "MEX-Jdt1": {
+      "federations": [
+        "MEX"
+      ],
+      "allowed": [
+        "MEX"
+      ],
+      "base": "Jdt1",
+      "kind": "PAIR",
+      "phase": "P1"
+    },
+    "FRA+ESP-1FH/": {
+      "federations": [
+        "FRA",
+        "ESP"
+      ],
+      "allowed": [
+        "FRA",
+        "ESP"
+      ],
+      "base": "1FH/",
+      "kind": "TEAM",
+      "phase": "P1",
+      "group": "B",
+      "component": "Connection",
+      "DD": 0.75
+    },
+    "NAB-1F>1P": {
+      "federations": [
+        "NAB"
+      ],
+      "allowed": [
+        "NAB",
+        "RUS"
+      ],
+      "base": "1F>1P",
+      "kind": "TEAM",
+      "phase": "P1",
+      "group": "C",
+      "component": "Bonus",
+      "DD": 0.6
+    },
+    "NAB-Ps1!": {
+      "federations": [
+        "NAB"
+      ],
+      "allowed": [
+        "NAB",
+        "RUS"
+      ],
+      "base": "Ps1!",
+      "kind": "TEAM",
+      "phase": "P1",
+      "group": "P",
+      "component": "Bonus",
+      "DD": 0.15
+    },
+    "NAB-Ps1t1o": {
+      "federations": [
+        "NAB"
+      ],
+      "allowed": [
+        "NAB",
+        "RUS"
+      ],
+      "base": "Ps1t1o",
+      "kind": "TEAM",
+      "phase": "P1",
+      "group": "P",
+      "component": "Bonus",
+      "DD": 0.45
+    },
+    "NAB-ChangeL": {
+      "federations": [
+        "NAB"
+      ],
+      "allowed": [
+        "NAB",
+        "RUS"
+      ],
+      "base": "ChangeL",
+      "kind": "TEAM",
+      "phase": "P1",
+      "group": "B",
+      "component": "Bonus",
+      "DD": 0.35
+    },
+    "ESP-Spiral": {
+      "federations": [
+        "ESP"
+      ],
+      "allowed": [
+        "ESP"
+      ],
+      "base": "Spiral",
+      "kind": "TEAM",
+      "phase": "P1",
+      "group": "B",
+      "component": "Bonus",
+      "DD": 0.3
+    },
+    "ESP-1PH/ + H1P/": {
+      "federations": [
+        "ESP"
+      ],
+      "allowed": [
+        "ESP"
+      ],
+      "base": "1PH/ + H1P/",
+      "kind": "TEAM",
+      "phase": "P1",
+      "group": "B",
+      "component": "Connection",
+      "DD": 0.725
+    },
+    "ESP-1FH/+ S1P/": {
+      "federations": [
+        "ESP"
+      ],
+      "allowed": [
+        "ESP"
+      ],
+      "base": "1FH/+ S1P/",
+      "kind": "TEAM",
+      "phase": "P1",
+      "group": "B",
+      "component": "Connection",
+      "DD": 0.6
+    },
+    "USA-1P>1P": {
+      "federations": [
+        "USA"
+      ],
+      "allowed": [
+        "USA"
+      ],
+      "base": "1P>1P",
+      "kind": "TEAM",
+      "phase": "P1",
+      "group": "C",
+      "component": "Bonus",
+      "DD": 0.375
+    },
+    "USA-3pS+": {
+      "federations": [
+        "USA"
+      ],
+      "allowed": [
+        "USA"
+      ],
+      "base": "3pS+",
+      "kind": "TEAM",
+      "phase": "P1",
+      "group": "P",
+      "component": "Connection",
+      "DD": 0.4
+    },
+    "MEX-Cs2": {
+      "federations": [
+        "MEX"
+      ],
+      "allowed": [
+        "MEX"
+      ],
+      "base": "Cs2",
+      "kind": "TEAM",
+      "phase": "P1",
+      "group": "C",
+      "component": "Rotation Plane",
+      "DD": 0.55
+    },
+    "CHI-Js1.5B": {
+      "federations": [
+        "CHI"
+      ],
+      "allowed": [
+        "CHI"
+      ],
+      "base": "Js1.5B",
+      "kind": "PAIR",
+      "phase": "P2"
+    },
+    "CHI-Js1Ro": {
+      "federations": [
+        "CHI"
+      ],
+      "allowed": [
+        "CHI"
+      ],
+      "base": "Js1Ro",
+      "kind": "PAIR",
+      "phase": "P2"
+    },
+    "CHI-Js1R": {
+      "federations": [
+        "CHI"
+      ],
+      "allowed": [
+        "CHI"
+      ],
+      "base": "Js1R",
+      "kind": "PAIR",
+      "phase": "P2"
+    },
+    "ESP-GRE-RUS-SL!2+r2": {
+      "federations": [
+        "ESP",
+        "GRE",
+        "RUS"
+      ],
+      "allowed": [
+        "ESP",
+        "GRE",
+        "RUS",
+        "NAB"
+      ],
+      "base": "SL!2+r2",
+      "kind": "PAIR",
+      "phase": "P2"
+    },
+    "ESP-Js1Bo": {
+      "federations": [
+        "ESP"
+      ],
+      "allowed": [
+        "ESP"
+      ],
+      "base": "Js1Bo",
+      "kind": "PAIR",
+      "phase": "P2"
+    },
+    "ESP-W!+catchSL": {
+      "federations": [
+        "ESP"
+      ],
+      "allowed": [
+        "ESP"
+      ],
+      "base": "W!+catchSL",
+      "kind": "PAIR",
+      "phase": "P2"
+    },
+    "ESP-W!+catchSL+r1": {
+      "federations": [
+        "ESP"
+      ],
+      "allowed": [
+        "ESP"
+      ],
+      "base": "W!+catchSL+r1",
+      "kind": "PAIR",
+      "phase": "P2"
+    },
+    "GBR-Js1p": {
+      "federations": [
+        "GBR"
+      ],
+      "allowed": [
+        "GBR"
+      ],
+      "base": "Js1p",
+      "kind": "PAIR",
+      "phase": "P2"
+    },
+    "GBR-Js1t0.5B+pt": {
+      "federations": [
+        "GBR"
+      ],
+      "allowed": [
+        "GBR"
+      ],
+      "base": "Js1t0.5B+pt",
+      "kind": "PAIR",
+      "phase": "P2"
+    },
+    "RUS-Js1B+pt": {
+      "federations": [
+        "RUS"
+      ],
+      "allowed": [
+        "RUS",
+        "NAB"
+      ],
+      "base": "Js1B+pt",
+      "kind": "PAIR",
+      "phase": "P2"
+    },
+    "CHN-Lotus": {
+      "federations": [
+        "CHN"
+      ],
+      "allowed": [
+        "CHN"
+      ],
+      "base": "Lotus",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "P",
+      "component": "Bonus",
+      "DD": 0.3
+    },
+    "CHN-Switch": {
+      "federations": [
+        "CHN"
+      ],
+      "allowed": [
+        "CHN"
+      ],
+      "base": "Switch",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "B",
+      "component": "Bonus",
+      "DD": 0.3
+    },
+    "CHN-Bloom": {
+      "federations": [
+        "CHN"
+      ],
+      "allowed": [
+        "CHN"
+      ],
+      "base": "Bloom",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "B",
+      "component": "Bonus",
+      "DD": 0.9
+    },
+    "ESP-Ret1Pa": {
+      "federations": [
+        "ESP"
+      ],
+      "allowed": [
+        "ESP"
+      ],
+      "base": "Ret1Pa",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "A",
+      "component": "Bonus",
+      "DD": 1.1
+    },
+    "ESP-Mov1+t1": {
+      "federations": [
+        "ESP"
+      ],
+      "allowed": [
+        "ESP"
+      ],
+      "base": "Mov1+t1",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "P",
+      "component": "Bonus",
+      "DD": 0.325
+    },
+    "CHN-2F1.5": {
+      "federations": [
+        "CHN"
+      ],
+      "allowed": [
+        "CHN"
+      ],
+      "base": "2F1.5",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "C",
+      "component": "Rotation Base",
+      "DD": 0.45
+    },
+    "FRA-Split": {
+      "federations": [
+        "FRA"
+      ],
+      "allowed": [
+        "FRA"
+      ],
+      "base": "Split",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "P",
+      "component": "Construction",
+      "DD": 1.25
+    },
+    "FRA-Cs1.5t0.5o": {
+      "federations": [
+        "FRA"
+      ],
+      "allowed": [
+        "FRA"
+      ],
+      "base": "Cs1.5t0.5o",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "C",
+      "component": "Rotation Plane",
+      "DD": 0.95
+    },
+    "JPN-Ps1!o": {
+      "federations": [
+        "JPN"
+      ],
+      "allowed": [
+        "JPN"
+      ],
+      "base": "Ps1!o",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "P",
+      "component": "Bonus",
+      "DD": 0.35
+    },
+    "JPN-Ps1.5!": {
+      "federations": [
+        "JPN"
+      ],
+      "allowed": [
+        "JPN"
+      ],
+      "base": "Ps1.5!",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "P",
+      "component": "Bonus",
+      "DD": 0.3
+    },
+    "JPN-Cs2t0.5": {
+      "federations": [
+        "JPN"
+      ],
+      "allowed": [
+        "JPN"
+      ],
+      "base": "Cs2t0.5",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "C",
+      "component": "Rotation Plane",
+      "DD": 0.8
+    },
+    "JPN-ESP-USA-Mov!": {
+      "federations": [
+        "JPN",
+        "ESP",
+        "USA"
+      ],
+      "allowed": [
+        "JPN",
+        "ESP",
+        "USA"
+      ],
+      "base": "Mov!",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "B",
+      "component": "Bonus",
+      "DD": 0.2
+    },
+    "USA-RetF": {
+      "federations": [
+        "USA"
+      ],
+      "allowed": [
+        "USA"
+      ],
+      "base": "RetF",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "A",
+      "component": "Bonus",
+      "DD": 1.0
+    },
+    "USA-Weasel": {
+      "federations": [
+        "USA"
+      ],
+      "allowed": [
+        "USA"
+      ],
+      "base": "Weasel",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "P",
+      "component": "Construction",
+      "DD": 1.5
+    },
+    "USA-r1.5L+": {
+      "federations": [
+        "USA"
+      ],
+      "allowed": [
+        "USA"
+      ],
+      "base": "r1.5L+",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "B",
+      "component": "Rotation Base",
+      "DD": 1.0
+    },
+    "USA-4L": {
+      "federations": [
+        "USA"
+      ],
+      "allowed": [
+        "USA"
+      ],
+      "base": "4L",
+      "kind": "TEAM",
+      "phase": "P2",
+      "group": "P",
+      "component": "Construction",
+      "DD": 1.45
+    }
+  }
+}

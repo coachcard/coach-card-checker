@@ -1,0 +1,1294 @@
+{
+  "_source": "Excel list of hybrid components.xlsx",
+  "_count": 158,
+  "families": {
+    "T": "Thrusts",
+    "S": "Spins",
+    "R": "Twists",
+    "F": "Flexibility",
+    "A": "Airborne Weight",
+    "C": "Connections"
+  },
+  "by_family": {
+    "T": [
+      {
+        "code": "TB",
+        "level": "B",
+        "description": "Thrust with 1 or 2 legs followed by crashing on the surface",
+        "DD": 0.3
+      },
+      {
+        "code": "T1",
+        "level": "1",
+        "description": "Thrust with 1 leg followed by vertical descent",
+        "DD": 0.45
+      },
+      {
+        "code": "T2a",
+        "level": "2",
+        "description": "Thrust with 1 leg followed by Spin 180°",
+        "DD": 0.5
+      },
+      {
+        "code": "T2b",
+        "level": "2",
+        "description": "Thrust with 1 leg followed by Twirl 180° and a crash",
+        "DD": 0.5
+      },
+      {
+        "code": "T3a",
+        "level": "3",
+        "description": "Thrust and vertical descent",
+        "DD": 0.65
+      },
+      {
+        "code": "T3b",
+        "level": "3",
+        "description": "Thrust with 1 leg followed by Spin 360°",
+        "DD": 0.65
+      },
+      {
+        "code": "T3c",
+        "level": "3",
+        "description": "Thrust with 1 leg followed by Twirl 180° and descent",
+        "DD": 0.65
+      },
+      {
+        "code": "T3d",
+        "level": "3",
+        "description": "Thrust with flexibility followed by crashing",
+        "DD": 0.65
+      },
+      {
+        "code": "T4a",
+        "level": "4",
+        "description": "Thrust with 1 leg followed by Spin 720°",
+        "DD": 0.8
+      },
+      {
+        "code": "T4b",
+        "level": "4",
+        "description": "Thrust with flexibility and descent",
+        "DD": 0.8
+      },
+      {
+        "code": "T4c",
+        "level": "4",
+        "description": "Thrust followed by Spin 180°",
+        "DD": 0.8
+      },
+      {
+        "code": "T4d",
+        "level": "4",
+        "description": "Flying Fish (with descent): Thrust → VP, 1 leg lowered to airborne Fishtail, then vertical descent",
+        "DD": 0.8
+      },
+      {
+        "code": "T4e",
+        "level": "4",
+        "description": "Thrust followed by Twirl 180° (in VP) and a crash",
+        "DD": 0.8
+      },
+      {
+        "code": "T5a",
+        "level": "5",
+        "description": "Thrust followed by Spin 360°",
+        "DD": 0.9
+      },
+      {
+        "code": "T5b",
+        "level": "5",
+        "description": "Thrust followed by Twirl 180° (in VP) and descent",
+        "DD": 0.9
+      },
+      {
+        "code": "T5c",
+        "level": "5",
+        "description": "Thrust with flexibility followed by Spin 180°",
+        "DD": 0.9
+      },
+      {
+        "code": "T5d",
+        "level": "5",
+        "description": "Flying Fish Spin 180° OR Thrust Fishtail Helicopter Spinning 180°",
+        "DD": 0.9
+      },
+      {
+        "code": "T5e",
+        "level": "5",
+        "description": "One leg Thrust with Twirl 180° followed by Spin 360°",
+        "DD": 0.9
+      },
+      {
+        "code": "T6a",
+        "level": "6",
+        "description": "Thrust with flexibility followed by Spin 360°",
+        "DD": 1.1
+      },
+      {
+        "code": "T6b",
+        "level": "6",
+        "description": "Thrust with Twirl 180° (in VP) followed by Spin 360°",
+        "DD": 1.1
+      },
+      {
+        "code": "T6c",
+        "level": "6",
+        "description": "Flying Fish 360° OR Thrust Fishtail Helicopter Spinning 360°",
+        "DD": 1.1
+      },
+      {
+        "code": "T7",
+        "level": "7",
+        "description": "Thrust followed by Spin 720°",
+        "DD": 1.5
+      },
+      {
+        "code": "T8",
+        "level": "8",
+        "description": "Thrust with flexibility followed by Spin 720°",
+        "DD": 1.7
+      },
+      {
+        "code": "T9a",
+        "level": "9",
+        "description": "Thrust to height 8.5 (waist)+ followed by Spin 1080° or more",
+        "DD": 2
+      },
+      {
+        "code": "T9b",
+        "level": "9",
+        "description": "Thrust to height 8.5 (waist)+ continued by catching (stable ≥1s) in VP above knees or higher",
+        "DD": 2
+      }
+    ],
+    "S": [
+      {
+        "code": "SB",
+        "level": "B",
+        "description": "Spin 180° (one or two legs)",
+        "DD": 0.15
+      },
+      {
+        "code": "SCB",
+        "level": "B",
+        "description": "Combined 180° (one or two legs)",
+        "DD": 0.35
+      },
+      {
+        "code": "SCDB",
+        "level": "B",
+        "description": "Two-direction Combined 180° (one or two legs)",
+        "DD": 0.4
+      },
+      {
+        "code": "S1",
+        "level": "1",
+        "description": "Spin 360° (one or two legs)",
+        "DD": 0.35
+      },
+      {
+        "code": "SC1",
+        "level": "1",
+        "description": "Combined 360° (one or two legs)",
+        "DD": 0.8
+      },
+      {
+        "code": "SCD1",
+        "level": "1",
+        "description": "Two-direction Combined 360° (one or two legs)",
+        "DD": 0.85
+      },
+      {
+        "code": "S2",
+        "level": "2",
+        "description": "Spin 720° (one or two legs)",
+        "DD": 0.75
+      },
+      {
+        "code": "SC2",
+        "level": "2",
+        "description": "Combined 720° (one or two legs)",
+        "DD": 1.6
+      },
+      {
+        "code": "SCD2",
+        "level": "2",
+        "description": "Two-direction Combined 720° (one or two legs)",
+        "DD": 1.65
+      },
+      {
+        "code": "S3",
+        "level": "3",
+        "description": "Spin 1080° (two legs)",
+        "DD": 1.15
+      },
+      {
+        "code": "SC3",
+        "level": "3",
+        "description": "Combined 1080° (two legs)",
+        "DD": 2.4
+      },
+      {
+        "code": "SCD3",
+        "level": "3",
+        "description": "Two-direction Combined 1080° (two legs)",
+        "DD": 2.45
+      },
+      {
+        "code": "S4",
+        "level": "4",
+        "description": "Spin 1440° (two legs)",
+        "DD": 1.55
+      },
+      {
+        "code": "SC4",
+        "level": "4",
+        "description": "Combined 1440° (two legs)",
+        "DD": 3.2
+      },
+      {
+        "code": "SCD4",
+        "level": "4",
+        "description": "Two-direction Combined 1440° (two legs)",
+        "DD": 3.25
+      },
+      {
+        "code": "S5",
+        "level": "5",
+        "description": "Spin 1800° (two legs)",
+        "DD": 1.95
+      },
+      {
+        "code": "SC5",
+        "level": "5",
+        "description": "Combined 1800° (two legs)",
+        "DD": 4
+      },
+      {
+        "code": "SCD5",
+        "level": "5",
+        "description": "Two-direction Combined 1800° (two legs)",
+        "DD": 4.05
+      },
+      {
+        "code": "S6",
+        "level": "6",
+        "description": "Spin 2160° (two legs)",
+        "DD": 2.35
+      },
+      {
+        "code": "SC6",
+        "level": "6",
+        "description": "Combined 2160° (two legs)",
+        "DD": 4.8
+      },
+      {
+        "code": "SCD6",
+        "level": "6",
+        "description": "Two-direction Combined 2160° (two legs)",
+        "DD": 4.85
+      },
+      {
+        "code": "S7",
+        "level": "7",
+        "description": "Spin 2520° (two legs)",
+        "DD": 2.75
+      },
+      {
+        "code": "S8",
+        "level": "8",
+        "description": "Spin 2880° (two legs)",
+        "DD": 3.15
+      },
+      {
+        "code": "S9",
+        "level": "9",
+        "description": "Spin 3240° (two legs)",
+        "DD": 3.55
+      },
+      {
+        "code": "S10",
+        "level": "10",
+        "description": "Spin 3600° (two legs)",
+        "DD": 3.95
+      }
+    ],
+    "R": [
+      {
+        "code": "RB",
+        "level": "B",
+        "description": "Swirl 180° / Turn 180° non-sustained or up-down",
+        "DD": 0.1
+      },
+      {
+        "code": "1RB",
+        "level": "B",
+        "description": "1 leg Twist/Twirl 180°",
+        "DD": 0.15
+      },
+      {
+        "code": "2RB",
+        "level": "B",
+        "description": "Twist/Twirl 180° (VP)",
+        "DD": 0.2
+      },
+      {
+        "code": "ROB",
+        "level": "B",
+        "description": "VP open 180° to Split",
+        "DD": 0.25
+      },
+      {
+        "code": "RCB",
+        "level": "B",
+        "description": "Split close 180° to VP",
+        "DD": 0.25
+      },
+      {
+        "code": "R1",
+        "level": "1",
+        "description": "Swirl 360° / Turn 360° non-sustained or up-down",
+        "DD": 0.2
+      },
+      {
+        "code": "1R1",
+        "level": "1",
+        "description": "1 leg Twist/Twirl 360°",
+        "DD": 0.35
+      },
+      {
+        "code": "2R1",
+        "level": "1",
+        "description": "Twist/Twirl 360° (VP)",
+        "DD": 0.45
+      },
+      {
+        "code": "RD1",
+        "level": "1",
+        "description": "Two-direction 360° (VP)",
+        "DD": 0.5
+      },
+      {
+        "code": "RU1",
+        "level": "1",
+        "description": "Unbalanced Twist/Twirl 360° (VP)",
+        "DD": 0.55
+      },
+      {
+        "code": "RO1",
+        "level": "1",
+        "description": "VP open 360° to Split",
+        "DD": 0.55
+      },
+      {
+        "code": "RC1",
+        "level": "1",
+        "description": "Split close 360° to VP",
+        "DD": 0.55
+      },
+      {
+        "code": "R2",
+        "level": "2",
+        "description": "Swirl 720°",
+        "DD": 0.4
+      },
+      {
+        "code": "1R2",
+        "level": "2",
+        "description": "1 leg Twist 720°",
+        "DD": 0.75
+      },
+      {
+        "code": "2R2",
+        "level": "2",
+        "description": "Twist 720° (VP)",
+        "DD": 0.95
+      },
+      {
+        "code": "RD2",
+        "level": "2",
+        "description": "Two-direction 720° (VP)",
+        "DD": 1.05
+      },
+      {
+        "code": "RU2",
+        "level": "2",
+        "description": "Unbalanced Twist 720° (VP)",
+        "DD": 1.15
+      },
+      {
+        "code": "R3",
+        "level": "3",
+        "description": "Swirl 1080°",
+        "DD": 0.6
+      },
+      {
+        "code": "1R3",
+        "level": "3",
+        "description": "1 leg Twist 1080°",
+        "DD": 1.15
+      },
+      {
+        "code": "2R3",
+        "level": "3",
+        "description": "Twist 1080° (VP)",
+        "DD": 1.45
+      },
+      {
+        "code": "RU3",
+        "level": "3",
+        "description": "Unbalanced Twist 1080° (VP)",
+        "DD": 1.75
+      },
+      {
+        "code": "R4",
+        "level": "4",
+        "description": "Swirl 1440°",
+        "DD": 0.8
+      },
+      {
+        "code": "1R4",
+        "level": "4",
+        "description": "1 leg Twist 1440°",
+        "DD": 1.55
+      },
+      {
+        "code": "2R4",
+        "level": "4",
+        "description": "Twist 1440° (VP)",
+        "DD": 1.95
+      },
+      {
+        "code": "RD4",
+        "level": "4",
+        "description": "Two-direction 1440° (VP)",
+        "DD": 2.15
+      },
+      {
+        "code": "RU4",
+        "level": "4",
+        "description": "Unbalanced Twist 1440° (VP)",
+        "DD": 2.35
+      },
+      {
+        "code": "1R5",
+        "level": "5",
+        "description": "1 leg Twist 1800°",
+        "DD": 1.95
+      },
+      {
+        "code": "2R5",
+        "level": "5",
+        "description": "Twist 1800° (VP)",
+        "DD": 2.45
+      },
+      {
+        "code": "RU5",
+        "level": "5",
+        "description": "Unbalanced Twist 1800° (VP)",
+        "DD": 2.95
+      },
+      {
+        "code": "1R6",
+        "level": "6",
+        "description": "1 leg Twist 2160°",
+        "DD": 2.35
+      },
+      {
+        "code": "2R6",
+        "level": "6",
+        "description": "Twist 2160° (VP)",
+        "DD": 2.95
+      },
+      {
+        "code": "RD6",
+        "level": "6",
+        "description": "Two-direction 2160° (VP)",
+        "DD": 3.35
+      },
+      {
+        "code": "RU6",
+        "level": "6",
+        "description": "Unbalanced Twist 2160° (VP)",
+        "DD": 3.55
+      },
+      {
+        "code": "2R7",
+        "level": "7",
+        "description": "Twist 2520° (VP)",
+        "DD": 3.45
+      },
+      {
+        "code": "RU7",
+        "level": "7",
+        "description": "Unbalanced Twist 2520° (VP)",
+        "DD": 4.15
+      },
+      {
+        "code": "2R8",
+        "level": "8",
+        "description": "Twist 2880° (VP)",
+        "DD": 3.95
+      },
+      {
+        "code": "RU8",
+        "level": "8",
+        "description": "Unbalanced Twist 2880° (VP)",
+        "DD": 4.75
+      },
+      {
+        "code": "2R9",
+        "level": "9",
+        "description": "Twist 3240° (VP)",
+        "DD": 4.45
+      },
+      {
+        "code": "RU9",
+        "level": "9",
+        "description": "Unbalanced Twist 3240° (VP)",
+        "DD": 5.35
+      },
+      {
+        "code": "2R10",
+        "level": "10",
+        "description": "Twist 3600° (VP)",
+        "DD": 4.95
+      },
+      {
+        "code": "RU10",
+        "level": "10",
+        "description": "Unbalanced Twist 3600° (VP)",
+        "DD": 5.95
+      }
+    ],
+    "F": [
+      {
+        "code": "FB",
+        "level": "B",
+        "description": "Back Layout to Surface Arch or Bent Knee Surface Arch",
+        "DD": 0.05
+      },
+      {
+        "code": "F1a",
+        "level": "1",
+        "description": "Rapid Split from any position",
+        "DD": 0.1
+      },
+      {
+        "code": "F1b",
+        "level": "1",
+        "description": "Rapid Knight Position from any position",
+        "DD": 0.1
+      },
+      {
+        "code": "F1c",
+        "level": "1",
+        "description": "BK Surface Arch to Knight (extending the BK up to Knight)",
+        "DD": 0.1
+      },
+      {
+        "code": "F2a",
+        "level": "2",
+        "description": "Walkout Front (to breath)",
+        "DD": 0.2
+      },
+      {
+        "code": "F2b",
+        "level": "2",
+        "description": "Split to Front Pike (180° arc with a straight leg)",
+        "DD": 0.2
+      },
+      {
+        "code": "F2c",
+        "level": "2",
+        "description": "Split variants at the surface (demo of ≥2 different Splits)",
+        "DD": 0.2
+      },
+      {
+        "code": "F3a",
+        "level": "3",
+        "description": "Split to Split through VP (changing legs)",
+        "DD": 0.3
+      },
+      {
+        "code": "F3b",
+        "level": "3",
+        "description": "Ariana Rotation",
+        "DD": 0.3
+      },
+      {
+        "code": "F3c",
+        "level": "3",
+        "description": "Combination of a Right and Left Leg Knight Position",
+        "DD": 0.3
+      },
+      {
+        "code": "F4a",
+        "level": "4",
+        "description": "BK Front Layout to BK Arch Position OR Front Layout to Split with straight leg",
+        "DD": 0.4
+      },
+      {
+        "code": "F4b",
+        "level": "4",
+        "description": "Surface Arch Position to Knight or Split (straight leg) through vertical arc/axis",
+        "DD": 0.4
+      },
+      {
+        "code": "F4c",
+        "level": "4",
+        "description": "Bent Knee Surface Arch to Bent Knee VP",
+        "DD": 0.4
+      },
+      {
+        "code": "F4d",
+        "level": "4",
+        "description": "BK Surface Arch to Knight (lift extended leg to VP, extend bent leg horizontal at surface)",
+        "DD": 0.4
+      },
+      {
+        "code": "F4e",
+        "level": "4",
+        "description": "Fishtail to Knight (horizontal plane, along the surface)",
+        "DD": 0.4
+      },
+      {
+        "code": "F4f",
+        "level": "4",
+        "description": "Fishtail to Knight (through VP)",
+        "DD": 0.4
+      },
+      {
+        "code": "F5a",
+        "level": "5",
+        "description": "Knight to VP OR Knight to Fishtail through VP",
+        "DD": 0.5
+      },
+      {
+        "code": "F5b",
+        "level": "5",
+        "description": "Bent Knee Surface Arch to VP",
+        "DD": 0.5
+      },
+      {
+        "code": "F5c",
+        "level": "5",
+        "description": "Knight rotating 180° (twisting in the Knight position)",
+        "DD": 0.5
+      },
+      {
+        "code": "F6a",
+        "level": "6",
+        "description": "Cyclone 180° (BK Surface Arch Twirl 180° to a VP)",
+        "DD": 0.65
+      },
+      {
+        "code": "F6b",
+        "level": "6",
+        "description": "Knight rotating 360° (twisting in the Knight Position)",
+        "DD": 0.65
+      },
+      {
+        "code": "F6c",
+        "level": "6",
+        "description": "Knight Join to VP while rotating 180°",
+        "DD": 0.65
+      },
+      {
+        "code": "F6d",
+        "level": "6",
+        "description": "Flat Split or Split variants sustained at the surface ≥3s",
+        "DD": 0.65
+      },
+      {
+        "code": "F7",
+        "level": "7",
+        "description": "Surface Arch to VP",
+        "DD": 0.75
+      },
+      {
+        "code": "F8a",
+        "level": "8",
+        "description": "Knight Join to VP while rotating 360°",
+        "DD": 0.9
+      },
+      {
+        "code": "F8b",
+        "level": "8",
+        "description": "Bent Knee Surface Arch Position to VP rotating 360° (Nova rotating 360°)",
+        "DD": 0.9
+      },
+      {
+        "code": "F9",
+        "level": "9",
+        "description": "Surface Arch Position to VP rotating 180°",
+        "DD": 1
+      },
+      {
+        "code": "F10",
+        "level": "10",
+        "description": "Surface Arch Position to VP rotating 360°",
+        "DD": 1.3
+      }
+    ],
+    "A": [
+      {
+        "code": "AB",
+        "level": "B",
+        "description": "Lift to any single leg position from Inverted Tuck, Table Top or a variant",
+        "DD": 0.05
+      },
+      {
+        "code": "A1a",
+        "level": "1",
+        "description": "Lift to any single leg position from Front Pike",
+        "DD": 0.1
+      },
+      {
+        "code": "A1b",
+        "level": "1",
+        "description": "Single leg descent",
+        "DD": 0.1
+      },
+      {
+        "code": "A1c",
+        "level": "1",
+        "description": "Lift to VP from Inverted Tuck, Table Top or a variant",
+        "DD": 0.1
+      },
+      {
+        "code": "A1d",
+        "level": "1",
+        "description": "Join to VP from Fishtail, Bent Knee VP or Split",
+        "DD": 0.1
+      },
+      {
+        "code": "A2a",
+        "level": "2",
+        "description": "Vertical descent in VP (with or without isolated movements)",
+        "DD": 0.15
+      },
+      {
+        "code": "A2b",
+        "level": "2",
+        "description": "From Front Pike to a single leg position while rotating 180°",
+        "DD": 0.15
+      },
+      {
+        "code": "A3a",
+        "level": "3",
+        "description": "Front Pike to VP (Porpoise lift)",
+        "DD": 0.2
+      },
+      {
+        "code": "A3b",
+        "level": "3",
+        "description": "Vertical ascent with 1 or 2 legs (with or without isolated movements)",
+        "DD": 0.2
+      },
+      {
+        "code": "A4a",
+        "level": "4",
+        "description": "From Front Pike to a single leg position while rotating 360°",
+        "DD": 0.45
+      },
+      {
+        "code": "A4b",
+        "level": "4",
+        "description": "Front Pike to VP while rotating 180°",
+        "DD": 0.45
+      },
+      {
+        "code": "A5",
+        "level": "5",
+        "description": "Front Pike to VP while rotating 360°",
+        "DD": 0.65
+      },
+      {
+        "code": "A6",
+        "level": "6",
+        "description": "Sustained height 1 leg or combo 1/2 legs ≥3s (or isolated movements performed ≥3s)",
+        "DD": 1.15
+      },
+      {
+        "code": "A7",
+        "level": "7",
+        "description": "Sustained height in VP ≥3s",
+        "DD": 1.45
+      },
+      {
+        "code": "A8",
+        "level": "8",
+        "description": "Sustained height ≥3s in VP performed in an unbalanced position",
+        "DD": 1.65
+      }
+    ],
+    "C": [
+      {
+        "code": "CB",
+        "level": "B",
+        "description": "Piked body at surface OR any position out of VP cone OR wrap leg around body (2-3 connected)",
+        "DD": 0.1
+      },
+      {
+        "code": "CB+",
+        "level": "B",
+        "description": "CB performed with 4-5 or 8-10 connected athletes (teams)",
+        "DD": 0.2
+      },
+      {
+        "code": "C1a",
+        "level": "1",
+        "description": "Connection in any 1-leg VP position with bottom (non-VP) leg connected (2-3)",
+        "DD": 0.2
+      },
+      {
+        "code": "C1b",
+        "level": "1",
+        "description": "Connect bottom leg w/ vertical leg of athlete in front OR wrap leg around body (2-3)",
+        "DD": 0.2
+      },
+      {
+        "code": "C1a+",
+        "level": "1",
+        "description": "C1a performed with 4-5 or 8-10 connected athletes (teams)",
+        "DD": 0.3
+      },
+      {
+        "code": "C1b+",
+        "level": "1",
+        "description": "C1b performed with 4-5 or 8-10 connected athletes (teams)",
+        "DD": 0.3
+      },
+      {
+        "code": "C2a",
+        "level": "2",
+        "description": "1 leg face-to-face connection (top leg in VP cone) (2-3)",
+        "DD": 0.3
+      },
+      {
+        "code": "C2b",
+        "level": "2",
+        "description": "1 leg back + 1 leg forward connection (both in VP cone) (2-3)",
+        "DD": 0.3
+      },
+      {
+        "code": "C2c",
+        "level": "2",
+        "description": "C1 connections with rotation ≥180° at sustained height (2-3)",
+        "DD": 0.3
+      },
+      {
+        "code": "C2a+",
+        "level": "2",
+        "description": "C2a performed with 4-5 or 8-10 connected athletes (teams)",
+        "DD": 0.4
+      },
+      {
+        "code": "C2b+",
+        "level": "2",
+        "description": "C2b performed with 4-5 or 8-10 connected athletes (teams)",
+        "DD": 0.4
+      },
+      {
+        "code": "C2c+",
+        "level": "2",
+        "description": "C2c performed with 4-5 or 8-10 connected athletes (teams)",
+        "DD": 0.4
+      },
+      {
+        "code": "C3",
+        "level": "3",
+        "description": "1 leg back or side connection (top leg in VP cone) (2-3)",
+        "DD": 0.4
+      },
+      {
+        "code": "C3+",
+        "level": "3",
+        "description": "C3 with 4-5 or 8-10 connected (exception: top leg at 90° feet-to-knee connection)",
+        "DD": 0.5
+      },
+      {
+        "code": "C4",
+        "level": "4",
+        "description": "Two-leg connection (both legs in VP cone), facing any direction (2-3)",
+        "DD": 0.5
+      },
+      {
+        "code": "C4+",
+        "level": "4",
+        "description": "C4 performed with 4-5 or 8-10 connected athletes (teams)",
+        "DD": 0.6
+      },
+      {
+        "code": "C5",
+        "level": "5",
+        "description": "Rotation vertical connection with 1 leg (rotation ≥180° at max height) (2-3)",
+        "DD": 1
+      },
+      {
+        "code": "C5+",
+        "level": "5",
+        "description": "C5 performed with 4-5 or 8-10 connected athletes (teams)",
+        "DD": 1.1
+      },
+      {
+        "code": "C6a",
+        "level": "6",
+        "description": "Rotation vertical connection with 2 legs (rotation ≥180° at max height) (2-3)",
+        "DD": 1.25
+      },
+      {
+        "code": "C6b",
+        "level": "6",
+        "description": "Rotation vertical connection with 1 leg (rotation ≥360° at max height) (2-3)",
+        "DD": 1.25
+      },
+      {
+        "code": "C6a+",
+        "level": "6",
+        "description": "C6a performed with 4-5 or 8-10 connected athletes (teams)",
+        "DD": 1.35
+      },
+      {
+        "code": "C6b+",
+        "level": "6",
+        "description": "C6b performed with 4-5 or 8-10 connected athletes (teams)",
+        "DD": 1.35
+      },
+      {
+        "code": "C7",
+        "level": "7",
+        "description": "C5 with rotation ≥360° at sustained height (2-3)",
+        "DD": 1.5
+      },
+      {
+        "code": "C7+",
+        "level": "7",
+        "description": "C7 performed with 4-5 or 8-10 connected athletes (teams)",
+        "DD": 1.6
+      }
+    ]
+  },
+  "all_codes": [
+    "1R1",
+    "1R2",
+    "1R3",
+    "1R4",
+    "1R5",
+    "1R6",
+    "1RB",
+    "2R1",
+    "2R10",
+    "2R2",
+    "2R3",
+    "2R4",
+    "2R5",
+    "2R6",
+    "2R7",
+    "2R8",
+    "2R9",
+    "2RB",
+    "A1a",
+    "A1b",
+    "A1c",
+    "A1d",
+    "A2a",
+    "A2b",
+    "A3a",
+    "A3b",
+    "A4a",
+    "A4b",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "AB",
+    "C1a",
+    "C1a+",
+    "C1b",
+    "C1b+",
+    "C2a",
+    "C2a+",
+    "C2b",
+    "C2b+",
+    "C2c",
+    "C2c+",
+    "C3",
+    "C3+",
+    "C4",
+    "C4+",
+    "C5",
+    "C5+",
+    "C6a",
+    "C6a+",
+    "C6b",
+    "C6b+",
+    "C7",
+    "C7+",
+    "CB",
+    "CB+",
+    "F10",
+    "F1a",
+    "F1b",
+    "F1c",
+    "F2a",
+    "F2b",
+    "F2c",
+    "F3a",
+    "F3b",
+    "F3c",
+    "F4a",
+    "F4b",
+    "F4c",
+    "F4d",
+    "F4e",
+    "F4f",
+    "F5a",
+    "F5b",
+    "F5c",
+    "F6a",
+    "F6b",
+    "F6c",
+    "F6d",
+    "F7",
+    "F8a",
+    "F8b",
+    "F9",
+    "FB",
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "RB",
+    "RC1",
+    "RCB",
+    "RD1",
+    "RD2",
+    "RD4",
+    "RD6",
+    "RO1",
+    "ROB",
+    "RU1",
+    "RU10",
+    "RU2",
+    "RU3",
+    "RU4",
+    "RU5",
+    "RU6",
+    "RU7",
+    "RU8",
+    "RU9",
+    "S1",
+    "S10",
+    "S2",
+    "S3",
+    "S4",
+    "S5",
+    "S6",
+    "S7",
+    "S8",
+    "S9",
+    "SB",
+    "SC1",
+    "SC2",
+    "SC3",
+    "SC4",
+    "SC5",
+    "SC6",
+    "SCB",
+    "SCD1",
+    "SCD2",
+    "SCD3",
+    "SCD4",
+    "SCD5",
+    "SCD6",
+    "SCDB",
+    "T1",
+    "T2a",
+    "T2b",
+    "T3a",
+    "T3b",
+    "T3c",
+    "T3d",
+    "T4a",
+    "T4b",
+    "T4c",
+    "T4d",
+    "T4e",
+    "T5a",
+    "T5b",
+    "T5c",
+    "T5d",
+    "T5e",
+    "T6a",
+    "T6b",
+    "T6c",
+    "T7",
+    "T8",
+    "T9a",
+    "T9b",
+    "TB"
+  ],
+  "code_to_family": {
+    "TB": "T",
+    "T1": "T",
+    "T2a": "T",
+    "T2b": "T",
+    "T3a": "T",
+    "T3b": "T",
+    "T3c": "T",
+    "T3d": "T",
+    "T4a": "T",
+    "T4b": "T",
+    "T4c": "T",
+    "T4d": "T",
+    "T4e": "T",
+    "T5a": "T",
+    "T5b": "T",
+    "T5c": "T",
+    "T5d": "T",
+    "T5e": "T",
+    "T6a": "T",
+    "T6b": "T",
+    "T6c": "T",
+    "T7": "T",
+    "T8": "T",
+    "T9a": "T",
+    "T9b": "T",
+    "SB": "S",
+    "SCB": "S",
+    "SCDB": "S",
+    "S1": "S",
+    "SC1": "S",
+    "SCD1": "S",
+    "S2": "S",
+    "SC2": "S",
+    "SCD2": "S",
+    "S3": "S",
+    "SC3": "S",
+    "SCD3": "S",
+    "S4": "S",
+    "SC4": "S",
+    "SCD4": "S",
+    "S5": "S",
+    "SC5": "S",
+    "SCD5": "S",
+    "S6": "S",
+    "SC6": "S",
+    "SCD6": "S",
+    "S7": "S",
+    "S8": "S",
+    "S9": "S",
+    "S10": "S",
+    "RB": "R",
+    "1RB": "R",
+    "2RB": "R",
+    "ROB": "R",
+    "RCB": "R",
+    "R1": "R",
+    "1R1": "R",
+    "2R1": "R",
+    "RD1": "R",
+    "RU1": "R",
+    "RO1": "R",
+    "RC1": "R",
+    "R2": "R",
+    "1R2": "R",
+    "2R2": "R",
+    "RD2": "R",
+    "RU2": "R",
+    "R3": "R",
+    "1R3": "R",
+    "2R3": "R",
+    "RU3": "R",
+    "R4": "R",
+    "1R4": "R",
+    "2R4": "R",
+    "RD4": "R",
+    "RU4": "R",
+    "1R5": "R",
+    "2R5": "R",
+    "RU5": "R",
+    "1R6": "R",
+    "2R6": "R",
+    "RD6": "R",
+    "RU6": "R",
+    "2R7": "R",
+    "RU7": "R",
+    "2R8": "R",
+    "RU8": "R",
+    "2R9": "R",
+    "RU9": "R",
+    "2R10": "R",
+    "RU10": "R",
+    "AB": "A",
+    "A1a": "A",
+    "A1b": "A",
+    "A1c": "A",
+    "A1d": "A",
+    "A2a": "A",
+    "A2b": "A",
+    "A3a": "A",
+    "A3b": "A",
+    "A4a": "A",
+    "A4b": "A",
+    "A5": "A",
+    "A6": "A",
+    "A7": "A",
+    "A8": "A",
+    "FB": "F",
+    "F1a": "F",
+    "F1b": "F",
+    "F1c": "F",
+    "F2a": "F",
+    "F2b": "F",
+    "F2c": "F",
+    "F3a": "F",
+    "F3b": "F",
+    "F3c": "F",
+    "F4a": "F",
+    "F4b": "F",
+    "F4c": "F",
+    "F4d": "F",
+    "F4e": "F",
+    "F4f": "F",
+    "F5a": "F",
+    "F5b": "F",
+    "F5c": "F",
+    "F6a": "F",
+    "F6b": "F",
+    "F6c": "F",
+    "F6d": "F",
+    "F7": "F",
+    "F8a": "F",
+    "F8b": "F",
+    "F9": "F",
+    "F10": "F",
+    "CB": "C",
+    "CB+": "C",
+    "C1a": "C",
+    "C1b": "C",
+    "C1a+": "C",
+    "C1b+": "C",
+    "C2a": "C",
+    "C2b": "C",
+    "C2c": "C",
+    "C2a+": "C",
+    "C2b+": "C",
+    "C2c+": "C",
+    "C3": "C",
+    "C3+": "C",
+    "C4": "C",
+    "C4+": "C",
+    "C5": "C",
+    "C5+": "C",
+    "C6a": "C",
+    "C6b": "C",
+    "C6a+": "C",
+    "C6b+": "C",
+    "C7": "C",
+    "C7+": "C"
+  }
+}

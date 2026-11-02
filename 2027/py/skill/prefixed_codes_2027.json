@@ -1,0 +1,336 @@
+{
+  "_note": "2026 federation-reserved codes. From January 1 2027 they are open to all and must be written WITHOUT the federation prefix (Appendix 7 Addendum).",
+  "federation_aliases": {
+    "NAB": [
+      "NAB",
+      "RUS"
+    ],
+    "RUS": [
+      "RUS",
+      "NAB"
+    ],
+    "NAA": [
+      "NAA",
+      "BLR"
+    ],
+    "BLR": [
+      "BLR",
+      "NAA"
+    ]
+  },
+  "codes": {
+    "AUT-SL!f2r0.5+r1>": {
+      "base": "SL!f2r0.5+r1>",
+      "kind": "PAIR",
+      "federations": [
+        "AUT"
+      ]
+    },
+    "NAA-W!s0.5p": {
+      "base": "W!s0.5p",
+      "kind": "PAIR",
+      "federations": [
+        "NAA"
+      ]
+    },
+    "KAZ-JBs1t1": {
+      "base": "JBs1t1",
+      "kind": "PAIR",
+      "federations": [
+        "KAZ"
+      ]
+    },
+    "KAZ-JBss1t1": {
+      "base": "JBss1t1",
+      "kind": "PAIR",
+      "federations": [
+        "KAZ"
+      ]
+    },
+    "NAB-SL!f2r1+r1": {
+      "base": "SL!f2r1+r1",
+      "kind": "PAIR",
+      "federations": [
+        "NAB"
+      ]
+    },
+    "MEX-Jdt1": {
+      "base": "Jdt1",
+      "kind": "PAIR",
+      "federations": [
+        "MEX"
+      ]
+    },
+    "FRA+ESP-1FH/": {
+      "base": "1FH/",
+      "kind": "TEAM",
+      "federations": [
+        "FRA",
+        "ESP"
+      ]
+    },
+    "NAB-1F>1P": {
+      "base": "1F>1P",
+      "kind": "TEAM",
+      "federations": [
+        "NAB"
+      ]
+    },
+    "NAB-Ps1!": {
+      "base": "Ps1!",
+      "kind": "TEAM",
+      "federations": [
+        "NAB"
+      ]
+    },
+    "NAB-Ps1t1o": {
+      "base": "Ps1t1o",
+      "kind": "TEAM",
+      "federations": [
+        "NAB"
+      ]
+    },
+    "NAB-ChangeL": {
+      "base": "ChangeL",
+      "kind": "TEAM",
+      "federations": [
+        "NAB"
+      ]
+    },
+    "ESP-Spiral": {
+      "base": "Spiral",
+      "kind": "TEAM",
+      "federations": [
+        "ESP"
+      ]
+    },
+    "ESP-1PH/ + H1P/": {
+      "base": "1PH/ + H1P/",
+      "kind": "TEAM",
+      "federations": [
+        "ESP"
+      ]
+    },
+    "ESP-1FH/+ S1P/": {
+      "base": "1FH/+ S1P/",
+      "kind": "TEAM",
+      "federations": [
+        "ESP"
+      ]
+    },
+    "USA-1P>1P": {
+      "base": "1P>1P",
+      "kind": "TEAM",
+      "federations": [
+        "USA"
+      ]
+    },
+    "USA-3pS+": {
+      "base": "3pS+",
+      "kind": "TEAM",
+      "federations": [
+        "USA"
+      ]
+    },
+    "MEX-Cs2": {
+      "base": "Cs2",
+      "kind": "TEAM",
+      "federations": [
+        "MEX"
+      ]
+    },
+    "CHI-Js1.5B": {
+      "base": "Js1.5B",
+      "kind": "PAIR",
+      "federations": [
+        "CHI"
+      ]
+    },
+    "CHI-Js1Ro": {
+      "base": "Js1Ro",
+      "kind": "PAIR",
+      "federations": [
+        "CHI"
+      ]
+    },
+    "CHI-Js1R": {
+      "base": "Js1R",
+      "kind": "PAIR",
+      "federations": [
+        "CHI"
+      ]
+    },
+    "ESP-GRE-RUS-SL!2+r2": {
+      "base": "SL!2+r2",
+      "kind": "PAIR",
+      "federations": [
+        "ESP",
+        "GRE",
+        "RUS"
+      ]
+    },
+    "ESP-Js1Bo": {
+      "base": "Js1Bo",
+      "kind": "PAIR",
+      "federations": [
+        "ESP"
+      ]
+    },
+    "ESP-W!+catchSL": {
+      "base": "W!+catchSL",
+      "kind": "PAIR",
+      "federations": [
+        "ESP"
+      ]
+    },
+    "ESP-W!+catchSL+r1": {
+      "base": "W!+catchSL+r1",
+      "kind": "PAIR",
+      "federations": [
+        "ESP"
+      ]
+    },
+    "GBR-Js1p": {
+      "base": "Js1p",
+      "kind": "PAIR",
+      "federations": [
+        "GBR"
+      ]
+    },
+    "GBR-Js1t0.5B+pt": {
+      "base": "Js1t0.5B+pt",
+      "kind": "PAIR",
+      "federations": [
+        "GBR"
+      ]
+    },
+    "RUS-Js1B+pt": {
+      "base": "Js1B+pt",
+      "kind": "PAIR",
+      "federations": [
+        "RUS"
+      ]
+    },
+    "CHN-Lotus": {
+      "base": "Lotus",
+      "kind": "TEAM",
+      "federations": [
+        "CHN"
+      ]
+    },
+    "CHN-Switch": {
+      "base": "Switch",
+      "kind": "TEAM",
+      "federations": [
+        "CHN"
+      ]
+    },
+    "CHN-Bloom": {
+      "base": "Bloom",
+      "kind": "TEAM",
+      "federations": [
+        "CHN"
+      ]
+    },
+    "ESP-Ret1Pa": {
+      "base": "Ret1Pa",
+      "kind": "TEAM",
+      "federations": [
+        "ESP"
+      ]
+    },
+    "ESP-Mov1+t1": {
+      "base": "Mov1+t1",
+      "kind": "TEAM",
+      "federations": [
+        "ESP"
+      ]
+    },
+    "CHN-2F1.5": {
+      "base": "2F1.5",
+      "kind": "TEAM",
+      "federations": [
+        "CHN"
+      ]
+    },
+    "FRA-Split": {
+      "base": "Split",
+      "kind": "TEAM",
+      "federations": [
+        "FRA"
+      ]
+    },
+    "FRA-Cs1.5t0.5o": {
+      "base": "Cs1.5t0.5o",
+      "kind": "TEAM",
+      "federations": [
+        "FRA"
+      ]
+    },
+    "JPN-Ps1!o": {
+      "base": "Ps1!o",
+      "kind": "TEAM",
+      "federations": [
+        "JPN"
+      ]
+    },
+    "JPN-Ps1.5!": {
+      "base": "Ps1.5!",
+      "kind": "TEAM",
+      "federations": [
+        "JPN"
+      ]
+    },
+    "JPN-Cs2t0.5": {
+      "base": "Cs2t0.5",
+      "kind": "TEAM",
+      "federations": [
+        "JPN"
+      ]
+    },
+    "JPN-ESP-USA-Mov!": {
+      "base": "Mov!",
+      "kind": "TEAM",
+      "federations": [
+        "JPN",
+        "ESP",
+        "USA"
+      ]
+    },
+    "USA-RetF": {
+      "base": "RetF",
+      "kind": "TEAM",
+      "federations": [
+        "USA"
+      ]
+    },
+    "USA-Weasel": {
+      "base": "Weasel",
+      "kind": "TEAM",
+      "federations": [
+        "USA"
+      ]
+    },
+    "USA-r1.5L+": {
+      "base": "r1.5L+",
+      "kind": "TEAM",
+      "federations": [
+        "USA"
+      ]
+    },
+    "USA-4L": {
+      "base": "4L",
+      "kind": "TEAM",
+      "federations": [
+        "USA"
+      ]
+    },
+    "AUS-SL!f2r0.5+r1>": {
+      "base": "SL!f2r0.5+r1>",
+      "kind": "PAIR",
+      "federations": [
+        "AUT"
+      ]
+    }
+  }
+}

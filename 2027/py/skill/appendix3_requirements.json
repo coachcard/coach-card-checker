@@ -1,0 +1,530 @@
+{
+  "_meta": {
+    "source": "World Aquatics Appendix 3 — Set Times and Number of Elements for Routines (DRAFT, version September 27th 2026)",
+    "edition": "In force as from January 1, 2027",
+    "rules_version": "2027",
+    "purpose": "Set numbers of elements for routines, used to validate coach cards",
+    "notes": [
+      "Appendix 3 is marked DRAFT (version Sept 27 2026).",
+      "12U and Youth share one table in 2027; Acrobatic Routine is Youth only and Open Free Combination is 12U only.",
+      "Time tolerance is +/- 5 seconds (time is not checked by the app)."
+    ]
+  },
+  "events": {
+    "Women Solo Technical": {
+      "age_group": "Senior/Junior",
+      "time_seconds": 120,
+      "total_required_elements": 6,
+      "elements": {
+        "TRE": 5,
+        "Hybrid": 1
+      },
+      "rules": [
+        "5 Technical Required Elements.",
+        "1 Hybrid with Degree of Difficulty."
+      ]
+    },
+    "Women Solo Free": {
+      "age_group": "Senior/Junior",
+      "time_seconds": 130,
+      "total_required_elements": 5,
+      "elements": {
+        "Hybrid": 4,
+        "Choreography Hybrid": 1
+      },
+      "rules": [
+        "Four Hybrids with Degree of Difficulty — must include one declaration from each family in the routine (except connections).",
+        "One Choreography Hybrid (ChoHy) with a fixed Degree of Difficulty of 1.0."
+      ]
+    },
+    "Men Solo Technical": {
+      "age_group": "Senior/Junior",
+      "time_seconds": 120,
+      "total_required_elements": 6,
+      "elements": {
+        "TRE": 5,
+        "Hybrid": 1
+      },
+      "rules": [
+        "5 Technical Required Elements.",
+        "1 Hybrid with Degree of Difficulty."
+      ]
+    },
+    "Men Solo Free": {
+      "age_group": "Senior/Junior",
+      "time_seconds": 130,
+      "total_required_elements": 5,
+      "elements": {
+        "Hybrid": 4,
+        "Choreography Hybrid": 1
+      },
+      "rules": [
+        "Four Hybrids with Degree of Difficulty — must include one declaration from each family in the routine (except connections).",
+        "One Choreography Hybrid (ChoHy) with a fixed Degree of Difficulty of 1.0."
+      ]
+    },
+    "Women Duet Technical": {
+      "age_group": "Senior/Junior",
+      "time_seconds": 140,
+      "total_required_elements": 7,
+      "elements": {
+        "TRE": 5,
+        "Hybrid": 1,
+        "Pair Acrobatic": 1
+      },
+      "rules": [
+        "5 Technical Required Elements.",
+        "1 Hybrid with Degree of Difficulty.",
+        "1 Pair Acrobatic (free choice)."
+      ]
+    },
+    "Women Duet Free": {
+      "age_group": "Senior/Junior",
+      "time_seconds": 145,
+      "total_required_elements": 6,
+      "elements": {
+        "Hybrid": 4,
+        "Pair Acrobatic": 2
+      },
+      "rules": [
+        "Four Hybrids with Degree of Difficulty — must include one declaration from each family in the routine.",
+        "Two Pair Acrobatics (free choice but must not repeat the same acrobatic)."
+      ]
+    },
+    "Mixed Duet Technical": {
+      "age_group": "Senior/Junior",
+      "time_seconds": 140,
+      "total_required_elements": 7,
+      "elements": {
+        "TRE": 3,
+        "Hybrid": 1,
+        "Required Hybrid": 1,
+        "Pair Acrobatic": 2,
+        "Sustained Surface Connection": 3
+      },
+      "rules": [
+        "3 Technical Required Elements.",
+        "1 Hybrid with Degree of Difficulty.",
+        "1 Required Hybrid: only one Thrust declaration and 2 different Connection declarations (e.g. T8 C3 C4).",
+        "Pair Acrobatics must not repeat the same acrobatic.",
+        "Minimum of 3 declared Sustained Surface Connections (\"SuCon\") with travel (1 m or more) or rotation (180 degrees or more)."
+      ]
+    },
+    "Mixed Duet Free": {
+      "age_group": "Senior/Junior",
+      "time_seconds": 165,
+      "total_required_elements": 7,
+      "elements": {
+        "Hybrid": 3,
+        "Choreography Hybrid": 1,
+        "Pair Acrobatic": 3,
+        "Sustained Surface Connection": 4
+      },
+      "rules": [
+        "Three Hybrids with Degree of Difficulty — must include one declaration from each family in the routine.",
+        "One Choreography Hybrid (ChoHy) with a fixed Degree of Difficulty of 1.0.",
+        "Three Pair Acrobatics (free choice but must not repeat the same acrobatic).",
+        "Minimum of 4 declared Sustained Surface Connections (\"SuCon\") with travel (1 m or more) or rotation (180 degrees or more)."
+      ]
+    },
+    "Open Team Technical": {
+      "age_group": "Senior/Junior",
+      "time_seconds": 170,
+      "total_required_elements": 8,
+      "elements": {
+        "TRE": 5,
+        "Hybrid": 1,
+        "Team Acrobatic": 2
+      },
+      "rules": [
+        "5 Technical Required Elements.",
+        "One Hybrid with Degree of Difficulty that must include a cadence action.",
+        "May contain a maximum of one (1) circle.",
+        "Two Team Acrobatics from two different main Groups."
+      ],
+      "team_acros_distinct_groups": true
+    },
+    "Open Team Free": {
+      "age_group": "Senior/Junior",
+      "time_seconds": 190,
+      "total_required_elements": 8,
+      "elements": {
+        "Hybrid": 5,
+        "Team Acrobatic": 3
+      },
+      "rules": [
+        "Five Hybrids with Degree of Difficulty — must include one declaration from each family in the routine.",
+        "Three Team Acrobatics (free choice but must not repeat the same acrobatic)."
+      ]
+    },
+    "Open Acrobatic": {
+      "age_group": "Senior/Junior",
+      "time_seconds": 180,
+      "total_required_elements": 7,
+      "elements": {
+        "Acrobatic": 7
+      },
+      "rules": [
+        "Acrobatics must contain one from each Group (A, B, C, P).",
+        "Maximum of two Acrobatics from the same Group.",
+        "Must not repeat the same acrobatic."
+      ],
+      "acro_required_groups": [
+        "A",
+        "B",
+        "C",
+        "P"
+      ],
+      "acro_max_per_group": 2
+    },
+    "12U Solo Free": {
+      "age_group": "12U",
+      "time_seconds": 120,
+      "total_required_elements": 4,
+      "elements": {
+        "Hybrid": 4
+      },
+      "rules": [
+        "Four Hybrids with Degree of Difficulty — must include one declaration from each family in the routine (except connections)."
+      ]
+    },
+    "12U Women Duet Free": {
+      "age_group": "12U",
+      "time_seconds": 130,
+      "total_required_elements": 5,
+      "elements": {
+        "Hybrid": 4,
+        "Pair Acrobatic": 1
+      },
+      "rules": [
+        "Four Hybrids with Degree of Difficulty — must include one declaration from each family in the routine.",
+        "One Pair Acrobatic (free choice)."
+      ]
+    },
+    "12U Mixed Duet Free": {
+      "age_group": "12U",
+      "time_seconds": 150,
+      "total_required_elements": 6,
+      "elements": {
+        "Hybrid": 3,
+        "Choreography Hybrid": 1,
+        "Pair Acrobatic": 2,
+        "Sustained Surface Connection": 3
+      },
+      "rules": [
+        "Three Hybrids with Degree of Difficulty — must include one declaration from each family in the routine.",
+        "One Choreography Hybrid (ChoHy) with a fixed Degree of Difficulty of 1.0.",
+        "Two Pair Acrobatics (free choice but must not repeat the same acrobatic).",
+        "Minimum of 3 declared Sustained Surface Connections (\"SuCon\") with travel (1 m or more) or rotation (180 degrees or more)."
+      ]
+    },
+    "12U Open Team Free": {
+      "age_group": "12U",
+      "time_seconds": 170,
+      "total_required_elements": 7,
+      "elements": {
+        "Hybrid": 4,
+        "Team Acrobatic": 3
+      },
+      "rules": [
+        "Four Hybrids with Degree of Difficulty — must include one declaration from each family in the routine.",
+        "Three Team Acrobatics with Degree of Difficulty safety limit (free choice but must not repeat the same acrobatic)."
+      ]
+    },
+    "Youth Solo Free": {
+      "age_group": "Youth (13-15)",
+      "time_seconds": 120,
+      "total_required_elements": 4,
+      "elements": {
+        "Hybrid": 4
+      },
+      "rules": [
+        "Four Hybrids with Degree of Difficulty — must include one declaration from each family in the routine (except connections)."
+      ]
+    },
+    "Youth Women Duet Free": {
+      "age_group": "Youth (13-15)",
+      "time_seconds": 130,
+      "total_required_elements": 5,
+      "elements": {
+        "Hybrid": 4,
+        "Pair Acrobatic": 1
+      },
+      "rules": [
+        "Four Hybrids with Degree of Difficulty — must include one declaration from each family in the routine.",
+        "One Pair Acrobatic (free choice)."
+      ]
+    },
+    "Youth Mixed Duet Free": {
+      "age_group": "Youth (13-15)",
+      "time_seconds": 150,
+      "total_required_elements": 6,
+      "elements": {
+        "Hybrid": 3,
+        "Choreography Hybrid": 1,
+        "Pair Acrobatic": 2,
+        "Sustained Surface Connection": 3
+      },
+      "rules": [
+        "Three Hybrids with Degree of Difficulty — must include one declaration from each family in the routine.",
+        "One Choreography Hybrid (ChoHy) with a fixed Degree of Difficulty of 1.0.",
+        "Two Pair Acrobatics (free choice but must not repeat the same acrobatic).",
+        "Minimum of 3 declared Sustained Surface Connections (\"SuCon\") with travel (1 m or more) or rotation (180 degrees or more)."
+      ]
+    },
+    "Youth Open Team Free": {
+      "age_group": "Youth (13-15)",
+      "time_seconds": 170,
+      "total_required_elements": 7,
+      "elements": {
+        "Hybrid": 4,
+        "Team Acrobatic": 3
+      },
+      "rules": [
+        "Four Hybrids with Degree of Difficulty — must include one declaration from each family in the routine.",
+        "Three Team Acrobatics with Degree of Difficulty safety limit (free choice but must not repeat the same acrobatic)."
+      ]
+    },
+    "Youth Acrobatic Routine": {
+      "age_group": "Youth (13-15)",
+      "time_seconds": 150,
+      "total_required_elements": 5,
+      "elements": {
+        "Acrobatic": 5
+      },
+      "rules": [
+        "Five Acrobatics with Degree of Difficulty safety limit.",
+        "Acrobatics must contain one from Group A, B and P. Group C is optional.",
+        "Maximum of two acrobatics from the same Group.",
+        "Must not repeat the same acrobatic."
+      ],
+      "acro_required_groups": [
+        "A",
+        "B",
+        "P"
+      ],
+      "acro_max_per_group": 2
+    },
+    "12U Open Free Combination": {
+      "age_group": "12U",
+      "time_seconds": 165,
+      "total_required_elements": 7,
+      "elements": {
+        "Solo Hybrid (DoD)": 1,
+        "Duet Hybrid (DoD)": 1,
+        "Team Hybrid (DoD)": 1,
+        "Choreography Hybrid": 1,
+        "Team Acrobatic": 3
+      },
+      "rules": [
+        "One Solo DD Hybrid.",
+        "One Duet DD Hybrid.",
+        "One Team DD Hybrid (minimum of four athletes).",
+        "One Team ChoHy with a fixed Degree of Difficulty of 1.0 (minimum of four athletes).",
+        "Three acrobatics with Degree of Difficulty safety limit — must not repeat the same acrobatic.",
+        "Family declarations may be counted across the solo, duet and team DD hybrids (Appendix 6)."
+      ]
+    }
+  },
+  "family_coverage_rule": {
+    "_source": "Appendix 6 (2027) — Important notes b)",
+    "rule": "Each Free Routine MUST include a skill from every family (except Connections in Solo). All routine members must perform that skill in the same declaration on the Coach Card (not factored).",
+    "exception_solo": "Connections (C) family is excluded for Solo events.",
+    "exception_free_combination": "In Open Free Combination one declaration from each family may be counted across solo, duet and team DD hybrids.",
+    "families": {
+      "T": "Thrusts",
+      "S": "Spins",
+      "R": "Twists (incl. Twirls and Swirls)",
+      "F": "Flexibility",
+      "A": "Airborne Weight",
+      "C": "Connections"
+    },
+    "applies_to_routines": [
+      "Women Solo Free",
+      "Men Solo Free",
+      "Women Duet Free",
+      "Mixed Duet Free",
+      "Open Team Free",
+      "12U Solo Free",
+      "12U Women Duet Free",
+      "12U Mixed Duet Free",
+      "12U Open Team Free",
+      "Youth Solo Free",
+      "Youth Women Duet Free",
+      "Youth Mixed Duet Free",
+      "Youth Open Team Free",
+      "12U Open Free Combination"
+    ],
+    "solo_routines_no_C_family": [
+      "Women Solo Free",
+      "Men Solo Free",
+      "12U Solo Free",
+      "Youth Solo Free"
+    ],
+    "free_combination_cross_hybrid_routines": [
+      "12U Open Free Combination"
+    ]
+  },
+  "per_hybrid_limits": {
+    "_source": "Appendix 6 (2027) — General requirements c) and e)",
+    "max_declarations_per_family": 5,
+    "max_weighted_per_technique": 2.0,
+    "max_declarations_per_technique_factored": 4,
+    "max_factored_codes": 10,
+    "max_factored_at_0_5": 5,
+    "max_factored_at_0_3": 5,
+    "factor_weights": {
+      "unfactored": 1.0,
+      "*0.5": 0.5,
+      "*0.3": 0.3
+    },
+    "notes": [
+      "Max 5 declarations per family per Hybrid (raw count, factored or not).",
+      "Max 2x per technique (weighted: unfactored 1, *0.5 = 0.5, *0.3 = 0.3); with factors a technique may appear at most 4x.",
+      "Factoring limited to 10 code declarations per Hybrid: max 5 at *0.5 and max 5 at *0.3.",
+      "C4 and C4+ are the same technique."
+    ]
+  },
+  "no_repeat_acrobatic_definition": {
+    "Group A": "Cannot repeat same position(s) (as P1 or as P2), exception third position bonus.",
+    "Group B": "Cannot repeat same construction nor same connection (grip).",
+    "Group C": "Cannot repeat same construction.",
+    "Group P": "Cannot repeat same construction, connection (grip), positions (P1 or P2, the third position itself may repeat) or bonus(es) — including the Pos3 bonus."
+  },
+  "youth_12u_acrobatic_safety_limits": {
+    "Youth": {
+      "Group A": {
+        "acrobatic_dod": 2.2,
+        "plus_base_mark": 0.5,
+        "total_max": 2.7
+      },
+      "Group B": {
+        "acrobatic_dod": 2.3,
+        "plus_base_mark": 0.5,
+        "total_max": 2.8
+      },
+      "Group C": {
+        "acrobatic_dod": 2.3,
+        "plus_base_mark": 0.5,
+        "total_max": 2.8
+      },
+      "Group P": {
+        "acrobatic_dod": 2.5,
+        "plus_base_mark": 0.5,
+        "total_max": 3.0
+      }
+    },
+    "12U": {
+      "Group A": {
+        "acrobatic_dod": 2.0,
+        "plus_base_mark": 0.5,
+        "total_max": 2.5
+      },
+      "Group B": {
+        "acrobatic_dod": 2.1,
+        "plus_base_mark": 0.5,
+        "total_max": 2.6
+      },
+      "Group C": {
+        "acrobatic_dod": 2.1,
+        "plus_base_mark": 0.5,
+        "total_max": 2.6
+      },
+      "Group P": {
+        "acrobatic_dod": 2.3,
+        "plus_base_mark": 0.5,
+        "total_max": 2.8
+      }
+    },
+    "_note": "Team/Open acrobatics in 12U and Youth routines: total DD (incl. 0.50 Base Mark) must not exceed the group maximum."
+  },
+  "age_restricted_codes": {
+    "_source": "Team Acrobatic Catalogue (1P>H, H>1P, 1F>1F, 1F>1F+ not for 12U/Youth; RetSq, RetPa Senior/Junior only) + Appendix 7 Addendum (1FH/, 1F>1P not for 12U/Youth; Ret1Pa, RetF Senior/Junior only)",
+    "age_groups": [
+      "12U",
+      "Youth (13-15)"
+    ],
+    "connections": {
+      "1FH/": "Not permitted for 12U and Youth (Base Mark)."
+    },
+    "bonuses": {
+      "1F>1P": "Not permitted for 12U and Youth (Base Mark).",
+      "1P>H": "Not permitted for 12U and Youth.",
+      "H>1P": "Not permitted for 12U and Youth.",
+      "Ret1Pa": "Senior/Junior only (Base Mark).",
+      "RetF": "Senior/Junior only (Base Mark).",
+      "RetSq": "Senior/Junior only.",
+      "RetPa": "Senior/Junior only.",
+      "1F>1F": "Not permitted for 12U and Youth (Base Mark).",
+      "1F>1F+": "Not permitted for 12U and Youth (Base Mark)."
+    }
+  },
+  "element_type_aliases": {
+    "TRE": [
+      "Technical Required Element",
+      "Technical Required Elements",
+      "TRE"
+    ],
+    "Choreography Hybrid": [
+      "Choreography Hybrid",
+      "Choreo Hybrid",
+      "ChoHy",
+      "CHOHY",
+      "Team ChoHy",
+      "Team Choreography Hybrid",
+      "Team Choreography Hybrid (no DoD)",
+      "Choreography Hybrid (fixed DD 1.0)"
+    ],
+    "Solo Hybrid (DoD)": [
+      "Solo Hybrid",
+      "Solo DoD Hybrid"
+    ],
+    "Duet Hybrid (DoD)": [
+      "Duet Hybrid",
+      "Duet DoD Hybrid"
+    ],
+    "Team Hybrid (DoD)": [
+      "Team Hybrid",
+      "Team DoD Hybrid"
+    ],
+    "Required Hybrid": [
+      "Required Hybrid",
+      "Req Hybrid"
+    ],
+    "Hybrid": [
+      "Hybrid",
+      "Hybrids",
+      "Hyb"
+    ],
+    "Pair Acrobatic": [
+      "Pair Acrobatic",
+      "Pair Acrobatics",
+      "Pair Acro"
+    ],
+    "Team Acrobatic": [
+      "Team Acrobatic",
+      "Team Acrobatics",
+      "Team Acro"
+    ],
+    "Acrobatic": [
+      "Acrobatic",
+      "Acrobatics",
+      "Acro"
+    ],
+    "Sustained Surface Connection": [
+      "Sustained Surface Connection",
+      "Surface Connection",
+      "SSC",
+      "SuCon"
+    ]
+  },
+  "theme_required_routines": {
+    "_source": "World Aquatics CR Part Seven - Acrobatic Routine and Free Combination must be presented with a declared theme/title on the coach card.",
+    "routines": [
+      "Open Acrobatic",
+      "Youth Acrobatic Routine",
+      "12U Open Free Combination"
+    ],
+    "rule": "The coach card for an Acrobatic Routine or a Free Combination must state the routine theme. A missing theme is a FAIL."
+  }
+}

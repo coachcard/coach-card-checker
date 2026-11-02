@@ -1,0 +1,16 @@
+{
+ "year": "2027",
+ "files": [
+  "skill/appendix3_requirements.json",
+  "skill/catalogue_hybrid.json",
+  "skill/catalogue_pair_acro.json",
+  "skill/catalogue_team_acro.json",
+  "skill/compatibility_grids.json",
+  "skill/prefixed_codes_2027.json",
+  "skill/scripts/check_coach_card.py",
+  "skill/scripts/code_validator.py",
+  "skill/scripts/acro_parser.py",
+  "skill/scripts/acro_dd.py",
+  "webapp/extract.py"
+ ]
+}

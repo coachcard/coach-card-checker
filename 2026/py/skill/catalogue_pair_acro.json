@@ -1,0 +1,612 @@
+{
+  "_source": "Excel list of pair acro codes.xlsx",
+  "_count": 67,
+  "all_codes": [
+    "AUS-SL!f2r0.5+r1>",
+    "AUT-SL!f2r0.5+r1>",
+    "CHI-Js1.5B",
+    "CHI-Js1R",
+    "CHI-Js1Ro",
+    "ESP-GRE-RUS-SL!2+r2",
+    "ESP-Js1Bo",
+    "ESP-W!+catchSL",
+    "ESP-W!+catchSL+r1",
+    "GBR-Js1p",
+    "GBR-Js1t0.5B+pt",
+    "J",
+    "JBs1t0.5",
+    "Jd",
+    "Jdf",
+    "Jf",
+    "Jfs1B",
+    "Jpd",
+    "Jr0.5",
+    "Js0.5B",
+    "Js0.5t0.5",
+    "Js1B",
+    "Js1B+f",
+    "Js1B+pf",
+    "Js1F",
+    "JsF1B",
+    "KAZ-JBs1t1",
+    "KAZ-JBss1t1",
+    "L",
+    "L!",
+    "L!f",
+    "L!fr0.5",
+    "L!fr0.5»",
+    "L!fr1",
+    "L!f»",
+    "L!r0.5",
+    "L!r0.5»",
+    "L!r1",
+    "L!r1»",
+    "L!»",
+    "Lf",
+    "Lfr0.5",
+    "Lf»",
+    "Lr0.5",
+    "Lr1",
+    "L»",
+    "MEX-Jdt1",
+    "NAA-W!s0.5p",
+    "NAB-SL!f2r1+r1",
+    "RUS-Js1B+pt",
+    "S!fr0.5>",
+    "S!r0.5>",
+    "SL!>",
+    "SL!f2+r1>",
+    "SL!f>",
+    "SL>",
+    "W!d",
+    "W!f",
+    "W!fr0.5",
+    "W!fr1",
+    "W!fr1.5",
+    "W!r0.5",
+    "W!r1",
+    "W!s0.5",
+    "W!s0.5t0.5",
+    "W!s1F",
+    "W!»"
+  ],
+  "items": [
+    {
+      "code": "L»",
+      "name": "Lift head-up with crashing",
+      "type": "Lift",
+      "DD": 0.1,
+      "total_DD": 0.2,
+      "reserved": "No"
+    },
+    {
+      "code": "L!»",
+      "name": "Lift legs-up with crashing",
+      "type": "Lift",
+      "DD": 0.2,
+      "total_DD": 0.3,
+      "reserved": "No"
+    },
+    {
+      "code": "L",
+      "name": "Lift head-up",
+      "type": "Lift",
+      "DD": 0.4,
+      "total_DD": 0.5,
+      "reserved": "No"
+    },
+    {
+      "code": "Lf»",
+      "name": "Lift head-up with flexibility and crashing",
+      "type": "Lift",
+      "DD": 0.4,
+      "total_DD": 0.5,
+      "reserved": "No"
+    },
+    {
+      "code": "L!f»",
+      "name": "Lift legs-up with flexibility and crashing",
+      "type": "Lift",
+      "DD": 0.4,
+      "total_DD": 0.5,
+      "reserved": "No"
+    },
+    {
+      "code": "L!r0.5»",
+      "name": "Lift legs-up with crashing and rotation 180°",
+      "type": "Lift",
+      "DD": 0.4,
+      "total_DD": 0.5,
+      "reserved": "No"
+    },
+    {
+      "code": "L!",
+      "name": "Lift legs-up",
+      "type": "Lift",
+      "DD": 0.6,
+      "total_DD": 0.7,
+      "reserved": "No"
+    },
+    {
+      "code": "Lf",
+      "name": "Lift head-up with flexibility",
+      "type": "Lift",
+      "DD": 0.6,
+      "total_DD": 0.7,
+      "reserved": "No"
+    },
+    {
+      "code": "L!r1»",
+      "name": "Lift legs-up with crashing and rotation 360°",
+      "type": "Lift",
+      "DD": 0.6,
+      "total_DD": 0.7,
+      "reserved": "No"
+    },
+    {
+      "code": "L!fr0.5»",
+      "name": "Lift legs-up with crashing, flexibility and rotation 180°",
+      "type": "Lift",
+      "DD": 0.6,
+      "total_DD": 0.7,
+      "reserved": "No"
+    },
+    {
+      "code": "Lr0.5",
+      "name": "Lift head-up with 180° rotation",
+      "type": "Lift",
+      "DD": 0.6,
+      "total_DD": 0.7,
+      "reserved": "No"
+    },
+    {
+      "code": "SL>",
+      "name": "Sustained lift head-up with travelling",
+      "type": "Sustained Lift",
+      "DD": 0.8,
+      "total_DD": 0.9,
+      "reserved": "No"
+    },
+    {
+      "code": "L!r0.5",
+      "name": "Lift legs-up with 180° rotation",
+      "type": "Lift",
+      "DD": 0.8,
+      "total_DD": 0.9,
+      "reserved": "No"
+    },
+    {
+      "code": "Lfr0.5",
+      "name": "Lift head-up with flexibility and rotation 180°",
+      "type": "Lift",
+      "DD": 0.8,
+      "total_DD": 0.9,
+      "reserved": "No"
+    },
+    {
+      "code": "L!f",
+      "name": "Lift legs-up with flexibility",
+      "type": "Lift",
+      "DD": 0.8,
+      "total_DD": 0.9,
+      "reserved": "No"
+    },
+    {
+      "code": "SL!>",
+      "name": "Sustained lift legs-up with travelling",
+      "type": "Sustained Lift",
+      "DD": 0.8,
+      "total_DD": 0.9,
+      "reserved": "No"
+    },
+    {
+      "code": "Lr1",
+      "name": "Lift head-up with rotation 360°",
+      "type": "Lift",
+      "DD": 0.8,
+      "total_DD": 0.9,
+      "reserved": "No"
+    },
+    {
+      "code": "J",
+      "name": "Jump head-up",
+      "type": "Jump",
+      "DD": 0.8,
+      "total_DD": 0.9,
+      "reserved": "No"
+    },
+    {
+      "code": "W!»",
+      "name": "Throw legs-up with crashing",
+      "type": "Throw",
+      "DD": 0.8,
+      "total_DD": 0.9,
+      "reserved": "No"
+    },
+    {
+      "code": "L!r1",
+      "name": "Lift legs-up with rotation 360°",
+      "type": "Lift",
+      "DD": 1,
+      "total_DD": 1.1,
+      "reserved": "No"
+    },
+    {
+      "code": "L!fr0.5",
+      "name": "Lift legs-up with flexibility and rotation 180°",
+      "type": "Lift",
+      "DD": 1,
+      "total_DD": 1.1,
+      "reserved": "No"
+    },
+    {
+      "code": "SL!f>",
+      "name": "Sustained lift legs-up with flexibility and travelling",
+      "type": "Sustained Lift",
+      "DD": 1,
+      "total_DD": 1.1,
+      "reserved": "No"
+    },
+    {
+      "code": "S!r0.5>",
+      "name": "Sustained lift legs-up with travelling and rotation 180°+",
+      "type": "Sustained Lift",
+      "DD": 1,
+      "total_DD": 1.1,
+      "reserved": "No"
+    },
+    {
+      "code": "Jr0.5",
+      "name": "Jump head-up with 180° rotation",
+      "type": "Jump",
+      "DD": 1,
+      "total_DD": 1.1,
+      "reserved": "No"
+    },
+    {
+      "code": "Jf",
+      "name": "Jump head-up with flexibility",
+      "type": "Jump",
+      "DD": 1,
+      "total_DD": 1.1,
+      "reserved": "No"
+    },
+    {
+      "code": "W!d",
+      "name": "Legs-up throw-dive",
+      "type": "Throw",
+      "DD": 1,
+      "total_DD": 1.1,
+      "reserved": "No"
+    },
+    {
+      "code": "L!fr1",
+      "name": "Lift legs-up with flexibility and rotation 360°",
+      "type": "Lift",
+      "DD": 1.2,
+      "total_DD": 1.3,
+      "reserved": "No"
+    },
+    {
+      "code": "S!fr0.5>",
+      "name": "Sustained lift legs-up with flexibility, travelling and rot 180°+",
+      "type": "Sustained Lift",
+      "DD": 1.2,
+      "total_DD": 1.3,
+      "reserved": "No"
+    },
+    {
+      "code": "W!r0.5",
+      "name": "Throw legs-up with 180° rotation",
+      "type": "Throw",
+      "DD": 1.2,
+      "total_DD": 1.3,
+      "reserved": "No"
+    },
+    {
+      "code": "W!f",
+      "name": "Throw legs-up with flexibility",
+      "type": "Throw",
+      "DD": 1.2,
+      "total_DD": 1.3,
+      "reserved": "No"
+    },
+    {
+      "code": "Jd",
+      "name": "Jump-Dive",
+      "type": "Jump",
+      "DD": 1.2,
+      "total_DD": 1.3,
+      "reserved": "No"
+    },
+    {
+      "code": "Js0.5B",
+      "name": "Jump head-up with 180° backwards somersault",
+      "type": "Jump",
+      "DD": 1.2,
+      "total_DD": 1.3,
+      "reserved": "No"
+    },
+    {
+      "code": "W!s0.5",
+      "name": "Throw legs-up with 180° somersault",
+      "type": "Throw",
+      "DD": 1.4,
+      "total_DD": 1.5,
+      "reserved": "No"
+    },
+    {
+      "code": "W!fr0.5",
+      "name": "Throw legs-up with flexibility and rotation 180°",
+      "type": "Throw",
+      "DD": 1.4,
+      "total_DD": 1.5,
+      "reserved": "No"
+    },
+    {
+      "code": "Jpd",
+      "name": "Jump-Tuck/Change position - Dive",
+      "type": "Jump",
+      "DD": 1.4,
+      "total_DD": 1.5,
+      "reserved": "No"
+    },
+    {
+      "code": "W!r1",
+      "name": "Throw legs-up with rotation 360°",
+      "type": "Throw",
+      "DD": 1.4,
+      "total_DD": 1.5,
+      "reserved": "No"
+    },
+    {
+      "code": "Jdf",
+      "name": "Jump head-up with flexibility and dive",
+      "type": "Jump",
+      "DD": 1.5,
+      "total_DD": 1.6,
+      "reserved": "No"
+    },
+    {
+      "code": "W!fr1",
+      "name": "Throw legs-up with flexibility and rotation 360° or more",
+      "type": "Throw",
+      "DD": 1.6,
+      "total_DD": 1.7,
+      "reserved": "No"
+    },
+    {
+      "code": "Js0.5t0.5",
+      "name": "Jump head-up with half twist and 180° somersault",
+      "type": "Jump",
+      "DD": 1.6,
+      "total_DD": 1.7,
+      "reserved": "No"
+    },
+    {
+      "code": "W!s0.5t0.5",
+      "name": "Throw legs-up with 180° somersault and half twist",
+      "type": "Throw",
+      "DD": 1.6,
+      "total_DD": 1.7,
+      "reserved": "No"
+    },
+    {
+      "code": "Js1B",
+      "name": "Jump head-up with 1 somersault backwards",
+      "type": "Jump",
+      "DD": 1.8,
+      "total_DD": 1.9,
+      "reserved": "No"
+    },
+    {
+      "code": "W!fr1.5",
+      "name": "Throw legs-up with flexibility and rotation 540°",
+      "type": "Throw",
+      "DD": 1.8,
+      "total_DD": 1.9,
+      "reserved": "No"
+    },
+    {
+      "code": "JBs1t0.5",
+      "name": "Jump - Tuck - 1 somersault half twist",
+      "type": "Jump",
+      "DD": 2,
+      "total_DD": 2.1,
+      "reserved": "No"
+    },
+    {
+      "code": "Jfs1B",
+      "name": "Jump head-up with 1 somersault backwards and flexibility",
+      "type": "Jump",
+      "DD": 2,
+      "total_DD": 2.1,
+      "reserved": "No"
+    },
+    {
+      "code": "Js1F",
+      "name": "Jump head-up with 1 somersault forwards",
+      "type": "Jump",
+      "DD": 2,
+      "total_DD": 2.1,
+      "reserved": "No"
+    },
+    {
+      "code": "Js1B+f",
+      "name": "Jump head-up with 1 som backwards + open in Jay (flexibility)",
+      "type": "Jump",
+      "DD": 2.1,
+      "total_DD": 2.2,
+      "reserved": "No"
+    },
+    {
+      "code": "SL!f2+r1>",
+      "name": "Sustained Lift with travel + 2 flex pushes with catch + rot 360°",
+      "type": "Sustained Lift",
+      "DD": 2.1,
+      "total_DD": 2.2,
+      "reserved": "No"
+    },
+    {
+      "code": "Js1B+pf",
+      "name": "Jump head-up + 1 som back + Pike + open in Jay (flexibility)",
+      "type": "Jump",
+      "DD": 2.15,
+      "total_DD": 2.25,
+      "reserved": "No"
+    },
+    {
+      "code": "W!s1F",
+      "name": "Throw legs-up with 1 somersault forwards",
+      "type": "Throw",
+      "DD": 2.2,
+      "total_DD": 2.3,
+      "reserved": "No"
+    },
+    {
+      "code": "JsF1B",
+      "name": "Jump head-up backwards frontal 360 somersault",
+      "type": "Jump",
+      "DD": 2.2,
+      "total_DD": 2.3,
+      "reserved": "No"
+    },
+    {
+      "code": "AUS-SL!f2r0.5+r1>",
+      "name": "Sustained lift legs-up with traveling + 2 flexibility pushes (clear catch) + r180° and r360°",
+      "type": "Lift (Sustained)",
+      "DD": 2.2,
+      "total_DD": 2.3,
+      "reserved": "Yes"
+    },
+    {
+      "code": "NAA-W!s0.5p",
+      "name": "Throw legs-up with 180° somersault in Pike",
+      "type": "Throw",
+      "DD": 1.45,
+      "total_DD": 1.55,
+      "reserved": "Yes"
+    },
+    {
+      "code": "KAZ-JBs1t1",
+      "name": "Jump head-up with 1 somersault + 1 twist",
+      "type": "Jump / Throw",
+      "DD": 2.4,
+      "total_DD": 2.5,
+      "reserved": "Yes"
+    },
+    {
+      "code": "KAZ-JBss1t1",
+      "name": "Jump head-up — 1 straight somersault + 1 twist",
+      "type": "Jump / Throw",
+      "DD": 2.8,
+      "total_DD": 2.9,
+      "reserved": "Yes"
+    },
+    {
+      "code": "NAB-SL!f2r1+r1",
+      "name": "Sustained lift legs-up with 2 flexibility pushes (clear catch) + r360° in each",
+      "type": "Lift (Sustained)",
+      "DD": 2.2,
+      "total_DD": 2.3,
+      "reserved": "Yes"
+    },
+    {
+      "code": "MEX-Jdt1",
+      "name": "Jump Dive Full Twist",
+      "type": "Jump / Throw",
+      "DD": 1.8,
+      "total_DD": 1.9,
+      "reserved": "Yes"
+    },
+    {
+      "code": "AUT-SL!f2r0.5+r1>",
+      "name": "Reserved (P1)",
+      "type": null,
+      "DD": null,
+      "total_DD": null,
+      "reserved": "AUT"
+    },
+    {
+      "code": "CHI-Js1.5B",
+      "name": "Reserved (P2)",
+      "type": null,
+      "DD": null,
+      "total_DD": null,
+      "reserved": "CHI"
+    },
+    {
+      "code": "ESP-GRE-RUS-SL!2+r2",
+      "name": "Reserved (P2)",
+      "type": null,
+      "DD": null,
+      "total_DD": null,
+      "reserved": "ESP+GRE+RUS"
+    },
+    {
+      "code": "ESP-Js1Bo",
+      "name": "Reserved (P2)",
+      "type": null,
+      "DD": null,
+      "total_DD": null,
+      "reserved": "ESP"
+    },
+    {
+      "code": "ESP-W!+catchSL",
+      "name": "Reserved (P2)",
+      "type": null,
+      "DD": null,
+      "total_DD": null,
+      "reserved": "ESP"
+    },
+    {
+      "code": "ESP-W!+catchSL+r1",
+      "name": "Reserved (P2)",
+      "type": null,
+      "DD": null,
+      "total_DD": null,
+      "reserved": "ESP"
+    },
+    {
+      "code": "GBR-Js1p",
+      "name": "Reserved (P2)",
+      "type": null,
+      "DD": null,
+      "total_DD": null,
+      "reserved": "GBR"
+    },
+    {
+      "code": "GBR-Js1t0.5B+pt",
+      "name": "Reserved (P2)",
+      "type": null,
+      "DD": null,
+      "total_DD": null,
+      "reserved": "GBR"
+    },
+    {
+      "code": "CHI-Js1Ro",
+      "name": "Reserved (P2)",
+      "type": null,
+      "DD": null,
+      "total_DD": null,
+      "reserved": "CHI"
+    },
+    {
+      "code": "CHI-Js1R",
+      "name": "Reserved (P2)",
+      "type": null,
+      "DD": null,
+      "total_DD": null,
+      "reserved": "CHI"
+    },
+    {
+      "code": "RUS-Js1B+pt",
+      "name": "Reserved (P2)",
+      "type": null,
+      "DD": null,
+      "total_DD": null,
+      "reserved": "RUS"
+    }
+  ],
+  "_reserved_codes_merged": "Phase 1 + Phase 2 (see reserved_codes.json)"
+}
