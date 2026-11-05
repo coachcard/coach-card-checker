@@ -315,7 +315,16 @@ def _detect_theme(text: str):
         return v.rstrip(".")
 
     def _is_label(ln):
+        if re.search(r"DECLARED|\bPART\b|\bORDER\b", ln, re.I):
+            return False                                   # "Theme/Declared Difficulty" table header
         return bool(_THEME_LABEL_RE.search(ln) or _THEME_LABEL_CLIPPED_RE.match(ln))
+
+    # Some cards (e.g. Chinese national events) print the theme in brackets:
+    # <怒目金刚>, 《...》, «...».
+    for ln in lines[:25]:
+        m = re.search(r"[<《«〈]\s*([^<>《》«»〈〉]{1,60}?)\s*[>》»〉]", ln)
+        if m and re.search(r"\w", m.group(1)):
+            return m.group(1).strip()[:80]
 
     for i, ln in enumerate(lines):
         if not _is_label(ln):
@@ -1123,10 +1132,53 @@ def _multi_card_signs(result, routine):
     return signs
 
 
+def _detect_order_team(text):
+    """Start-list style cards: a header 'Order  Team  Name ...' then a row
+    '6  Sichuan  ...'. Returns (order, team) — either may be None."""
+    lines = [ln.strip() for ln in (text or "").splitlines()]
+    for i, ln in enumerate(lines):
+        if re.search(r"\bORDER\b", ln, re.I) and re.search(r"\bTEAM\b|\bCLUB\b", ln, re.I):
+            for nxt in lines[i + 1:i + 3]:
+                cells = [c for c in re.split(r"\s{2,}|\t", nxt) if c.strip()]
+                if cells and re.fullmatch(r"\d{1,3}", cells[0]):
+                    team = cells[1] if len(cells) > 1 and re.search(r"[A-Za-z]{3,}", cells[1]) \
+                        and not re.search(r"[<《]", cells[1]) else None
+                    return cells[0], team
+    return None, None
+
+
+def _suggest_name(result):
+    """A readable file name for camera photos ('image.jpg'): federation /
+    club first, then start order, then theme."""
+    text = result.get("ocr_text") or result.get("_raw_text") or ""
+    order, team = _detect_order_team(text)
+    parts = []
+    fed = result.get("detected_federation")
+    if fed:
+        parts.append(fed)
+    if team and (not fed or team.upper() != fed.upper()):
+        parts.append(team)
+    if order:
+        parts.append("order " + order)
+    theme = result.get("detected_theme")
+    if theme:
+        parts.append(theme)
+    if not parts:
+        return None
+    name = " - ".join(parts)
+    name = re.sub(r'[\\/:*?"<>|]+', " ", name)
+    return re.sub(r"\s+", " ", name).strip()[:80] or None
+
+
 def _post_process(result, routine=None):
     """Catalogue snapping + the notes that explain it, on every source."""
     try:
         els = result.get("elements") or []
+        # Newer coach-card software puts spaces around the dashes of acrobatic
+        # codes ("A- Sq- Back - tk - s1"): show them in catalogue notation.
+        for el in els:
+            if "acro" in (el.get("type") or "").lower() and el.get("code"):
+                el["code"] = re.sub(r"\s*([-/])\s*", r"\1", el["code"].strip())
         fixes, cases = _snap_elements(els)
         notes = result.setdefault("notes", [])
         if fixes:
@@ -1155,6 +1207,12 @@ def _post_process(result, routine=None):
                     + "; ".join(signs) + "). Lines from another card may have been "
                     "added: compare every row with the card on the left and delete "
                     "the extra ones — or retake the photo with only this card in the frame.")
+    except Exception:
+        pass
+    try:
+        sug = _suggest_name(result)
+        if sug:
+            result["suggested_name"] = sug
     except Exception:
         pass
     result.pop("_raw_text", None)

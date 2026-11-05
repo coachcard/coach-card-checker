@@ -66,10 +66,20 @@ def strip_federation_prefixes(code):
     return code
 
 
+# Newer coach-card software writes acrobatics with spaces around the dashes
+# ("A- Sq- Back - tk - s1", "B - LH- LiH- br"): drop them so the code reads
+# exactly like the catalogue notation ("A-Sq-Back-tk-s1").
+_SPACED_SEP_RE = re.compile(r"\s*([-/])\s*")
+
+
+def collapse_spaced_separators(code):
+    return _SPACED_SEP_RE.sub(r"\1", (code or "").strip())
+
+
 def _normalize_code(code):
     if not code:
         return code
-    return strip_federation_prefixes(_DECIMAL_COMMA_RE.sub(".", code))
+    return strip_federation_prefixes(_DECIMAL_COMMA_RE.sub(".", collapse_spaced_separators(code)))
 
 
 # OCR routinely confuses the letter O with the digit 0 and flips the case of

@@ -644,7 +644,33 @@ async function startEntry() {
   showProgress();
   const result = await extractFile(state.file, name, setProgress);
   hideProgress();
+  const renamed = renamedFromCard(state.file, result);
+  if (renamed !== state.file) {
+    state.file = renamed;
+    state.files = [renamed];
+    if (result) result.filename = renamed.name;
+    const nameEl = $("#dnd-name");
+    if (nameEl) nameEl.textContent = renamed.name;
+  }
   loadEntry(result, state.file, spec, name);
+}
+
+// Photos taken with the phone camera arrive as "image.jpg" / "IMG_1234.jpg".
+// Give them a readable name from what was read on the card (federation / club,
+// start order, theme), so they can be told apart in the list and the reports.
+const GENERIC_NAME_RE =
+  /^(image|img|photo|pxl|dsc|dscn|dcim|capture|camera|cam|screenshot|scan|picture|pic|whatsapp image)?[\s_\-\d().:]*(\.\w+)?$/i;
+
+function renamedFromCard(file, result, taken) {
+  if (!file || !result || !result.suggested_name || !GENERIC_NAME_RE.test(file.name)) return file;
+  const ext = (file.name.match(/\.\w+$/) || [".jpg"])[0].toLowerCase();
+  let base = result.suggested_name, n = 2, name = base + ext;
+  while (taken && taken.has(name.toLowerCase())) name = `${base} (${n++})${ext}`;
+  try {
+    return new File([file], name, { type: file.type, lastModified: file.lastModified });
+  } catch (e) {
+    return file;                                   // very old browsers: keep the original
+  }
 }
 
 // Read one card on the server (SSE progress). Never throws.
@@ -1006,6 +1032,9 @@ async function runBatchQueue() {
         it.label = label || "";
         renderBatchRow(it);
       });
+      const taken = new Set(b.items.filter((x) => x !== it).map((x) => x.file.name.toLowerCase()));
+      it.file = renamedFromCard(it.file, res, taken);
+      if (res) res.filename = it.file.name;
       it.result = res;
       it.federation = (res && res.detected_federation) || "";
       it.status = res && res.ok && (res.elements || []).length ? "read" : "error";

@@ -116,6 +116,27 @@ _TEAM_HEAD_RE = re.compile(r"^\s*([ABCP])\s*-\s*(.*)$", re.IGNORECASE)
 _DECIMAL_COMMA_RE = re.compile(r"(?<=\d),(?=\d)")
 
 
+_CONS_CACHE = None
+
+
+def _constructions(group):
+    """Construction codes of a team-acro group (catalogue), cached."""
+    global _CONS_CACHE
+    if _CONS_CACHE is None:
+        _CONS_CACHE = {}
+        try:
+            p = os.path.normpath(os.path.join(
+                os.path.dirname(os.path.abspath(__file__)), "..", "catalogue_team_acro.json"))
+            with open(p, "r", encoding="utf-8") as f:
+                cbg = json.load(f).get("components_by_group", {})
+            for gg, comps in cbg.items():
+                _CONS_CACHE[gg] = {c.get("code") for c in comps.get("Construction", [])
+                                   if isinstance(c, dict)}
+        except Exception:
+            pass
+    return _CONS_CACHE.get(group, set())
+
+
 def parse_team_acro_code(code: str, group: str | None = None) -> TeamAcroCode:
     """Parse a team/open acro code.
 
@@ -131,12 +152,23 @@ def parse_team_acro_code(code: str, group: str | None = None) -> TeamAcroCode:
     if not code:
         out.parse_error = "empty"
         return out
-    code = _DECIMAL_COMMA_RE.sub(".", code)
+    code = _DECIMAL_COMMA_RE.sub(".", re.sub(r"\s*([-/])\s*", r"\1", (code or "").strip()))
 
     g = (group or "").strip().upper()
     if g in ("A", "B", "C", "P"):
         out.group = g
         rest = code.strip()
+        # Newer coach-card software writes the group letter first ("A-Sq-Back-
+        # tk-s1"). Drop it when what follows is a real construction of that
+        # group — group P has a construction called "P", so "P-Ve-..." (old
+        # style, construction P) is left alone while "P-B-2pBb-..." is stripped.
+        m = re.match(r"^([ABCP])-(.+)$", rest)
+        if m and m.group(1).upper() == g:
+            segs = m.group(2).split("-")
+            cons = _constructions(g)
+            # "FRA-Split": federation-reserved constructions carry a prefix
+            if segs[0] in cons or "-".join(segs[:2]) in cons:
+                rest = m.group(2)
     else:
         m = _TEAM_HEAD_RE.match(code)
         if not m:
@@ -329,6 +361,7 @@ def check_pair_acro_no_repeat(codes: list[str]) -> list[NoRepeatViolation]:
     seen: dict[str, int] = {}
     violations: list[NoRepeatViolation] = []
     for c in codes:
+        c = re.sub(r"\s*([-/])\s*", r"\1", (c or "").strip())   # "Js - 1" = "Js-1"
         if not c:
             continue
         if c in seen:
