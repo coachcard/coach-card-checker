@@ -108,7 +108,7 @@ def _classify(part: str, base_mark: str, routine: str | None):
 
     if p.startswith("TRE"):
         return "TRE", ""
-    if "SSC" in p or "SURFACE" in p:
+    if "SSC" in p or "SURFACE" in p or re.match(r"SU\s*CON", p):
         return "Sustained Surface Connection", ""
     if "PAIR" in p:
         return "Pair Acrobatic", ""
@@ -417,6 +417,45 @@ def _get_ocr():
 _OCR_CACHE = {}
 
 
+# a run of hybrid codes as printed (RU1, RC1*0,5, SCD1, 2RB, C4+ ...)
+_PRINTED_HYB_RE = (r"(?:(?:\d{0,2}(?:R[UDCO]?|SC?D?|[TFAC])\d{1,2}[a-z]{0,2}|AB|SB|\d?R[CDU]?B)"
+                   r"(?:\*\d[.,]\d)?\+?)+")
+
+
+def _drop_annotation_boxes(boxes):
+    """Hand-written notes on a printed card (judges' marks: 'FF360', '✓P',
+    'A1C A8 T8' written over a hybrid) come out of OCR as small boxes sitting on
+    top of a printed code line. Drop a box when it lies over a long printed
+    code box (overlapping it horizontally, within ~3/4 of a line height
+    vertically) without starting where the code column starts. A second piece
+    of a printed hybrid that the card split with a wide gap starts AFTER the
+    first piece, so it does not overlap and is kept."""
+    def w(b):
+        return (b.get("x1") or b["x0"]) - b["x0"]
+    codes = [b for b in boxes if b.get("x1") is not None and w(b) >= 100
+             and (len(re.findall(r"[TSRFAC]\d", b["text"])) >= 3 or _hybrid_run(b["text"])
+                  or _ACRO_SUB_RE.search(b["text"]))]
+    if not codes:
+        return boxes
+    keep = []
+    for b in boxes:
+        drop = False
+        printed = (re.fullmatch(_PRINTED_HYB_RE, re.sub(r"\s+", "", b["text"]))
+                   and b.get("conf", 0) >= 0.85)   # a wrapped 2nd line of a printed hybrid
+        if b.get("x1") is not None and not printed and not re.match(r"^\s*TRE", b["text"], re.I):
+            for c in codes:
+                if c is b or w(b) >= 0.5 * w(c):
+                    continue
+                ov = min(b["x1"], c["x1"]) - max(b["x0"], c["x0"])
+                if (ov > 0.3 * max(w(b), 1) and abs(b["yc"] - c["yc"]) < 0.75 * max(c["h"], 1)
+                        and abs(b["x0"] - c["x0"]) > 20):
+                    drop = True
+                    break
+        if not drop:
+            keep.append(b)
+    return keep
+
+
 def _ocr_raw(np_img):
     """Run OCR once; cache boxes so re-clustering at different tolerances is free."""
     key = (np_img.shape, int(np_img[::37, ::37].sum()))
@@ -438,9 +477,11 @@ def _ocr_raw(np_img):
                 "yc": sum(ys) / 4.0,
                 "xc": sum(xs) / 4.0,
                 "x0": min(xs),
+                "x1": max(xs),
                 "h": max(ys) - min(ys),
             }
         )
+    boxes = _drop_annotation_boxes(boxes)
     if len(_OCR_CACHE) > 24:
         _OCR_CACHE.clear()
     _OCR_CACHE[key] = boxes
@@ -688,7 +729,7 @@ def _from_image(path, routine, progress=None):
 
 # Tolerate common OCR slips in "ACRO" (ACR0 / AGRO / ACRO. / ACRO A / ACROA).
 _ACRO_LINE_RE = re.compile(r"A[CG]R[O0][\s.\-_]*([ABCP])(?![A-Za-z])", re.I)
-_OTHER_KW_RE = re.compile(r"(HYBR[I1l]D|\bHYB\b|\bTRE\b|\bSSC\b)", re.I)
+_OTHER_KW_RE = re.compile(r"(HYBR[I1l]D|\bHYB\b|\bTRE\b|\bSSC\b|\bSU\s*CON\b)", re.I)
 
 
 def _clean_hybrid_ocr(s: str) -> str:
@@ -741,6 +782,8 @@ def _clean_pair_ocr(code: str) -> str:
         return code
     m = re.match(r"^([A-Z]{2,3}-)?", code)          # keep a federation prefix
     pre, body = m.group(0), code[m.end():]
+    # the '!' after the base jump/lift is often read as I / l / |: 'SLIf2' -> 'SL!f2'
+    body = re.sub(r"^(SL|J|L|S|W)[Il|](?=[a-z0-9+>])", r"\1!", body)
     letters = re.sub(r"[^A-Za-z]", "", body)
     if len(letters) >= 2 and letters == letters.upper():
         body = body.lower()
@@ -891,6 +934,8 @@ def _loose_rows_to_elements(rows, routine):
     carry_grp = None  # an "ACRO-x" label seen on a line whose code sat on the next
     hyb_prefix = ""   # hybrid codes from a wrapped line above (no PART keyword)
     for cells in rows:
+        # OCR reads the '1' of TRE1a as 'l' / 'I' ('TREla')
+        cells = [re.sub(r"^(TRE)[lI|](?=[a-z]?$)", r"\g<1>1", c) for c in cells]
         line = " ".join(cells).strip()
         t = _time_to_seconds(line)
         if t is not None:
@@ -900,7 +945,9 @@ def _loose_rows_to_elements(rows, routine):
         strong_pair = next(
             (c for c in cells if want_pair and _PAIR_STRONG_RE.match(c.strip())), None
         )
-        if _PAIR_LABEL_RE.search(line) or strong_pair:
+        if _PAIR_LABEL_RE.search(line) or strong_pair or (
+                want_pair and re.search(r"(?<![A-Za-z])ACRO(?![-_ ]?[ABCP](?![A-Za-z]))", line, re.I)):
+            # (start-list cards write a duet's pair acrobatics as a bare "ACRO")
             etype, grp = "Pair Acrobatic", ""
         else:
             am = _ACRO_LINE_RE.search(line)
@@ -952,6 +999,12 @@ def _loose_rows_to_elements(rows, routine):
                 cands = [c for c in cands if _PAIR_LIKE_RE.match(c)]
         is_hyb = "hybrid" in etype.lower()
         if not cands and not (is_hyb and hyb_prefix):
+            # SuCon rows have no code; a pair-acro row whose code is hidden under
+            # hand-writing still counts — keep it with an empty code to fill in.
+            if etype == "Sustained Surface Connection" or (
+                    etype == "Pair Acrobatic" and re.search(r"\d{1,2}:\d{2}", line)):
+                slot = next((c.replace(" ", "") for c in cells if re.search(r"\d{1,2}:\d{2}", c)), "")
+                elements.append({"type": etype, "group": grp, "code": "", "slot": slot})
             continue
         if is_hyb:
             code = _respace_hybrid((hyb_prefix + " " + " ".join(cands)).strip())
@@ -959,6 +1012,13 @@ def _loose_rows_to_elements(rows, routine):
         elif etype == "Pair Acrobatic":
             hyb_prefix = ""
             code = _clean_pair_ocr(min(cands, key=len))
+        elif etype == "TRE":
+            hyb_prefix = ""
+            tre = [c for c in cands if re.match(r"^TRE", c, re.I)] or cands   # not a note beside it
+            code = re.sub(r"^(TRE)[lI|](?=[a-z]?$)", r"\g<1>1", max(tre, key=len))   # TREla -> TRE1a
+        elif etype == "Sustained Surface Connection":
+            hyb_prefix = ""
+            code = ""                                       # SuCon rows carry no code
         else:
             hyb_prefix = ""
             code = _clean_acro_ocr(max(cands, key=len))
@@ -1072,6 +1132,71 @@ def _snap_elements(elements):
     return fixes, cases
 
 
+def _hybrid_validator():
+    try:
+        if _SCRIPTS_DIR not in sys.path:
+            sys.path.insert(0, _SCRIPTS_DIR)
+        from code_validator import validate_hybrid_code  # type: ignore
+        return validate_hybrid_code
+    except Exception:
+        return None
+
+
+def _fix_hybrid_marks(els):
+    """A judge's tick or letter written right after a hybrid code gets glued to
+    it by OCR ('F7' + '✓P' -> 'F7P', 'RC1' + '/' -> 'RC1/'). When a code is not
+    in the catalogue but becomes a real code once trailing marks are removed,
+    use the real code. Returns display strings of what was changed."""
+    valid = _hybrid_validator()
+    if not valid:
+        return []
+    fixes = []
+    for el in els:
+        if "hybrid" not in (el.get("type") or "").lower() or not el.get("code"):
+            continue
+        toks = el["code"].split()
+        changed = False
+        for i, t in enumerate(toks):
+            try:
+                if valid(t).get("ok"):
+                    continue
+            except Exception:
+                continue
+            cut = re.sub(r"[^0-9a-z+.*\]B]+$", "", t)          # trailing marks (not 'B': AB, 2RB)
+            if cut and cut != t and valid(cut).get("ok"):
+                fixes.append(f"{t} -> {cut}")
+                toks[i] = cut
+                changed = True
+        if changed:
+            el["code"] = " ".join(toks)
+    return fixes
+
+
+def _infer_required_hybrid(els, routine):
+    """Start-list cards write every hybrid as 'HYBRID'. When the routine needs a
+    Required Hybrid and none is marked, take the hybrid that has the required
+    shape (one thrust T + connections C only, e.g. 'T9b C7 C6a'); if none has
+    it, the shortest hybrid. Returns the code that was re-typed, or None."""
+    global _EVENTS
+    _routine_total(routine)                                # loads _EVENTS
+    spec = ((_EVENTS or {}).get(routine) or {}).get("elements") or {}
+    if not spec.get("Required Hybrid"):
+        return None
+    if any(e.get("type") == "Required Hybrid" for e in els):
+        return None
+    hybs = [e for e in els if e.get("type") == "Hybrid" and e.get("code")]
+    if len(hybs) < 2:
+        return None
+
+    def shape(e):
+        fam = [re.sub(r"^\d+", "", t)[:1] for t in e["code"].split()]
+        return fam.count("T") == 1 and fam.count("C") >= 2 and set(fam) <= {"T", "C"}
+
+    pick = next((e for e in hybs if shape(e)), None) or min(hybs, key=lambda e: len(e["code"].split()))
+    pick["type"] = "Required Hybrid"
+    return pick["code"]
+
+
 _EVENTS = None
 
 
@@ -1174,6 +1299,16 @@ def _post_process(result, routine=None):
     """Catalogue snapping + the notes that explain it, on every source."""
     try:
         els = result.get("elements") or []
+        notes0 = result.setdefault("notes", [])
+        if result.get("source") == "image":
+            marks = _fix_hybrid_marks(els)
+            if marks:
+                notes0.append("Removed marks read next to hybrid codes (probably hand-written): "
+                              + "; ".join(marks) + " — compare with the card.")
+        req = _infer_required_hybrid(els, routine)
+        if req:
+            notes0.append(f"Required Hybrid: the card does not say which hybrid it is — "
+                          f"“{req}” was taken as the Required Hybrid. Change the type if it is another one.")
         # Newer coach-card software puts spaces around the dashes of acrobatic
         # codes ("A- Sq- Back - tk - s1"): show them in catalogue notation.
         for el in els:

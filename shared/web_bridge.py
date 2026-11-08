@@ -27,6 +27,7 @@ def _to_boxes(raw):
             "yc": sum(ys) / 4.0,
             "xc": sum(xs) / 4.0,
             "x0": min(xs),
+            "x1": max(xs),
             "h": max(ys) - min(ys),
         })
     return out
@@ -34,7 +35,7 @@ def _to_boxes(raw):
 
 def _read(raw, routine):
     """= extract._from_image.read_at(), on pre-computed OCR boxes."""
-    boxes = _to_boxes(raw)
+    boxes = ex._drop_annotation_boxes(_to_boxes(raw))   # = what extract._ocr_raw does
     ex._ocr_raw = lambda _arr, _b=boxes: _b      # every caller gets these boxes
     els = ex._boxes_to_elements(boxes, routine)
     best_rows = ex._ocr_lines(None, row_tol=0.6)[0]

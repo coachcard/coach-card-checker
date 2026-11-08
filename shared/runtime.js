@@ -178,6 +178,23 @@ await micropip.install(["openpyxl", "pypdf"])
     }
   };
 
+  // Self-update: GitHub Pages lets browsers keep the page itself for ~10 min,
+  // so right after a new version is published a browser can still run the old
+  // app.js. Fetch the page fresh; if it points to a newer version, reload once.
+  (async () => {
+    try {
+      const mine = (me && me.src.match(/[?&]v=(\d+)/) || [])[1];
+      if (!mine) return;
+      const html = await (await fetch(location.href.split("#")[0], { cache: "no-cache" })).text();
+      const live = (html.match(/runtime\.js\?v=(\d+)/) || [])[1];
+      const key = "cc-reloaded-" + live;
+      if (live && live !== mine && !sessionStorage.getItem(key)) {
+        sessionStorage.setItem(key, "1");
+        location.reload();
+      }
+    } catch (e) { /* offline or storage blocked: keep the current version */ }
+  })();
+
   // Start loading Python right away (the routine list needs it).
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initPython);
   else initPython();

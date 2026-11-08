@@ -164,7 +164,13 @@ def check(
 
     # ---- 1. Total count -----------------------------------------------------
     declared_elements = declared.get("elements", [])
-    declared_total = len(declared_elements)
+    # Sustained Surface Connections ("SuCon") are a MINIMUM requirement, listed
+    # in the "Additional requirements" column — they are not counted in the
+    # routine's Total Elements (e.g. Mixed Duet Technical: 3 TRE + 1 Hybrid +
+    # 1 Required Hybrid + 2 Pair Acrobatics = 7, plus at least 3 SuCon).
+    min_types = set(spec.get("minimum_element_types", ["Sustained Surface Connection"]))
+    declared_total = sum(1 for el in declared_elements
+                         if normalise_type(el.get("type", ""), aliases) not in min_types)
     required_total = spec["total_required_elements"]
     if declared_total == required_total:
         report.add(CheckResult(
@@ -181,6 +187,23 @@ def check(
         report.recommendations.append(
             f"Adjust the number of declared elements to {required_total}."
         )
+
+    # ---- 1b. Rows with no code (e.g. a photo where hand-writing hid it) -----
+    def _has_code(el):
+        if (el.get("code") or "").strip():
+            return True
+        return any(((c.get("code") if isinstance(c, dict) else str(c)) or "").strip()
+                   for c in (el.get("codes") or []))
+    no_code = [f"#{i} {el.get('type', '?')}" for i, el in enumerate(declared_elements, start=1)
+               if not _has_code(el)
+               and normalise_type(el.get("type", ""), aliases) not in min_types
+               and "choreo" not in (el.get("type") or "").lower()]
+    if no_code:
+        report.add(CheckResult(
+            label="Elements without a code",
+            status="warn",
+            detail=", ".join(no_code) + " — type the code from the card, then run the analysis again",
+        ))
 
     # ---- 2. Per-type counts -------------------------------------------------
     type_counter: Counter[str] = Counter()
@@ -204,6 +227,17 @@ def check(
 
     for required_type, required_count in spec["elements"].items():
         actual = type_counter.get(required_type, 0)
+        if required_type in min_types:
+            ok = actual >= required_count
+            report.add(CheckResult(
+                label=f"{required_type} (minimum)",
+                status="pass" if ok else "fail",
+                detail=f"minimum {required_count}, declared {actual}",
+            ))
+            if not ok:
+                report.recommendations.append(
+                    f"Declare at least {required_count} {required_type}s (\"SuCon\").")
+            continue
         if actual == required_count:
             report.add(CheckResult(
                 label=f"{required_type}",
