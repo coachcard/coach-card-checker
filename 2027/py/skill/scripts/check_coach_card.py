@@ -68,6 +68,8 @@ class Report:
     rules_version: str = RULES_VERSION
     checks: list[CheckResult] = field(default_factory=list)
     recommendations: list[str] = field(default_factory=list)
+    # Remarks shown at the bottom of the report — not a flag, no effect on the summary
+    notes: list[str] = field(default_factory=list)
 
     def add(self, check: CheckResult) -> None:
         self.checks.append(check)
@@ -85,6 +87,7 @@ class Report:
             "summary": self.summary,
             "checks": [c.__dict__ for c in self.checks],
             "recommendations": self.recommendations,
+            "notes": self.notes,
         }
 
     def to_text(self) -> str:
@@ -106,6 +109,11 @@ class Report:
             lines.append("Recommendations:")
             for r in self.recommendations:
                 lines.append(f"  - {r}")
+        if self.notes:
+            lines.append("")
+            lines.append("Notes:")
+            for n in self.notes:
+                lines.append(f"  - {n}")
         return "\n".join(lines)
 
 
@@ -194,6 +202,23 @@ def check(
         report.recommendations.append(
             f"Adjust the number of declared elements to {required_total}."
         )
+
+    # ---- 1b. Rows with no code (e.g. a photo where hand-writing hid it) -----
+    def _has_code(el):
+        if (el.get("code") or "").strip():
+            return True
+        return any(((c.get("code") if isinstance(c, dict) else str(c)) or "").strip()
+                   for c in (el.get("codes") or []))
+    no_code = [f"#{i} {el.get('type', '?')}" for i, el in enumerate(declared_elements, start=1)
+               if not _has_code(el)
+               and normalise_type(el.get("type", ""), aliases) not in min_types
+               and "choreo" not in (el.get("type") or "").lower()]
+    if no_code:
+        report.add(CheckResult(
+            label="Elements without a code",
+            status="warn",
+            detail=", ".join(no_code) + " — type the code from the card, then run the analysis again",
+        ))
 
     # ---- 2. Per-type counts -------------------------------------------------
     type_counter: Counter[str] = Counter()
@@ -333,7 +358,10 @@ def check(
 
     # ---- 9. Code existence (Appendix 6 + 7 catalogues) --------------------
     for c in check_code_existence(routine, declared):
-        report.add(c)
+        if c.status == "note":
+            report.notes.append(c.detail)       # bottom-of-report remark, not a flag
+        else:
+            report.add(c)
 
     # ---- 7. Per-hybrid family/technique limits (Appendix 6 §29.6.1.8.c/e) --
     for c in check_per_hybrid_family_limits(routine, declared):
@@ -1154,12 +1182,10 @@ def check_code_existence(routine: str, declared) -> list[CheckResult]:
     if casing_notes:
         results.append(CheckResult(
             label="Upper/lower case or 0/O differences vs catalogue",
-            status="info",
-            detail="; ".join(casing_notes)
-                   + "  — accepted as matches. This is often the app misreading the card "
-                     "(photo or scan), not an error on the card: compare with the card. If the "
-                     "card is right, go back (\u2190 Edit elements), correct the code by hand and run "
-                     "the analysis again. If the card itself is written that way, it should match "
-                     "the catalogue spelling exactly.",
+            status="note",
+            detail="Upper/lower case (or 0/O) differences from the catalogue were found and "
+                   "accepted: " + "; ".join(casing_notes) + ". They are most likely the photo "
+                   "or scan being misread by the app (OCR), not mistakes on the card — still, "
+                   "a quick look at the card is recommended.",
         ))
     return results

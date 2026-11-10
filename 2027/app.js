@@ -920,6 +920,13 @@ function renderReport(data) {
   } else {
     reco.innerHTML = "";
   }
+  // Remarks (e.g. upper/lower case differences, most likely OCR) — not flags.
+  if ((data.notes || []).length) {
+    reco.insertAdjacentHTML("beforeend",
+      '<div class="report-notes"><h3>Notes</h3><ul>' +
+      data.notes.map((n) => `<li>${escapeHtml(n)}</li>`).join("") +
+      "</ul></div>");
+  }
 }
 
 function applyFilters() {
